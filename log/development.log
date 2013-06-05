@@ -1,0 +1,4975 @@
+  [1m[36m (2.1ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [1m[35m (1.4ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateVideos (20130605223904)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.4ms)[0m  [1mCREATE TABLE "videos" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "file_url" varchar(255), "file_url_tmp" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20130605223904"]]
+  [1m[36m (1.8ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+
+
+Started GET "/" for 127.0.0.1 at 2013-06-05 15:44:30 -0700
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /usr/local/opt/rbenv/versions/2.0.0-p0/lib/ruby/gems/2.0.0/gems/railties-4.0.0.rc1/lib/rails/templates/rails/welcome/index.html.erb (3.5ms)
+Completed 200 OK in 38ms (Views: 15.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/videos/new" for 127.0.0.1 at 2013-06-05 15:44:36 -0700
+Processing by VideosController#new as HTML
+  Rendered videos/_form.html.erb (50.7ms)
+  Rendered videos/new.html.erb within layouts/application (87.6ms)
+Completed 200 OK in 1198ms (Views: 1183.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-06-05 15:44:37 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-05 15:44:37 -0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-05 15:44:37 -0700
+
+
+Started GET "/assets/videos.js?body=1" for 127.0.0.1 at 2013-06-05 15:44:38 -0700
+
+
+Started GET "/assets/videos.css?body=1" for 127.0.0.1 at 2013-06-05 15:44:38 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-05 15:44:38 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-06-05 15:44:38 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-05 15:44:38 -0700
+
+
+Started GET "/videos/new" for 127.0.0.1 at 2013-06-05 15:45:16 -0700
+Processing by VideosController#new as HTML
+  Rendered videos/_form.html.erb (8.6ms)
+  Rendered videos/new.html.erb within layouts/application (10.0ms)
+Completed 200 OK in 18ms (Views: 16.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-06-05 15:45:16 -0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-05 15:45:17 -0700
+
+
+Started GET "/assets/videos.css?body=1" for 127.0.0.1 at 2013-06-05 15:45:17 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-05 15:45:17 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-06-05 15:45:17 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-05 15:45:17 -0700
+
+
+Started GET "/assets/videos.js?body=1" for 127.0.0.1 at 2013-06-05 15:45:17 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-05 15:45:17 -0700
+
+
+Started POST "/videos" for 127.0.0.1 at 2013-06-05 15:45:48 -0700
+Processing by VideosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"vXY8Omwf1qY8MJYPeomfeJpIEPr4GNwlMvddPDBqv2Q=", "video"=>{"file_url"=>#<ActionDispatch::Http::UploadedFile:0x007fc2b0699838 @tempfile=#<Tempfile:/var/folders/dp/dxp19pz54dzf_8f6zmvk7fyh0000gn/T/RackMultipart20130605-75939-iujpii>, @original_filename="mini copy 2.mp4", @content_type="video/mp4", @headers="Content-Disposition: form-data; name=\"video[file_url]\"; filename=\"mini copy 2.mp4\"\r\nContent-Type: video/mp4\r\n">, "file_url_tmp"=>""}, "commit"=>"Create Video"}
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (35.8ms)[0m  INSERT INTO "videos" ("created_at", "file_url", "file_url_tmp", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", Wed, 05 Jun 2013 22:45:48 UTC +00:00], ["file_url", nil], ["file_url_tmp", "20130605-1545-75939-6895/mini_copy_2.mp4"], ["updated_at", Wed, 05 Jun 2013 22:45:48 UTC +00:00]]
+  [1m[36m (1.7ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/videos/1
+Completed 302 Found in 64ms (ActiveRecord: 37.7ms)
+
+
+Started GET "/videos/1" for 127.0.0.1 at 2013-06-05 15:45:48 -0700
+Processing by VideosController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mVideo Load (0.3ms)[0m  SELECT "videos".* FROM "videos" WHERE "videos"."id" = ? LIMIT 1  [["id", "1"]]
+  Rendered videos/show.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 15ms (Views: 10.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-05 15:45:49 -0700
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-06-05 15:45:49 -0700
+
+
+Started GET "/assets/videos.css?body=1" for 127.0.0.1 at 2013-06-05 15:45:49 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-05 15:45:49 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-05 15:45:49 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-06-05 15:45:49 -0700
+
+
+Started GET "/assets/videos.js?body=1" for 127.0.0.1 at 2013-06-05 15:45:49 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-05 15:45:49 -0700
+
+
+Started GET "/sidekiq/retries" for 127.0.0.1 at 2013-06-05 15:45:59 -0700
+
+ActionController::RoutingError (No route matches [GET] "/sidekiq/retries"):
+  actionpack (4.0.0.rc1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.0.rc1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.0.rc1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.0.rc1) lib/rails/rack/logger.rb:21:in `block in call'
+  activesupport (4.0.0.rc1) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.0.rc1) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.0.rc1) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.0.rc1) lib/rails/rack/logger.rb:21:in `call'
+  actionpack (4.0.0.rc1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.0.rc1) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.0.rc1) lib/action_dispatch/middleware/static.rb:64:in `call'
+  railties (4.0.0.rc1) lib/rails/engine.rb:511:in `call'
+  railties (4.0.0.rc1) lib/rails/application.rb:96:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /usr/local/opt/rbenv/versions/2.0.0-p0/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /usr/local/opt/rbenv/versions/2.0.0-p0/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /usr/local/opt/rbenv/versions/2.0.0-p0/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /usr/local/opt/rbenv/versions/2.0.0-p0/lib/ruby/gems/2.0.0/gems/actionpack-4.0.0.rc1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.3ms)
+  Rendered /usr/local/opt/rbenv/versions/2.0.0-p0/lib/ruby/gems/2.0.0/gems/actionpack-4.0.0.rc1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.8ms)
+  Rendered /usr/local/opt/rbenv/versions/2.0.0-p0/lib/ruby/gems/2.0.0/gems/actionpack-4.0.0.rc1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (19.3ms)
+  Rendered /usr/local/opt/rbenv/versions/2.0.0-p0/lib/ruby/gems/2.0.0/gems/actionpack-4.0.0.rc1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (66.4ms)
+
+
+Started GET "/videos/1" for 127.0.0.1 at 2013-06-05 15:46:49 -0700
+Processing by VideosController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mVideo Load (0.2ms)[0m  [1mSELECT "videos".* FROM "videos" WHERE "videos"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  Rendered videos/show.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 11ms (Views: 8.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-05 15:46:49 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-05 15:46:49 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-05 15:46:49 -0700
+
+
+Started GET "/assets/videos.css?body=1" for 127.0.0.1 at 2013-06-05 15:46:49 -0700
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-06-05 15:46:49 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-06-05 15:46:49 -0700
+
+
+Started GET "/assets/videos.js?body=1" for 127.0.0.1 at 2013-06-05 15:46:49 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-05 15:46:49 -0700
+
+
+Started GET "/videos/1" for 127.0.0.1 at 2013-06-05 15:46:50 -0700
+Processing by VideosController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mVideo Load (0.1ms)[0m  SELECT "videos".* FROM "videos" WHERE "videos"."id" = ? LIMIT 1  [["id", "1"]]
+  Rendered videos/show.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 10ms (Views: 8.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-05 15:46:51 -0700
+
+
+Started GET "/assets/videos.css?body=1" for 127.0.0.1 at 2013-06-05 15:46:51 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-05 15:46:51 -0700
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-06-05 15:46:51 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-06-05 15:46:51 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-05 15:46:51 -0700
+
+
+Started GET "/assets/videos.js?body=1" for 127.0.0.1 at 2013-06-05 15:46:51 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-05 15:46:51 -0700
+
+
+Started GET "/videos/1" for 127.0.0.1 at 2013-06-05 15:52:45 -0700
+Processing by VideosController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mVideo Load (0.3ms)[0m  [1mSELECT "videos".* FROM "videos" WHERE "videos"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  Rendered videos/show.html.erb within layouts/application (5.4ms)
+Completed 200 OK in 212ms (Views: 147.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-05 15:52:45 -0700
+
+
+Started GET "/assets/videos.css?body=1" for 127.0.0.1 at 2013-06-05 15:52:45 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-05 15:52:45 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-05 15:52:45 -0700
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-06-05 15:52:45 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-06-05 15:52:45 -0700
+
+
+Started GET "/assets/videos.js?body=1" for 127.0.0.1 at 2013-06-05 15:52:45 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-05 15:52:45 -0700
+
+
+Started GET "/sidekiq" for 127.0.0.1 at 2013-06-05 15:52:47 -0700
+
+
+Started GET "/sidekiq/stylesheets/bootstrap.css" for 127.0.0.1 at 2013-06-05 15:52:47 -0700
+
+
+Started GET "/sidekiq/javascripts/dashboard.js" for 127.0.0.1 at 2013-06-05 15:52:47 -0700
+
+
+Started GET "/sidekiq/stylesheets/application.css" for 127.0.0.1 at 2013-06-05 15:52:47 -0700
+
+
+Started GET "/sidekiq/javascripts/application.js" for 127.0.0.1 at 2013-06-05 15:52:47 -0700
+
+
+Started GET "/sidekiq/images/status-sd8051fd480.png" for 127.0.0.1 at 2013-06-05 15:52:47 -0700
+
+
+Started GET "/sidekiq/dashboard/stats" for 127.0.0.1 at 2013-06-05 15:52:49 -0700
+
+
+Started GET "/sidekiq" for 127.0.0.1 at 2013-06-05 15:52:50 -0700
+
+
+Started GET "/sidekiq/stylesheets/bootstrap.css" for 127.0.0.1 at 2013-06-05 15:52:50 -0700
+
+
+Started GET "/sidekiq/javascripts/application.js" for 127.0.0.1 at 2013-06-05 15:52:51 -0700
+
+
+Started GET "/sidekiq/javascripts/dashboard.js" for 127.0.0.1 at 2013-06-05 15:52:51 -0700
+
+
+Started GET "/sidekiq/stylesheets/application.css" for 127.0.0.1 at 2013-06-05 15:52:51 -0700
+
+
+Started GET "/sidekiq/images/status-sd8051fd480.png" for 127.0.0.1 at 2013-06-05 15:52:51 -0700
+
+
+Started GET "/sidekiq/dashboard/stats" for 127.0.0.1 at 2013-06-05 15:52:53 -0700
+
+
+Started GET "/sidekiq/retries" for 127.0.0.1 at 2013-06-05 15:52:53 -0700
+
+
+Started GET "/sidekiq/javascripts/application.js" for 127.0.0.1 at 2013-06-05 15:52:53 -0700
+
+
+Started GET "/sidekiq/stylesheets/bootstrap.css" for 127.0.0.1 at 2013-06-05 15:52:53 -0700
+
+
+Started GET "/sidekiq/stylesheets/application.css" for 127.0.0.1 at 2013-06-05 15:52:53 -0700
+
+
+Started GET "/sidekiq/images/status-sd8051fd480.png" for 127.0.0.1 at 2013-06-05 15:52:53 -0700
+
+
+Started GET "/sidekiq/retries/1370472920.453965-50042008e229c9bf1410e1c9" for 127.0.0.1 at 2013-06-05 15:52:56 -0700
+
+
+Started GET "/sidekiq/stylesheets/bootstrap.css" for 127.0.0.1 at 2013-06-05 15:52:57 -0700
+
+
+Started GET "/sidekiq/stylesheets/application.css" for 127.0.0.1 at 2013-06-05 15:52:57 -0700
+
+
+Started GET "/sidekiq/javascripts/application.js" for 127.0.0.1 at 2013-06-05 15:52:57 -0700
+
+
+Started GET "/sidekiq/images/status-sd8051fd480.png" for 127.0.0.1 at 2013-06-05 15:52:57 -0700
+
+
+Started GET "/sidekiq/queues" for 127.0.0.1 at 2013-06-05 15:53:13 -0700
+
+
+Started GET "/sidekiq/stylesheets/bootstrap.css" for 127.0.0.1 at 2013-06-05 15:53:13 -0700
+
+
+Started GET "/sidekiq/stylesheets/application.css" for 127.0.0.1 at 2013-06-05 15:53:13 -0700
+
+
+Started GET "/sidekiq/javascripts/application.js" for 127.0.0.1 at 2013-06-05 15:53:13 -0700
+
+
+Started GET "/sidekiq/images/status-sd8051fd480.png" for 127.0.0.1 at 2013-06-05 15:53:13 -0700
+
+
+Started GET "/sidekiq/retries" for 127.0.0.1 at 2013-06-05 15:53:15 -0700
+
+
+Started GET "/sidekiq/stylesheets/bootstrap.css" for 127.0.0.1 at 2013-06-05 15:53:16 -0700
+
+
+Started GET "/sidekiq/stylesheets/application.css" for 127.0.0.1 at 2013-06-05 15:53:16 -0700
+
+
+Started GET "/sidekiq/javascripts/application.js" for 127.0.0.1 at 2013-06-05 15:53:16 -0700
+
+
+Started GET "/sidekiq/images/status-sd8051fd480.png" for 127.0.0.1 at 2013-06-05 15:53:16 -0700
+
+
+Started GET "/sidekiq/retries" for 127.0.0.1 at 2013-06-05 15:53:20 -0700
+
+
+Started GET "/sidekiq/stylesheets/application.css" for 127.0.0.1 at 2013-06-05 15:53:20 -0700
+
+
+Started GET "/sidekiq/stylesheets/bootstrap.css" for 127.0.0.1 at 2013-06-05 15:53:20 -0700
+
+
+Started GET "/sidekiq/javascripts/application.js" for 127.0.0.1 at 2013-06-05 15:53:20 -0700
+
+
+Started GET "/sidekiq/images/status-sd8051fd480.png" for 127.0.0.1 at 2013-06-05 15:53:20 -0700
+
+
+Started POST "/sidekiq/retries" for 127.0.0.1 at 2013-06-05 15:53:45 -0700
+
+
+Started GET "/sidekiq/retries" for 127.0.0.1 at 2013-06-05 15:53:45 -0700
+
+
+Started GET "/sidekiq/javascripts/application.js" for 127.0.0.1 at 2013-06-05 15:53:46 -0700
+
+
+Started GET "/sidekiq/stylesheets/bootstrap.css" for 127.0.0.1 at 2013-06-05 15:53:46 -0700
+
+
+Started GET "/sidekiq/stylesheets/application.css" for 127.0.0.1 at 2013-06-05 15:53:46 -0700
+
+
+Started GET "/sidekiq/images/status-sd8051fd480.png" for 127.0.0.1 at 2013-06-05 15:53:46 -0700
+  [1m[36m (14.6ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying(255) NOT NULL) [0m
+  [1m[35m (1.7ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateVideos (20130605223904)
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (4.0ms)[0m  [1mCREATE TABLE "videos" ("id" serial primary key, "file_url" character varying(255), "file_url_tmp" character varying(255), "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35mSQL (0.9ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20130605223904"]]
+  [1m[36m (0.8ms)[0m  [1mCOMMIT[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.5ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+
+
+Started GET "/videos/" for 127.0.0.1 at 2013-06-05 15:57:03 -0700
+Processing by VideosController#index as HTML
+  [1m[36mVideo Load (0.4ms)[0m  [1mSELECT "videos".* FROM "videos"[0m
+  Rendered videos/index.html.erb within layouts/application (6.9ms)
+Completed 200 OK in 181ms (Views: 145.6ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-05 15:57:04 -0700
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-06-05 15:57:04 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-05 15:57:04 -0700
+
+
+Started GET "/assets/videos.css?body=1" for 127.0.0.1 at 2013-06-05 15:57:04 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-05 15:57:04 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-06-05 15:57:04 -0700
+
+
+Started GET "/assets/videos.js?body=1" for 127.0.0.1 at 2013-06-05 15:57:04 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-05 15:57:04 -0700
+
+
+Started GET "/videos/new" for 127.0.0.1 at 2013-06-05 15:57:05 -0700
+Processing by VideosController#new as HTML
+  Rendered videos/_form.html.erb (60.6ms)
+  Rendered videos/new.html.erb within layouts/application (67.5ms)
+Completed 200 OK in 77ms (Views: 74.8ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/videos" for 127.0.0.1 at 2013-06-05 15:57:19 -0700
+Processing by VideosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"vXY8Omwf1qY8MJYPeomfeJpIEPr4GNwlMvddPDBqv2Q=", "video"=>{"file_url"=>#<ActionDispatch::Http::UploadedFile:0x007f88803e8bd0 @tempfile=#<Tempfile:/var/folders/dp/dxp19pz54dzf_8f6zmvk7fyh0000gn/T/RackMultipart20130605-76344-gqqsj1>, @original_filename="mini copy 2.mp4", @content_type="video/mp4", @headers="Content-Disposition: form-data; name=\"video[file_url]\"; filename=\"mini copy 2.mp4\"\r\nContent-Type: video/mp4\r\n">, "file_url_tmp"=>""}, "commit"=>"Create Video"}
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (3.4ms)[0m  [1mINSERT INTO "videos" ("created_at", "file_url", "file_url_tmp", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", Wed, 05 Jun 2013 22:57:19 UTC +00:00], ["file_url", nil], ["file_url_tmp", "20130605-1557-76344-6362/mini_copy_2.mp4"], ["updated_at", Wed, 05 Jun 2013 22:57:19 UTC +00:00]]
+  [1m[35m (0.4ms)[0m  COMMIT
+Redirected to http://localhost:3000/videos/1
+Completed 302 Found in 26ms (ActiveRecord: 4.2ms)
+
+
+Started GET "/videos/1" for 127.0.0.1 at 2013-06-05 15:57:19 -0700
+Processing by VideosController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mVideo Load (0.3ms)[0m  [1mSELECT "videos".* FROM "videos" WHERE "videos"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[36mVideo Load (0.8ms)[0m  [1mSELECT "videos".* FROM "videos" WHERE "videos"."id" = $1 LIMIT 1[0m  [["id", "1"]]
+  Rendered videos/show.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 15ms (Views: 10.2ms | ActiveRecord: 0.8ms)
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mVideo Load (0.2ms)[0m  [1mSELECT "videos".* FROM "videos" WHERE "videos"."id" = ? LIMIT 1[0m  [["id", 1]]
+
+
+  [1m[35mSQL (3.8ms)[0m  UPDATE "videos" SET "file_url_tmp" = ?, "file_url" = ?, "updated_at" = ? WHERE "videos"."id" = 1  [["file_url_tmp", nil], ["file_url", "mini_copy_2.mp4"], ["updated_at", Wed, 05 Jun 2013 22:57:19 UTC +00:00]]
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-05 15:57:19 -0700
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-06-05 15:57:19 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-05 15:57:20 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-06-05 15:57:20 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-05 15:57:20 -0700
+
+
+Started GET "/assets/videos.css?body=1" for 127.0.0.1 at 2013-06-05 15:57:20 -0700
+
+
+Started GET "/assets/videos.js?body=1" for 127.0.0.1 at 2013-06-05 15:57:20 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-05 15:57:20 -0700
+
+
+Started GET "/sidekiq/retries" for 127.0.0.1 at 2013-06-05 15:57:23 -0700
+
+
+Started GET "/sidekiq/stylesheets/application.css" for 127.0.0.1 at 2013-06-05 15:57:23 -0700
+
+
+Started GET "/sidekiq/javascripts/application.js" for 127.0.0.1 at 2013-06-05 15:57:23 -0700
+
+
+Started GET "/sidekiq/stylesheets/bootstrap.css" for 127.0.0.1 at 2013-06-05 15:57:23 -0700
+
+
+Started GET "/sidekiq/images/status-sd8051fd480.png" for 127.0.0.1 at 2013-06-05 15:57:24 -0700
+
+
+Started GET "/sidekiq/retries" for 127.0.0.1 at 2013-06-05 15:57:28 -0700
+
+
+Started GET "/sidekiq/stylesheets/bootstrap.css" for 127.0.0.1 at 2013-06-05 15:57:28 -0700
+
+
+Started GET "/sidekiq/stylesheets/application.css" for 127.0.0.1 at 2013-06-05 15:57:28 -0700
+
+
+Started GET "/sidekiq/javascripts/application.js" for 127.0.0.1 at 2013-06-05 15:57:28 -0700
+
+
+Started GET "/sidekiq/images/status-sd8051fd480.png" for 127.0.0.1 at 2013-06-05 15:57:28 -0700
+
+
+Started GET "/sidekiq/retries" for 127.0.0.1 at 2013-06-05 15:57:29 -0700
+
+
+Started GET "/sidekiq/stylesheets/application.css" for 127.0.0.1 at 2013-06-05 15:57:29 -0700
+
+
+Started GET "/sidekiq/stylesheets/bootstrap.css" for 127.0.0.1 at 2013-06-05 15:57:29 -0700
+
+
+Started GET "/sidekiq/javascripts/application.js" for 127.0.0.1 at 2013-06-05 15:57:29 -0700
+
+
+Started GET "/sidekiq/images/status-sd8051fd480.png" for 127.0.0.1 at 2013-06-05 15:57:29 -0700
+
+
+Started GET "/sidekiq/retries" for 127.0.0.1 at 2013-06-05 15:57:30 -0700
+
+
+Started GET "/sidekiq/stylesheets/bootstrap.css" for 127.0.0.1 at 2013-06-05 15:57:30 -0700
+
+
+Started GET "/sidekiq/javascripts/application.js" for 127.0.0.1 at 2013-06-05 15:57:30 -0700
+
+
+Started GET "/sidekiq/stylesheets/application.css" for 127.0.0.1 at 2013-06-05 15:57:30 -0700
+
+
+Started GET "/sidekiq/images/status-sd8051fd480.png" for 127.0.0.1 at 2013-06-05 15:57:30 -0700
+
+
+Started GET "/sidekiq/retries?poll=true" for 127.0.0.1 at 2013-06-05 15:57:31 -0700
+
+
+Started GET "/sidekiq/stylesheets/bootstrap.css" for 127.0.0.1 at 2013-06-05 15:57:31 -0700
+
+
+Started GET "/sidekiq/stylesheets/application.css" for 127.0.0.1 at 2013-06-05 15:57:31 -0700
+
+
+Started GET "/sidekiq/javascripts/application.js" for 127.0.0.1 at 2013-06-05 15:57:31 -0700
+
+
+Started GET "/sidekiq/images/status-sd8051fd480.png" for 127.0.0.1 at 2013-06-05 15:57:31 -0700
+
+
+Started GET "/sidekiq/retries?poll=true" for 127.0.0.1 at 2013-06-05 15:57:33 -0700
+
+
+Started GET "/sidekiq/stylesheets/bootstrap.css" for 127.0.0.1 at 2013-06-05 15:57:33 -0700
+
+
+Started GET "/sidekiq/javascripts/application.js" for 127.0.0.1 at 2013-06-05 15:57:33 -0700
+
+
+Started GET "/sidekiq/stylesheets/application.css" for 127.0.0.1 at 2013-06-05 15:57:33 -0700
+
+
+Started GET "/sidekiq/images/status-sd8051fd480.png" for 127.0.0.1 at 2013-06-05 15:57:33 -0700
+
+
+Started GET "/sidekiq/retries?poll=true" for 127.0.0.1 at 2013-06-05 15:57:35 -0700
+
+
+Started GET "/sidekiq/stylesheets/application.css" for 127.0.0.1 at 2013-06-05 15:57:36 -0700
+
+
+Started GET "/sidekiq/javascripts/application.js" for 127.0.0.1 at 2013-06-05 15:57:36 -0700
+
+
+Started GET "/sidekiq/stylesheets/bootstrap.css" for 127.0.0.1 at 2013-06-05 15:57:36 -0700
+
+
+Started GET "/sidekiq/images/status-sd8051fd480.png" for 127.0.0.1 at 2013-06-05 15:57:36 -0700
+
+
+Started GET "/sidekiq/retries?poll=true" for 127.0.0.1 at 2013-06-05 15:57:38 -0700
+
+
+Started GET "/sidekiq/stylesheets/bootstrap.css" for 127.0.0.1 at 2013-06-05 15:57:38 -0700
+
+
+Started GET "/sidekiq/javascripts/application.js" for 127.0.0.1 at 2013-06-05 15:57:38 -0700
+
+
+Started GET "/sidekiq/stylesheets/application.css" for 127.0.0.1 at 2013-06-05 15:57:38 -0700
+
+
+Started GET "/sidekiq/images/status-sd8051fd480.png" for 127.0.0.1 at 2013-06-05 15:57:38 -0700
+
+
+Started GET "/sidekiq/retries?poll=true" for 127.0.0.1 at 2013-06-05 15:57:40 -0700
+
+
+Started GET "/sidekiq/stylesheets/bootstrap.css" for 127.0.0.1 at 2013-06-05 15:57:40 -0700
+
+
+Started GET "/sidekiq/stylesheets/application.css" for 127.0.0.1 at 2013-06-05 15:57:40 -0700
+
+
+Started GET "/sidekiq/javascripts/application.js" for 127.0.0.1 at 2013-06-05 15:57:40 -0700
+
+
+Started GET "/sidekiq/images/status-sd8051fd480.png" for 127.0.0.1 at 2013-06-05 15:57:40 -0700
+
+
+Started GET "/sidekiq/retries?poll=true" for 127.0.0.1 at 2013-06-05 15:57:42 -0700
+
+
+Started GET "/sidekiq/stylesheets/bootstrap.css" for 127.0.0.1 at 2013-06-05 15:57:43 -0700
+
+
+Started GET "/sidekiq/javascripts/application.js" for 127.0.0.1 at 2013-06-05 15:57:43 -0700
+
+
+Started GET "/sidekiq/stylesheets/application.css" for 127.0.0.1 at 2013-06-05 15:57:43 -0700
+
+
+Started GET "/sidekiq/images/status-sd8051fd480.png" for 127.0.0.1 at 2013-06-05 15:57:43 -0700
+
+
+Started GET "/sidekiq/retries?poll=true" for 127.0.0.1 at 2013-06-05 15:57:45 -0700
+
+
+Started GET "/sidekiq/javascripts/application.js" for 127.0.0.1 at 2013-06-05 15:57:45 -0700
+
+
+Started GET "/sidekiq/stylesheets/bootstrap.css" for 127.0.0.1 at 2013-06-05 15:57:45 -0700
+
+
+Started GET "/sidekiq/stylesheets/application.css" for 127.0.0.1 at 2013-06-05 15:57:45 -0700
+
+
+Started GET "/sidekiq/images/status-sd8051fd480.png" for 127.0.0.1 at 2013-06-05 15:57:45 -0700
+
+
+Started GET "/sidekiq/retries?poll=true" for 127.0.0.1 at 2013-06-05 15:57:47 -0700
+
+
+Started GET "/sidekiq/stylesheets/bootstrap.css" for 127.0.0.1 at 2013-06-05 15:57:47 -0700
+
+
+Started GET "/sidekiq/javascripts/application.js" for 127.0.0.1 at 2013-06-05 15:57:47 -0700
+
+
+Started GET "/sidekiq/stylesheets/application.css" for 127.0.0.1 at 2013-06-05 15:57:47 -0700
+
+
+Started GET "/sidekiq/images/status-sd8051fd480.png" for 127.0.0.1 at 2013-06-05 15:57:48 -0700
+
+
+Started GET "/sidekiq/retries?poll=true" for 127.0.0.1 at 2013-06-05 15:57:50 -0700
+
+
+Started GET "/sidekiq/stylesheets/bootstrap.css" for 127.0.0.1 at 2013-06-05 15:57:50 -0700
+
+
+Started GET "/sidekiq/javascripts/application.js" for 127.0.0.1 at 2013-06-05 15:57:50 -0700
+
+
+Started GET "/sidekiq/stylesheets/application.css" for 127.0.0.1 at 2013-06-05 15:57:50 -0700
+
+
+Started GET "/sidekiq/images/status-sd8051fd480.png" for 127.0.0.1 at 2013-06-05 15:57:50 -0700
+
+
+Started GET "/sidekiq/retries?poll=true" for 127.0.0.1 at 2013-06-05 15:57:52 -0700
+
+
+Started GET "/sidekiq/stylesheets/bootstrap.css" for 127.0.0.1 at 2013-06-05 15:57:52 -0700
+
+
+Started GET "/sidekiq/javascripts/application.js" for 127.0.0.1 at 2013-06-05 15:57:52 -0700
+
+
+Started GET "/sidekiq/stylesheets/application.css" for 127.0.0.1 at 2013-06-05 15:57:52 -0700
+
+
+Started GET "/sidekiq/images/status-sd8051fd480.png" for 127.0.0.1 at 2013-06-05 15:57:52 -0700
+
+
+Started GET "/sidekiq/retries?poll=true" for 127.0.0.1 at 2013-06-05 15:57:54 -0700
+
+
+Started GET "/sidekiq/javascripts/application.js" for 127.0.0.1 at 2013-06-05 15:57:54 -0700
+
+
+Started GET "/sidekiq/stylesheets/application.css" for 127.0.0.1 at 2013-06-05 15:57:54 -0700
+
+
+Started GET "/sidekiq/stylesheets/bootstrap.css" for 127.0.0.1 at 2013-06-05 15:57:54 -0700
+
+
+Started GET "/sidekiq/images/status-sd8051fd480.png" for 127.0.0.1 at 2013-06-05 15:57:55 -0700
+
+
+Started GET "/sidekiq/retries?poll=true" for 127.0.0.1 at 2013-06-05 15:57:57 -0700
+
+
+Started GET "/sidekiq/stylesheets/bootstrap.css" for 127.0.0.1 at 2013-06-05 15:57:57 -0700
+
+
+Started GET "/sidekiq/stylesheets/application.css" for 127.0.0.1 at 2013-06-05 15:57:57 -0700
+
+
+Started GET "/sidekiq/javascripts/application.js" for 127.0.0.1 at 2013-06-05 15:57:57 -0700
+
+
+Started GET "/sidekiq/images/status-sd8051fd480.png" for 127.0.0.1 at 2013-06-05 15:57:57 -0700
+
+
+Started GET "/sidekiq/retries?poll=true" for 127.0.0.1 at 2013-06-05 15:57:59 -0700
+
+
+Started GET "/sidekiq/stylesheets/bootstrap.css" for 127.0.0.1 at 2013-06-05 15:57:59 -0700
+
+
+Started GET "/sidekiq/stylesheets/application.css" for 127.0.0.1 at 2013-06-05 15:57:59 -0700
+
+
+Started GET "/sidekiq/javascripts/application.js" for 127.0.0.1 at 2013-06-05 15:57:59 -0700
+
+
+Started GET "/sidekiq/images/status-sd8051fd480.png" for 127.0.0.1 at 2013-06-05 15:57:59 -0700
+
+
+Started GET "/sidekiq/retries?poll=true" for 127.0.0.1 at 2013-06-05 15:58:01 -0700
+
+
+Started GET "/sidekiq/stylesheets/bootstrap.css" for 127.0.0.1 at 2013-06-05 15:58:02 -0700
+
+
+Started GET "/sidekiq/javascripts/application.js" for 127.0.0.1 at 2013-06-05 15:58:02 -0700
+
+
+Started GET "/sidekiq/stylesheets/application.css" for 127.0.0.1 at 2013-06-05 15:58:02 -0700
+
+
+Started GET "/sidekiq/images/status-sd8051fd480.png" for 127.0.0.1 at 2013-06-05 15:58:02 -0700
+
+
+Started GET "/sidekiq/retries?poll=true" for 127.0.0.1 at 2013-06-05 15:58:04 -0700
+
+
+Started GET "/sidekiq/stylesheets/bootstrap.css" for 127.0.0.1 at 2013-06-05 15:58:04 -0700
+
+
+Started GET "/sidekiq/stylesheets/application.css" for 127.0.0.1 at 2013-06-05 15:58:04 -0700
+
+
+Started GET "/sidekiq/javascripts/application.js" for 127.0.0.1 at 2013-06-05 15:58:04 -0700
+
+
+Started GET "/sidekiq/images/status-sd8051fd480.png" for 127.0.0.1 at 2013-06-05 15:58:04 -0700
+
+
+Started GET "/sidekiq/retries?poll=true" for 127.0.0.1 at 2013-06-05 15:58:06 -0700
+
+
+Started GET "/sidekiq/stylesheets/bootstrap.css" for 127.0.0.1 at 2013-06-05 15:58:06 -0700
+
+
+Started GET "/sidekiq/javascripts/application.js" for 127.0.0.1 at 2013-06-05 15:58:06 -0700
+
+
+Started GET "/sidekiq/stylesheets/application.css" for 127.0.0.1 at 2013-06-05 15:58:06 -0700
+
+
+Started GET "/sidekiq/images/status-sd8051fd480.png" for 127.0.0.1 at 2013-06-05 15:58:06 -0700
+
+
+Started GET "/sidekiq/retries?poll=true" for 127.0.0.1 at 2013-06-05 15:58:08 -0700
+
+
+Started GET "/sidekiq/stylesheets/application.css" for 127.0.0.1 at 2013-06-05 15:58:09 -0700
+
+
+Started GET "/sidekiq/stylesheets/bootstrap.css" for 127.0.0.1 at 2013-06-05 15:58:09 -0700
+
+
+Started GET "/sidekiq/javascripts/application.js" for 127.0.0.1 at 2013-06-05 15:58:09 -0700
+
+
+Started GET "/sidekiq/images/status-sd8051fd480.png" for 127.0.0.1 at 2013-06-05 15:58:09 -0700
+
+
+Started GET "/sidekiq/retries?poll=true" for 127.0.0.1 at 2013-06-05 15:58:11 -0700
+
+
+Started GET "/sidekiq/stylesheets/application.css" for 127.0.0.1 at 2013-06-05 15:58:11 -0700
+
+
+Started GET "/sidekiq/stylesheets/bootstrap.css" for 127.0.0.1 at 2013-06-05 15:58:11 -0700
+
+
+Started GET "/sidekiq/javascripts/application.js" for 127.0.0.1 at 2013-06-05 15:58:11 -0700
+
+
+Started GET "/sidekiq/images/status-sd8051fd480.png" for 127.0.0.1 at 2013-06-05 15:58:11 -0700
+
+
+Started GET "/sidekiq/retries?poll=true" for 127.0.0.1 at 2013-06-05 15:58:13 -0700
+
+
+Started GET "/sidekiq/stylesheets/bootstrap.css" for 127.0.0.1 at 2013-06-05 15:58:13 -0700
+
+
+Started GET "/sidekiq/stylesheets/application.css" for 127.0.0.1 at 2013-06-05 15:58:13 -0700
+
+
+Started GET "/sidekiq/javascripts/application.js" for 127.0.0.1 at 2013-06-05 15:58:13 -0700
+
+
+Started GET "/sidekiq/images/status-sd8051fd480.png" for 127.0.0.1 at 2013-06-05 15:58:13 -0700
+
+
+Started GET "/sidekiq/retries?poll=true" for 127.0.0.1 at 2013-06-05 15:58:15 -0700
+
+
+Started GET "/sidekiq/stylesheets/bootstrap.css" for 127.0.0.1 at 2013-06-05 15:58:16 -0700
+
+
+Started GET "/sidekiq/stylesheets/application.css" for 127.0.0.1 at 2013-06-05 15:58:16 -0700
+
+
+Started GET "/sidekiq/javascripts/application.js" for 127.0.0.1 at 2013-06-05 15:58:16 -0700
+
+
+Started GET "/sidekiq/images/status-sd8051fd480.png" for 127.0.0.1 at 2013-06-05 15:58:16 -0700
+
+
+Started GET "/sidekiq/retries?poll=true" for 127.0.0.1 at 2013-06-05 15:58:18 -0700
+
+
+Started GET "/sidekiq/stylesheets/bootstrap.css" for 127.0.0.1 at 2013-06-05 15:58:18 -0700
+
+
+Started GET "/sidekiq/javascripts/application.js" for 127.0.0.1 at 2013-06-05 15:58:18 -0700
+
+
+Started GET "/sidekiq/stylesheets/application.css" for 127.0.0.1 at 2013-06-05 15:58:18 -0700
+
+
+Started GET "/sidekiq/images/status-sd8051fd480.png" for 127.0.0.1 at 2013-06-05 15:58:18 -0700
+
+
+Started GET "/sidekiq/retries?poll=true" for 127.0.0.1 at 2013-06-05 15:58:20 -0700
+
+
+Started GET "/sidekiq/stylesheets/bootstrap.css" for 127.0.0.1 at 2013-06-05 15:58:20 -0700
+
+
+Started GET "/sidekiq/stylesheets/application.css" for 127.0.0.1 at 2013-06-05 15:58:20 -0700
+
+
+Started GET "/sidekiq/javascripts/application.js" for 127.0.0.1 at 2013-06-05 15:58:20 -0700
+
+
+Started GET "/sidekiq/images/status-sd8051fd480.png" for 127.0.0.1 at 2013-06-05 15:58:20 -0700
+
+
+Started GET "/sidekiq/retries?poll=true" for 127.0.0.1 at 2013-06-05 15:58:22 -0700
+
+
+Started GET "/sidekiq/stylesheets/bootstrap.css" for 127.0.0.1 at 2013-06-05 15:58:23 -0700
+
+
+Started GET "/sidekiq/javascripts/application.js" for 127.0.0.1 at 2013-06-05 15:58:23 -0700
+
+
+Started GET "/sidekiq/stylesheets/application.css" for 127.0.0.1 at 2013-06-05 15:58:23 -0700
+
+
+Started GET "/sidekiq/images/status-sd8051fd480.png" for 127.0.0.1 at 2013-06-05 15:58:23 -0700
+
+
+Started GET "/sidekiq/retries?poll=true" for 127.0.0.1 at 2013-06-05 15:58:25 -0700
+
+
+Started GET "/sidekiq/stylesheets/bootstrap.css" for 127.0.0.1 at 2013-06-05 15:58:25 -0700
+
+
+Started GET "/sidekiq/javascripts/application.js" for 127.0.0.1 at 2013-06-05 15:58:25 -0700
+
+
+Started GET "/sidekiq/stylesheets/application.css" for 127.0.0.1 at 2013-06-05 15:58:25 -0700
+
+
+Started GET "/sidekiq/images/status-sd8051fd480.png" for 127.0.0.1 at 2013-06-05 15:58:25 -0700
+
+
+Started GET "/sidekiq/retries?poll=true" for 127.0.0.1 at 2013-06-05 15:58:27 -0700
+
+
+Started GET "/sidekiq/stylesheets/bootstrap.css" for 127.0.0.1 at 2013-06-05 15:58:27 -0700
+
+
+Started GET "/sidekiq/stylesheets/application.css" for 127.0.0.1 at 2013-06-05 15:58:27 -0700
+
+
+Started GET "/sidekiq/javascripts/application.js" for 127.0.0.1 at 2013-06-05 15:58:27 -0700
+
+
+Started GET "/sidekiq/images/status-sd8051fd480.png" for 127.0.0.1 at 2013-06-05 15:58:28 -0700
+
+
+Started GET "/sidekiq/retries?poll=true" for 127.0.0.1 at 2013-06-05 15:58:30 -0700
+
+
+Started GET "/sidekiq/stylesheets/bootstrap.css" for 127.0.0.1 at 2013-06-05 15:58:30 -0700
+
+
+Started GET "/sidekiq/javascripts/application.js" for 127.0.0.1 at 2013-06-05 15:58:30 -0700
+
+
+Started GET "/sidekiq/stylesheets/application.css" for 127.0.0.1 at 2013-06-05 15:58:30 -0700
+
+
+Started GET "/sidekiq/images/status-sd8051fd480.png" for 127.0.0.1 at 2013-06-05 15:58:30 -0700
+
+
+Started GET "/sidekiq/retries?poll=true" for 127.0.0.1 at 2013-06-05 15:58:32 -0700
+
+
+Started GET "/sidekiq/stylesheets/application.css" for 127.0.0.1 at 2013-06-05 15:58:32 -0700
+
+
+Started GET "/sidekiq/stylesheets/bootstrap.css" for 127.0.0.1 at 2013-06-05 15:58:32 -0700
+
+
+Started GET "/sidekiq/javascripts/application.js" for 127.0.0.1 at 2013-06-05 15:58:32 -0700
+
+
+Started GET "/sidekiq/images/status-sd8051fd480.png" for 127.0.0.1 at 2013-06-05 15:58:32 -0700
+
+
+Started GET "/sidekiq/retries?poll=true" for 127.0.0.1 at 2013-06-05 15:58:34 -0700
+
+
+Started GET "/sidekiq/stylesheets/bootstrap.css" for 127.0.0.1 at 2013-06-05 15:58:34 -0700
+
+
+Started GET "/sidekiq/javascripts/application.js" for 127.0.0.1 at 2013-06-05 15:58:34 -0700
+
+
+Started GET "/sidekiq/stylesheets/application.css" for 127.0.0.1 at 2013-06-05 15:58:34 -0700
+
+
+Started GET "/sidekiq/images/status-sd8051fd480.png" for 127.0.0.1 at 2013-06-05 15:58:35 -0700
+
+
+Started GET "/sidekiq/retries?poll=true" for 127.0.0.1 at 2013-06-05 15:58:37 -0700
+
+
+Started GET "/sidekiq/stylesheets/bootstrap.css" for 127.0.0.1 at 2013-06-05 15:58:37 -0700
+
+
+Started GET "/sidekiq/stylesheets/application.css" for 127.0.0.1 at 2013-06-05 15:58:37 -0700
+
+
+Started GET "/sidekiq/javascripts/application.js" for 127.0.0.1 at 2013-06-05 15:58:37 -0700
+
+
+Started GET "/sidekiq/images/status-sd8051fd480.png" for 127.0.0.1 at 2013-06-05 15:58:37 -0700
+
+
+Started GET "/sidekiq/retries?poll=true" for 127.0.0.1 at 2013-06-05 15:58:39 -0700
+
+
+Started GET "/sidekiq/stylesheets/bootstrap.css" for 127.0.0.1 at 2013-06-05 15:58:39 -0700
+
+
+Started GET "/sidekiq/javascripts/application.js" for 127.0.0.1 at 2013-06-05 15:58:39 -0700
+
+
+Started GET "/sidekiq/stylesheets/application.css" for 127.0.0.1 at 2013-06-05 15:58:39 -0700
+
+
+Started GET "/sidekiq/images/status-sd8051fd480.png" for 127.0.0.1 at 2013-06-05 15:58:39 -0700
+
+
+Started GET "/sidekiq/retries?poll=true" for 127.0.0.1 at 2013-06-05 15:58:41 -0700
+
+
+Started GET "/sidekiq/stylesheets/bootstrap.css" for 127.0.0.1 at 2013-06-05 15:58:41 -0700
+
+
+Started GET "/sidekiq/javascripts/application.js" for 127.0.0.1 at 2013-06-05 15:58:41 -0700
+
+
+Started GET "/sidekiq/stylesheets/application.css" for 127.0.0.1 at 2013-06-05 15:58:41 -0700
+
+
+Started GET "/sidekiq/images/status-sd8051fd480.png" for 127.0.0.1 at 2013-06-05 15:58:42 -0700
+
+
+Started GET "/sidekiq/retries?poll=true" for 127.0.0.1 at 2013-06-05 15:58:44 -0700
+
+
+Started GET "/sidekiq/stylesheets/bootstrap.css" for 127.0.0.1 at 2013-06-05 15:58:44 -0700
+
+
+Started GET "/sidekiq/stylesheets/application.css" for 127.0.0.1 at 2013-06-05 15:58:44 -0700
+
+
+Started GET "/sidekiq/javascripts/application.js" for 127.0.0.1 at 2013-06-05 15:58:44 -0700
+
+
+Started GET "/sidekiq/images/status-sd8051fd480.png" for 127.0.0.1 at 2013-06-05 15:58:44 -0700
+
+
+Started GET "/sidekiq/retries?poll=true" for 127.0.0.1 at 2013-06-05 15:58:46 -0700
+
+
+Started GET "/sidekiq/stylesheets/bootstrap.css" for 127.0.0.1 at 2013-06-05 15:58:46 -0700
+
+
+Started GET "/sidekiq/stylesheets/application.css" for 127.0.0.1 at 2013-06-05 15:58:46 -0700
+
+
+Started GET "/sidekiq/javascripts/application.js" for 127.0.0.1 at 2013-06-05 15:58:46 -0700
+
+
+Started GET "/sidekiq/images/status-sd8051fd480.png" for 127.0.0.1 at 2013-06-05 15:58:46 -0700
+
+
+Started GET "/sidekiq/retries?poll=true" for 127.0.0.1 at 2013-06-05 15:58:48 -0700
+
+
+Started GET "/sidekiq/retries" for 127.0.0.1 at 2013-06-05 15:58:48 -0700
+
+
+Started GET "/sidekiq/stylesheets/bootstrap.css" for 127.0.0.1 at 2013-06-05 15:58:49 -0700
+
+
+Started GET "/sidekiq/stylesheets/application.css" for 127.0.0.1 at 2013-06-05 15:58:49 -0700
+
+
+Started GET "/sidekiq/javascripts/application.js" for 127.0.0.1 at 2013-06-05 15:58:49 -0700
+
+
+Started GET "/sidekiq/images/status-sd8051fd480.png" for 127.0.0.1 at 2013-06-05 15:58:49 -0700
+  [1m[36mVideo Load (0.2ms)[0m  [1mSELECT "videos".* FROM "videos" WHERE "videos"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mVideo Load (0.2ms)[0m  [1mSELECT "videos".* FROM "videos" WHERE "videos"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mSQL (0.5ms)[0m  UPDATE "videos" SET "file_url_tmp" = ?, "file_url" = ?, "updated_at" = ? WHERE "videos"."id" = 1  [["file_url_tmp", nil], ["file_url", "mini_copy_2.mp4"], ["updated_at", Wed, 05 Jun 2013 22:58:49 UTC +00:00]]
+SQLite3::BusyException: database is locked: UPDATE "videos" SET "file_url_tmp" = ?, "file_url" = ?, "updated_at" = ? WHERE "videos"."id" = 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+
+
+Started GET "/sidekiq/retries/1370473126.898533-50042008e229c9bf1410e1c9" for 127.0.0.1 at 2013-06-05 15:58:50 -0700
+
+
+Started GET "/sidekiq/retries" for 127.0.0.1 at 2013-06-05 15:58:50 -0700
+
+
+Started GET "/sidekiq/stylesheets/bootstrap.css" for 127.0.0.1 at 2013-06-05 15:58:51 -0700
+
+
+Started GET "/sidekiq/javascripts/application.js" for 127.0.0.1 at 2013-06-05 15:58:51 -0700
+
+
+Started GET "/sidekiq/stylesheets/application.css" for 127.0.0.1 at 2013-06-05 15:58:51 -0700
+
+
+Started GET "/sidekiq/images/status-sd8051fd480.png" for 127.0.0.1 at 2013-06-05 15:58:51 -0700
+
+
+Started GET "/sidekiq/retries/1370473889.544543-50042008e229c9bf1410e1c9" for 127.0.0.1 at 2013-06-05 15:58:52 -0700
+
+
+Started GET "/sidekiq/javascripts/application.js" for 127.0.0.1 at 2013-06-05 15:58:53 -0700
+
+
+Started GET "/sidekiq/stylesheets/bootstrap.css" for 127.0.0.1 at 2013-06-05 15:58:53 -0700
+
+
+Started GET "/sidekiq/stylesheets/application.css" for 127.0.0.1 at 2013-06-05 15:58:53 -0700
+
+
+Started GET "/sidekiq/images/status-sd8051fd480.png" for 127.0.0.1 at 2013-06-05 15:58:53 -0700
+
+
+Started POST "/sidekiq/retries/1370473889.544543-50042008e229c9bf1410e1c9" for 127.0.0.1 at 2013-06-05 15:58:56 -0700
+
+
+Started GET "/sidekiq/retries" for 127.0.0.1 at 2013-06-05 15:58:56 -0700
+
+
+Started GET "/sidekiq/stylesheets/bootstrap.css" for 127.0.0.1 at 2013-06-05 15:58:56 -0700
+
+
+Started GET "/sidekiq/javascripts/application.js" for 127.0.0.1 at 2013-06-05 15:58:57 -0700
+
+
+Started GET "/sidekiq/stylesheets/application.css" for 127.0.0.1 at 2013-06-05 15:58:57 -0700
+
+
+Started GET "/sidekiq/images/status-sd8051fd480.png" for 127.0.0.1 at 2013-06-05 15:58:57 -0700
+
+
+Started GET "/sidekiq/retries" for 127.0.0.1 at 2013-06-05 15:58:59 -0700
+
+
+Started GET "/sidekiq/stylesheets/application.css" for 127.0.0.1 at 2013-06-05 15:58:59 -0700
+
+
+Started GET "/sidekiq/javascripts/application.js" for 127.0.0.1 at 2013-06-05 15:58:59 -0700
+
+
+Started GET "/sidekiq/stylesheets/bootstrap.css" for 127.0.0.1 at 2013-06-05 15:58:59 -0700
+
+
+Started GET "/sidekiq/images/status-sd8051fd480.png" for 127.0.0.1 at 2013-06-05 15:58:59 -0700
+
+
+Started GET "/sidekiq/retries" for 127.0.0.1 at 2013-06-05 15:59:01 -0700
+
+
+Started GET "/sidekiq/stylesheets/bootstrap.css" for 127.0.0.1 at 2013-06-05 15:59:01 -0700
+
+
+Started GET "/sidekiq/stylesheets/application.css" for 127.0.0.1 at 2013-06-05 15:59:01 -0700
+
+
+Started GET "/sidekiq/javascripts/application.js" for 127.0.0.1 at 2013-06-05 15:59:01 -0700
+
+
+Started GET "/sidekiq/images/status-sd8051fd480.png" for 127.0.0.1 at 2013-06-05 15:59:01 -0700
+
+
+Started GET "/sidekiq/retries?poll=true" for 127.0.0.1 at 2013-06-05 15:59:04 -0700
+
+
+Started GET "/sidekiq/stylesheets/bootstrap.css" for 127.0.0.1 at 2013-06-05 15:59:04 -0700
+
+
+Started GET "/sidekiq/javascripts/application.js" for 127.0.0.1 at 2013-06-05 15:59:04 -0700
+
+
+Started GET "/sidekiq/stylesheets/application.css" for 127.0.0.1 at 2013-06-05 15:59:04 -0700
+
+
+Started GET "/sidekiq/images/status-sd8051fd480.png" for 127.0.0.1 at 2013-06-05 15:59:04 -0700
+
+
+Started GET "/sidekiq/retries?poll=true" for 127.0.0.1 at 2013-06-05 15:59:06 -0700
+
+
+Started GET "/sidekiq/stylesheets/bootstrap.css" for 127.0.0.1 at 2013-06-05 15:59:06 -0700
+
+
+Started GET "/sidekiq/stylesheets/application.css" for 127.0.0.1 at 2013-06-05 15:59:06 -0700
+
+
+Started GET "/sidekiq/javascripts/application.js" for 127.0.0.1 at 2013-06-05 15:59:06 -0700
+
+
+Started GET "/sidekiq/images/status-sd8051fd480.png" for 127.0.0.1 at 2013-06-05 15:59:06 -0700
+
+
+Started GET "/sidekiq/retries?poll=true" for 127.0.0.1 at 2013-06-05 15:59:08 -0700
+
+
+Started GET "/sidekiq/stylesheets/bootstrap.css" for 127.0.0.1 at 2013-06-05 15:59:08 -0700
+
+
+Started GET "/sidekiq/javascripts/application.js" for 127.0.0.1 at 2013-06-05 15:59:08 -0700
+
+
+Started GET "/sidekiq/stylesheets/application.css" for 127.0.0.1 at 2013-06-05 15:59:08 -0700
+
+
+Started GET "/sidekiq/images/status-sd8051fd480.png" for 127.0.0.1 at 2013-06-05 15:59:08 -0700
+
+
+Started GET "/sidekiq/retries?poll=true" for 127.0.0.1 at 2013-06-05 15:59:10 -0700
+
+
+Started GET "/sidekiq/stylesheets/bootstrap.css" for 127.0.0.1 at 2013-06-05 15:59:11 -0700
+
+
+Started GET "/sidekiq/javascripts/application.js" for 127.0.0.1 at 2013-06-05 15:59:11 -0700
+
+
+Started GET "/sidekiq/stylesheets/application.css" for 127.0.0.1 at 2013-06-05 15:59:11 -0700
+
+
+Started GET "/sidekiq/images/status-sd8051fd480.png" for 127.0.0.1 at 2013-06-05 15:59:11 -0700
+
+
+Started GET "/sidekiq/retries?poll=true" for 127.0.0.1 at 2013-06-05 15:59:13 -0700
+
+
+Started GET "/sidekiq/stylesheets/bootstrap.css" for 127.0.0.1 at 2013-06-05 15:59:13 -0700
+
+
+Started GET "/sidekiq/stylesheets/application.css" for 127.0.0.1 at 2013-06-05 15:59:13 -0700
+
+
+Started GET "/sidekiq/javascripts/application.js" for 127.0.0.1 at 2013-06-05 15:59:13 -0700
+
+
+Started GET "/sidekiq/images/status-sd8051fd480.png" for 127.0.0.1 at 2013-06-05 15:59:13 -0700
+
+
+Started GET "/sidekiq/retries?poll=true" for 127.0.0.1 at 2013-06-05 15:59:15 -0700
+
+
+Started GET "/sidekiq/stylesheets/bootstrap.css" for 127.0.0.1 at 2013-06-05 15:59:16 -0700
+
+
+Started GET "/sidekiq/stylesheets/application.css" for 127.0.0.1 at 2013-06-05 15:59:16 -0700
+
+
+Started GET "/sidekiq/javascripts/application.js" for 127.0.0.1 at 2013-06-05 15:59:16 -0700
+
+
+Started GET "/sidekiq/images/status-sd8051fd480.png" for 127.0.0.1 at 2013-06-05 15:59:16 -0700
+
+
+Started GET "/sidekiq/retries?poll=true" for 127.0.0.1 at 2013-06-05 15:59:18 -0700
+
+
+Started GET "/sidekiq/javascripts/application.js" for 127.0.0.1 at 2013-06-05 15:59:18 -0700
+
+
+Started GET "/sidekiq/stylesheets/bootstrap.css" for 127.0.0.1 at 2013-06-05 15:59:18 -0700
+
+
+Started GET "/sidekiq/stylesheets/application.css" for 127.0.0.1 at 2013-06-05 15:59:18 -0700
+
+
+Started GET "/sidekiq/images/status-sd8051fd480.png" for 127.0.0.1 at 2013-06-05 15:59:18 -0700
+
+
+Started GET "/sidekiq/retries?poll=true" for 127.0.0.1 at 2013-06-05 15:59:20 -0700
+
+
+Started GET "/sidekiq/stylesheets/application.css" for 127.0.0.1 at 2013-06-05 15:59:20 -0700
+
+
+Started GET "/sidekiq/stylesheets/bootstrap.css" for 127.0.0.1 at 2013-06-05 15:59:20 -0700
+
+
+Started GET "/sidekiq/javascripts/application.js" for 127.0.0.1 at 2013-06-05 15:59:20 -0700
+
+
+Started GET "/sidekiq/images/status-sd8051fd480.png" for 127.0.0.1 at 2013-06-05 15:59:20 -0700
+
+
+Started GET "/sidekiq/retries?poll=true" for 127.0.0.1 at 2013-06-05 15:59:22 -0700
+
+
+Started GET "/sidekiq/stylesheets/bootstrap.css" for 127.0.0.1 at 2013-06-05 15:59:23 -0700
+
+
+Started GET "/sidekiq/stylesheets/application.css" for 127.0.0.1 at 2013-06-05 15:59:23 -0700
+
+
+Started GET "/sidekiq/javascripts/application.js" for 127.0.0.1 at 2013-06-05 15:59:23 -0700
+
+
+Started GET "/sidekiq/images/status-sd8051fd480.png" for 127.0.0.1 at 2013-06-05 15:59:23 -0700
+
+
+Started GET "/sidekiq/retries?poll=true" for 127.0.0.1 at 2013-06-05 15:59:25 -0700
+
+
+Started GET "/sidekiq/stylesheets/bootstrap.css" for 127.0.0.1 at 2013-06-05 15:59:25 -0700
+
+
+Started GET "/sidekiq/stylesheets/application.css" for 127.0.0.1 at 2013-06-05 15:59:25 -0700
+
+
+Started GET "/sidekiq/javascripts/application.js" for 127.0.0.1 at 2013-06-05 15:59:25 -0700
+
+
+Started GET "/sidekiq/images/status-sd8051fd480.png" for 127.0.0.1 at 2013-06-05 15:59:25 -0700
+
+
+Started GET "/sidekiq/retries?poll=true" for 127.0.0.1 at 2013-06-05 15:59:27 -0700
+
+
+Started GET "/sidekiq/stylesheets/bootstrap.css" for 127.0.0.1 at 2013-06-05 15:59:27 -0700
+
+
+Started GET "/sidekiq/stylesheets/application.css" for 127.0.0.1 at 2013-06-05 15:59:27 -0700
+
+
+Started GET "/sidekiq/javascripts/application.js" for 127.0.0.1 at 2013-06-05 15:59:27 -0700
+
+
+Started GET "/sidekiq/images/status-sd8051fd480.png" for 127.0.0.1 at 2013-06-05 15:59:28 -0700
+
+
+Started GET "/sidekiq/retries?poll=true" for 127.0.0.1 at 2013-06-05 15:59:30 -0700
+
+
+Started GET "/sidekiq/stylesheets/bootstrap.css" for 127.0.0.1 at 2013-06-05 15:59:30 -0700
+
+
+Started GET "/sidekiq/javascripts/application.js" for 127.0.0.1 at 2013-06-05 15:59:30 -0700
+
+
+Started GET "/sidekiq/stylesheets/application.css" for 127.0.0.1 at 2013-06-05 15:59:30 -0700
+
+
+Started GET "/sidekiq/images/status-sd8051fd480.png" for 127.0.0.1 at 2013-06-05 15:59:30 -0700
+
+
+Started GET "/sidekiq/retries?poll=true" for 127.0.0.1 at 2013-06-05 15:59:32 -0700
+
+
+Started GET "/sidekiq/stylesheets/bootstrap.css" for 127.0.0.1 at 2013-06-05 15:59:32 -0700
+
+
+Started GET "/sidekiq/stylesheets/application.css" for 127.0.0.1 at 2013-06-05 15:59:32 -0700
+
+
+Started GET "/sidekiq/javascripts/application.js" for 127.0.0.1 at 2013-06-05 15:59:32 -0700
+
+
+Started GET "/sidekiq/images/status-sd8051fd480.png" for 127.0.0.1 at 2013-06-05 15:59:32 -0700
+
+
+Started GET "/sidekiq/retries?poll=true" for 127.0.0.1 at 2013-06-05 15:59:34 -0700
+
+
+Started GET "/sidekiq/javascripts/application.js" for 127.0.0.1 at 2013-06-05 15:59:35 -0700
+
+
+Started GET "/sidekiq/stylesheets/bootstrap.css" for 127.0.0.1 at 2013-06-05 15:59:35 -0700
+
+
+Started GET "/sidekiq/stylesheets/application.css" for 127.0.0.1 at 2013-06-05 15:59:35 -0700
+
+
+Started GET "/sidekiq/images/status-sd8051fd480.png" for 127.0.0.1 at 2013-06-05 15:59:35 -0700
+
+
+Started GET "/sidekiq/retries?poll=true" for 127.0.0.1 at 2013-06-05 15:59:37 -0700
+
+
+Started GET "/sidekiq/stylesheets/bootstrap.css" for 127.0.0.1 at 2013-06-05 15:59:37 -0700
+
+
+Started GET "/sidekiq/stylesheets/application.css" for 127.0.0.1 at 2013-06-05 15:59:37 -0700
+
+
+Started GET "/sidekiq/javascripts/application.js" for 127.0.0.1 at 2013-06-05 15:59:37 -0700
+
+
+Started GET "/sidekiq/images/status-sd8051fd480.png" for 127.0.0.1 at 2013-06-05 15:59:37 -0700
+
+
+Started GET "/sidekiq/retries?poll=true" for 127.0.0.1 at 2013-06-05 15:59:39 -0700
+
+
+Started GET "/sidekiq/stylesheets/bootstrap.css" for 127.0.0.1 at 2013-06-05 15:59:39 -0700
+
+
+Started GET "/sidekiq/stylesheets/application.css" for 127.0.0.1 at 2013-06-05 15:59:39 -0700
+
+
+Started GET "/sidekiq/javascripts/application.js" for 127.0.0.1 at 2013-06-05 15:59:39 -0700
+
+
+Started GET "/sidekiq/images/status-sd8051fd480.png" for 127.0.0.1 at 2013-06-05 15:59:39 -0700
+
+
+Started GET "/sidekiq/retries?poll=true" for 127.0.0.1 at 2013-06-05 15:59:41 -0700
+
+
+Started GET "/sidekiq/stylesheets/bootstrap.css" for 127.0.0.1 at 2013-06-05 15:59:42 -0700
+
+
+Started GET "/sidekiq/stylesheets/application.css" for 127.0.0.1 at 2013-06-05 15:59:42 -0700
+
+
+Started GET "/sidekiq/javascripts/application.js" for 127.0.0.1 at 2013-06-05 15:59:42 -0700
+
+
+Started GET "/sidekiq/images/status-sd8051fd480.png" for 127.0.0.1 at 2013-06-05 15:59:42 -0700
+
+
+Started GET "/sidekiq/retries?poll=true" for 127.0.0.1 at 2013-06-05 15:59:44 -0700
+
+
+Started GET "/sidekiq/stylesheets/bootstrap.css" for 127.0.0.1 at 2013-06-05 15:59:44 -0700
+
+
+Started GET "/sidekiq/javascripts/application.js" for 127.0.0.1 at 2013-06-05 15:59:44 -0700
+
+
+Started GET "/sidekiq/stylesheets/application.css" for 127.0.0.1 at 2013-06-05 15:59:44 -0700
+
+
+Started GET "/sidekiq/images/status-sd8051fd480.png" for 127.0.0.1 at 2013-06-05 15:59:44 -0700
+
+
+Started GET "/sidekiq/retries?poll=true" for 127.0.0.1 at 2013-06-05 15:59:46 -0700
+
+
+Started GET "/sidekiq/stylesheets/bootstrap.css" for 127.0.0.1 at 2013-06-05 15:59:46 -0700
+
+
+Started GET "/sidekiq/javascripts/application.js" for 127.0.0.1 at 2013-06-05 15:59:46 -0700
+
+
+Started GET "/sidekiq/stylesheets/application.css" for 127.0.0.1 at 2013-06-05 15:59:46 -0700
+
+
+Started GET "/sidekiq/images/status-sd8051fd480.png" for 127.0.0.1 at 2013-06-05 15:59:47 -0700
+
+
+Started GET "/sidekiq/retries?poll=true" for 127.0.0.1 at 2013-06-05 15:59:49 -0700
+
+
+Started GET "/sidekiq/stylesheets/application.css" for 127.0.0.1 at 2013-06-05 15:59:49 -0700
+
+
+Started GET "/sidekiq/javascripts/application.js" for 127.0.0.1 at 2013-06-05 15:59:49 -0700
+
+
+Started GET "/sidekiq/stylesheets/bootstrap.css" for 127.0.0.1 at 2013-06-05 15:59:49 -0700
+
+
+Started GET "/sidekiq/images/status-sd8051fd480.png" for 127.0.0.1 at 2013-06-05 15:59:49 -0700
+
+
+Started GET "/sidekiq/retries?poll=true" for 127.0.0.1 at 2013-06-05 15:59:51 -0700
+
+
+Started GET "/sidekiq/stylesheets/bootstrap.css" for 127.0.0.1 at 2013-06-05 15:59:51 -0700
+
+
+Started GET "/sidekiq/javascripts/application.js" for 127.0.0.1 at 2013-06-05 15:59:51 -0700
+
+
+Started GET "/sidekiq/stylesheets/application.css" for 127.0.0.1 at 2013-06-05 15:59:51 -0700
+
+
+Started GET "/sidekiq/images/status-sd8051fd480.png" for 127.0.0.1 at 2013-06-05 15:59:51 -0700
+
+
+Started GET "/sidekiq/retries?poll=true" for 127.0.0.1 at 2013-06-05 15:59:53 -0700
+
+
+Started GET "/sidekiq/stylesheets/application.css" for 127.0.0.1 at 2013-06-05 15:59:53 -0700
+
+
+Started GET "/sidekiq/javascripts/application.js" for 127.0.0.1 at 2013-06-05 15:59:53 -0700
+
+
+Started GET "/sidekiq/stylesheets/bootstrap.css" for 127.0.0.1 at 2013-06-05 15:59:53 -0700
+
+
+Started GET "/sidekiq/images/status-sd8051fd480.png" for 127.0.0.1 at 2013-06-05 15:59:54 -0700
+
+
+Started GET "/sidekiq/retries?poll=true" for 127.0.0.1 at 2013-06-05 15:59:56 -0700
+
+
+Started GET "/sidekiq/stylesheets/bootstrap.css" for 127.0.0.1 at 2013-06-05 15:59:56 -0700
+
+
+Started GET "/sidekiq/stylesheets/application.css" for 127.0.0.1 at 2013-06-05 15:59:56 -0700
+
+
+Started GET "/sidekiq/javascripts/application.js" for 127.0.0.1 at 2013-06-05 15:59:56 -0700
+
+
+Started GET "/sidekiq/images/status-sd8051fd480.png" for 127.0.0.1 at 2013-06-05 15:59:56 -0700
+
+
+Started GET "/sidekiq/retries?poll=true" for 127.0.0.1 at 2013-06-05 15:59:58 -0700
+
+
+Started GET "/sidekiq/stylesheets/bootstrap.css" for 127.0.0.1 at 2013-06-05 15:59:58 -0700
+
+
+Started GET "/sidekiq/javascripts/application.js" for 127.0.0.1 at 2013-06-05 15:59:58 -0700
+
+
+Started GET "/sidekiq/stylesheets/application.css" for 127.0.0.1 at 2013-06-05 15:59:58 -0700
+
+
+Started GET "/sidekiq/images/status-sd8051fd480.png" for 127.0.0.1 at 2013-06-05 15:59:58 -0700
+
+
+Started GET "/sidekiq/retries?poll=true" for 127.0.0.1 at 2013-06-05 16:00:00 -0700
+
+
+Started GET "/sidekiq/stylesheets/bootstrap.css" for 127.0.0.1 at 2013-06-05 16:00:00 -0700
+
+
+Started GET "/sidekiq/stylesheets/application.css" for 127.0.0.1 at 2013-06-05 16:00:00 -0700
+
+
+Started GET "/sidekiq/javascripts/application.js" for 127.0.0.1 at 2013-06-05 16:00:00 -0700
+
+
+Started GET "/sidekiq/images/status-sd8051fd480.png" for 127.0.0.1 at 2013-06-05 16:00:00 -0700
+
+
+Started GET "/sidekiq/retries?poll=true" for 127.0.0.1 at 2013-06-05 16:00:02 -0700
+
+
+Started GET "/sidekiq/stylesheets/bootstrap.css" for 127.0.0.1 at 2013-06-05 16:00:03 -0700
+
+
+Started GET "/sidekiq/javascripts/application.js" for 127.0.0.1 at 2013-06-05 16:00:03 -0700
+
+
+Started GET "/sidekiq/stylesheets/application.css" for 127.0.0.1 at 2013-06-05 16:00:03 -0700
+
+
+Started GET "/sidekiq/images/status-sd8051fd480.png" for 127.0.0.1 at 2013-06-05 16:00:03 -0700
+
+
+Started GET "/sidekiq/retries?poll=true" for 127.0.0.1 at 2013-06-05 16:00:05 -0700
+
+
+Started GET "/sidekiq/stylesheets/bootstrap.css" for 127.0.0.1 at 2013-06-05 16:00:05 -0700
+
+
+Started GET "/sidekiq/stylesheets/application.css" for 127.0.0.1 at 2013-06-05 16:00:05 -0700
+
+
+Started GET "/sidekiq/javascripts/application.js" for 127.0.0.1 at 2013-06-05 16:00:05 -0700
+
+
+Started GET "/sidekiq/images/status-sd8051fd480.png" for 127.0.0.1 at 2013-06-05 16:00:05 -0700
+
+
+Started GET "/sidekiq/retries?poll=true" for 127.0.0.1 at 2013-06-05 16:00:07 -0700
+
+
+Started GET "/sidekiq/stylesheets/bootstrap.css" for 127.0.0.1 at 2013-06-05 16:00:07 -0700
+
+
+Started GET "/sidekiq/stylesheets/application.css" for 127.0.0.1 at 2013-06-05 16:00:07 -0700
+
+
+Started GET "/sidekiq/javascripts/application.js" for 127.0.0.1 at 2013-06-05 16:00:07 -0700
+
+
+Started GET "/sidekiq/images/status-sd8051fd480.png" for 127.0.0.1 at 2013-06-05 16:00:07 -0700
+
+
+Started GET "/sidekiq/retries?poll=true" for 127.0.0.1 at 2013-06-05 16:00:09 -0700
+
+
+Started GET "/sidekiq/stylesheets/bootstrap.css" for 127.0.0.1 at 2013-06-05 16:00:10 -0700
+
+
+Started GET "/sidekiq/javascripts/application.js" for 127.0.0.1 at 2013-06-05 16:00:10 -0700
+
+
+Started GET "/sidekiq/stylesheets/application.css" for 127.0.0.1 at 2013-06-05 16:00:10 -0700
+
+
+Started GET "/sidekiq/images/status-sd8051fd480.png" for 127.0.0.1 at 2013-06-05 16:00:10 -0700
+
+
+Started GET "/sidekiq/retries?poll=true" for 127.0.0.1 at 2013-06-05 16:00:12 -0700
+
+
+Started GET "/sidekiq/javascripts/application.js" for 127.0.0.1 at 2013-06-05 16:00:12 -0700
+
+
+Started GET "/sidekiq/stylesheets/bootstrap.css" for 127.0.0.1 at 2013-06-05 16:00:12 -0700
+
+
+Started GET "/sidekiq/stylesheets/application.css" for 127.0.0.1 at 2013-06-05 16:00:12 -0700
+
+
+Started GET "/sidekiq/images/status-sd8051fd480.png" for 127.0.0.1 at 2013-06-05 16:00:12 -0700
+
+
+Started GET "/sidekiq/retries?poll=true" for 127.0.0.1 at 2013-06-05 16:00:14 -0700
+
+
+Started GET "/sidekiq/stylesheets/bootstrap.css" for 127.0.0.1 at 2013-06-05 16:00:14 -0700
+
+
+Started GET "/sidekiq/stylesheets/application.css" for 127.0.0.1 at 2013-06-05 16:00:14 -0700
+
+
+Started GET "/sidekiq/javascripts/application.js" for 127.0.0.1 at 2013-06-05 16:00:14 -0700
+
+
+Started GET "/sidekiq/images/status-sd8051fd480.png" for 127.0.0.1 at 2013-06-05 16:00:14 -0700
+
+
+Started GET "/sidekiq/retries?poll=true" for 127.0.0.1 at 2013-06-05 16:00:16 -0700
+
+
+Started GET "/sidekiq/stylesheets/application.css" for 127.0.0.1 at 2013-06-05 16:00:17 -0700
+
+
+Started GET "/sidekiq/stylesheets/bootstrap.css" for 127.0.0.1 at 2013-06-05 16:00:17 -0700
+
+
+Started GET "/sidekiq/javascripts/application.js" for 127.0.0.1 at 2013-06-05 16:00:17 -0700
+
+
+Started GET "/sidekiq/images/status-sd8051fd480.png" for 127.0.0.1 at 2013-06-05 16:00:17 -0700
+
+
+Started GET "/sidekiq/retries?poll=true" for 127.0.0.1 at 2013-06-05 16:00:19 -0700
+
+
+Started GET "/sidekiq/javascripts/application.js" for 127.0.0.1 at 2013-06-05 16:00:19 -0700
+
+
+Started GET "/sidekiq/stylesheets/application.css" for 127.0.0.1 at 2013-06-05 16:00:19 -0700
+
+
+Started GET "/sidekiq/stylesheets/bootstrap.css" for 127.0.0.1 at 2013-06-05 16:00:19 -0700
+
+
+Started GET "/sidekiq/images/status-sd8051fd480.png" for 127.0.0.1 at 2013-06-05 16:00:19 -0700
+
+
+Started GET "/sidekiq/retries?poll=true" for 127.0.0.1 at 2013-06-05 16:00:21 -0700
+
+
+Started GET "/sidekiq/stylesheets/bootstrap.css" for 127.0.0.1 at 2013-06-05 16:00:21 -0700
+
+
+Started GET "/sidekiq/javascripts/application.js" for 127.0.0.1 at 2013-06-05 16:00:21 -0700
+
+
+Started GET "/sidekiq/stylesheets/application.css" for 127.0.0.1 at 2013-06-05 16:00:21 -0700
+
+
+Started GET "/sidekiq/images/status-sd8051fd480.png" for 127.0.0.1 at 2013-06-05 16:00:21 -0700
+
+
+Started GET "/sidekiq/retries?poll=true" for 127.0.0.1 at 2013-06-05 16:00:23 -0700
+
+
+Started GET "/sidekiq/stylesheets/application.css" for 127.0.0.1 at 2013-06-05 16:00:24 -0700
+
+
+Started GET "/sidekiq/javascripts/application.js" for 127.0.0.1 at 2013-06-05 16:00:24 -0700
+
+
+Started GET "/sidekiq/stylesheets/bootstrap.css" for 127.0.0.1 at 2013-06-05 16:00:24 -0700
+
+
+Started GET "/sidekiq/images/status-sd8051fd480.png" for 127.0.0.1 at 2013-06-05 16:00:24 -0700
+
+
+Started GET "/sidekiq/retries?poll=true" for 127.0.0.1 at 2013-06-05 16:00:26 -0700
+
+
+Started GET "/sidekiq/javascripts/application.js" for 127.0.0.1 at 2013-06-05 16:00:26 -0700
+
+
+Started GET "/sidekiq/stylesheets/bootstrap.css" for 127.0.0.1 at 2013-06-05 16:00:26 -0700
+
+
+Started GET "/sidekiq/stylesheets/application.css" for 127.0.0.1 at 2013-06-05 16:00:26 -0700
+
+
+Started GET "/sidekiq/images/status-sd8051fd480.png" for 127.0.0.1 at 2013-06-05 16:00:27 -0700
+
+
+Started GET "/sidekiq/retries?poll=true" for 127.0.0.1 at 2013-06-05 16:00:29 -0700
+
+
+Started GET "/sidekiq/stylesheets/bootstrap.css" for 127.0.0.1 at 2013-06-05 16:00:29 -0700
+
+
+Started GET "/sidekiq/javascripts/application.js" for 127.0.0.1 at 2013-06-05 16:00:29 -0700
+
+
+Started GET "/sidekiq/stylesheets/application.css" for 127.0.0.1 at 2013-06-05 16:00:29 -0700
+
+
+Started GET "/sidekiq/images/status-sd8051fd480.png" for 127.0.0.1 at 2013-06-05 16:00:29 -0700
+
+
+Started GET "/sidekiq/retries?poll=true" for 127.0.0.1 at 2013-06-05 16:00:31 -0700
+
+
+Started GET "/sidekiq/javascripts/application.js" for 127.0.0.1 at 2013-06-05 16:00:31 -0700
+
+
+Started GET "/sidekiq/stylesheets/application.css" for 127.0.0.1 at 2013-06-05 16:00:31 -0700
+
+
+Started GET "/sidekiq/stylesheets/bootstrap.css" for 127.0.0.1 at 2013-06-05 16:00:31 -0700
+
+
+Started GET "/sidekiq/images/status-sd8051fd480.png" for 127.0.0.1 at 2013-06-05 16:00:31 -0700
+
+
+Started GET "/sidekiq/retries?poll=true" for 127.0.0.1 at 2013-06-05 16:00:33 -0700
+
+
+Started GET "/sidekiq/stylesheets/bootstrap.css" for 127.0.0.1 at 2013-06-05 16:00:34 -0700
+
+
+Started GET "/sidekiq/stylesheets/application.css" for 127.0.0.1 at 2013-06-05 16:00:34 -0700
+
+
+Started GET "/sidekiq/javascripts/application.js" for 127.0.0.1 at 2013-06-05 16:00:34 -0700
+
+
+Started GET "/sidekiq/images/status-sd8051fd480.png" for 127.0.0.1 at 2013-06-05 16:00:34 -0700
+
+
+Started GET "/sidekiq/retries?poll=true" for 127.0.0.1 at 2013-06-05 16:00:36 -0700
+
+
+Started GET "/sidekiq/stylesheets/bootstrap.css" for 127.0.0.1 at 2013-06-05 16:00:36 -0700
+
+
+Started GET "/sidekiq/stylesheets/application.css" for 127.0.0.1 at 2013-06-05 16:00:36 -0700
+
+
+Started GET "/sidekiq/javascripts/application.js" for 127.0.0.1 at 2013-06-05 16:00:36 -0700
+
+
+Started GET "/sidekiq/images/status-sd8051fd480.png" for 127.0.0.1 at 2013-06-05 16:00:36 -0700
+
+
+Started GET "/sidekiq/retries?poll=true" for 127.0.0.1 at 2013-06-05 16:00:38 -0700
+
+
+Started GET "/sidekiq/stylesheets/bootstrap.css" for 127.0.0.1 at 2013-06-05 16:00:38 -0700
+
+
+Started GET "/sidekiq/javascripts/application.js" for 127.0.0.1 at 2013-06-05 16:00:38 -0700
+
+
+Started GET "/sidekiq/stylesheets/application.css" for 127.0.0.1 at 2013-06-05 16:00:38 -0700
+
+
+Started GET "/sidekiq/images/status-sd8051fd480.png" for 127.0.0.1 at 2013-06-05 16:00:38 -0700
+
+
+Started GET "/sidekiq/retries?poll=true" for 127.0.0.1 at 2013-06-05 16:00:40 -0700
+
+
+Started GET "/sidekiq/stylesheets/bootstrap.css" for 127.0.0.1 at 2013-06-05 16:00:40 -0700
+
+
+Started GET "/sidekiq/stylesheets/application.css" for 127.0.0.1 at 2013-06-05 16:00:40 -0700
+
+
+Started GET "/sidekiq/javascripts/application.js" for 127.0.0.1 at 2013-06-05 16:00:41 -0700
+
+
+Started GET "/sidekiq/images/status-sd8051fd480.png" for 127.0.0.1 at 2013-06-05 16:00:41 -0700
+
+
+Started GET "/sidekiq/retries?poll=true" for 127.0.0.1 at 2013-06-05 16:00:43 -0700
+
+
+Started GET "/sidekiq/stylesheets/bootstrap.css" for 127.0.0.1 at 2013-06-05 16:00:43 -0700
+
+
+Started GET "/sidekiq/stylesheets/application.css" for 127.0.0.1 at 2013-06-05 16:00:43 -0700
+
+
+Started GET "/sidekiq/javascripts/application.js" for 127.0.0.1 at 2013-06-05 16:00:43 -0700
+
+
+Started GET "/sidekiq/images/status-sd8051fd480.png" for 127.0.0.1 at 2013-06-05 16:00:43 -0700
+
+
+Started GET "/sidekiq/retries?poll=true" for 127.0.0.1 at 2013-06-05 16:00:45 -0700
+
+
+Started GET "/sidekiq/stylesheets/bootstrap.css" for 127.0.0.1 at 2013-06-05 16:00:45 -0700
+
+
+Started GET "/sidekiq/javascripts/application.js" for 127.0.0.1 at 2013-06-05 16:00:45 -0700
+
+
+Started GET "/sidekiq/stylesheets/application.css" for 127.0.0.1 at 2013-06-05 16:00:45 -0700
+
+
+Started GET "/sidekiq/images/status-sd8051fd480.png" for 127.0.0.1 at 2013-06-05 16:00:45 -0700
+
+
+Started GET "/sidekiq/retries?poll=true" for 127.0.0.1 at 2013-06-05 16:00:47 -0700
+
+
+Started GET "/sidekiq/stylesheets/bootstrap.css" for 127.0.0.1 at 2013-06-05 16:00:48 -0700
+
+
+Started GET "/sidekiq/javascripts/application.js" for 127.0.0.1 at 2013-06-05 16:00:48 -0700
+
+
+Started GET "/sidekiq/stylesheets/application.css" for 127.0.0.1 at 2013-06-05 16:00:48 -0700
+
+
+Started GET "/sidekiq/images/status-sd8051fd480.png" for 127.0.0.1 at 2013-06-05 16:00:48 -0700
+
+
+Started GET "/sidekiq/retries?poll=true" for 127.0.0.1 at 2013-06-05 16:00:50 -0700
+
+
+Started GET "/sidekiq/stylesheets/bootstrap.css" for 127.0.0.1 at 2013-06-05 16:00:50 -0700
+
+
+Started GET "/sidekiq/javascripts/application.js" for 127.0.0.1 at 2013-06-05 16:00:50 -0700
+
+
+Started GET "/sidekiq/stylesheets/application.css" for 127.0.0.1 at 2013-06-05 16:00:50 -0700
+
+
+Started GET "/sidekiq/images/status-sd8051fd480.png" for 127.0.0.1 at 2013-06-05 16:00:50 -0700
+
+
+Started GET "/sidekiq/retries?poll=true" for 127.0.0.1 at 2013-06-05 16:00:52 -0700
+
+
+Started GET "/sidekiq/javascripts/application.js" for 127.0.0.1 at 2013-06-05 16:00:52 -0700
+
+
+Started GET "/sidekiq/stylesheets/application.css" for 127.0.0.1 at 2013-06-05 16:00:52 -0700
+
+
+Started GET "/sidekiq/stylesheets/bootstrap.css" for 127.0.0.1 at 2013-06-05 16:00:52 -0700
+
+
+Started GET "/sidekiq/images/status-sd8051fd480.png" for 127.0.0.1 at 2013-06-05 16:00:52 -0700
+
+
+Started GET "/sidekiq/retries?poll=true" for 127.0.0.1 at 2013-06-05 16:00:54 -0700
+
+
+Started GET "/sidekiq/stylesheets/bootstrap.css" for 127.0.0.1 at 2013-06-05 16:00:54 -0700
+
+
+Started GET "/sidekiq/stylesheets/application.css" for 127.0.0.1 at 2013-06-05 16:00:55 -0700
+
+
+Started GET "/sidekiq/javascripts/application.js" for 127.0.0.1 at 2013-06-05 16:00:55 -0700
+
+
+Started GET "/sidekiq/images/status-sd8051fd480.png" for 127.0.0.1 at 2013-06-05 16:00:55 -0700
+
+
+Started GET "/sidekiq/retries?poll=true" for 127.0.0.1 at 2013-06-05 16:00:57 -0700
+
+
+Started GET "/sidekiq/stylesheets/application.css" for 127.0.0.1 at 2013-06-05 16:00:57 -0700
+
+
+Started GET "/sidekiq/stylesheets/bootstrap.css" for 127.0.0.1 at 2013-06-05 16:00:57 -0700
+
+
+Started GET "/sidekiq/javascripts/application.js" for 127.0.0.1 at 2013-06-05 16:00:57 -0700
+
+
+Started GET "/sidekiq/images/status-sd8051fd480.png" for 127.0.0.1 at 2013-06-05 16:00:57 -0700
+
+
+Started GET "/sidekiq/retries?poll=true" for 127.0.0.1 at 2013-06-05 16:00:59 -0700
+
+
+Started GET "/sidekiq/stylesheets/bootstrap.css" for 127.0.0.1 at 2013-06-05 16:00:59 -0700
+
+
+Started GET "/sidekiq/stylesheets/application.css" for 127.0.0.1 at 2013-06-05 16:00:59 -0700
+
+
+Started GET "/sidekiq/javascripts/application.js" for 127.0.0.1 at 2013-06-05 16:00:59 -0700
+
+
+Started GET "/sidekiq/images/status-sd8051fd480.png" for 127.0.0.1 at 2013-06-05 16:00:59 -0700
+
+
+Started GET "/sidekiq/retries?poll=true" for 127.0.0.1 at 2013-06-05 16:01:01 -0700
+
+
+Started GET "/sidekiq/stylesheets/bootstrap.css" for 127.0.0.1 at 2013-06-05 16:01:01 -0700
+
+
+Started GET "/sidekiq/stylesheets/application.css" for 127.0.0.1 at 2013-06-05 16:01:01 -0700
+
+
+Started GET "/sidekiq/javascripts/application.js" for 127.0.0.1 at 2013-06-05 16:01:01 -0700
+
+
+Started GET "/sidekiq/images/status-sd8051fd480.png" for 127.0.0.1 at 2013-06-05 16:01:02 -0700
+
+
+Started GET "/sidekiq/retries?poll=true" for 127.0.0.1 at 2013-06-05 16:01:04 -0700
+
+
+Started GET "/sidekiq/stylesheets/bootstrap.css" for 127.0.0.1 at 2013-06-05 16:01:04 -0700
+
+
+Started GET "/sidekiq/stylesheets/application.css" for 127.0.0.1 at 2013-06-05 16:01:04 -0700
+
+
+Started GET "/sidekiq/javascripts/application.js" for 127.0.0.1 at 2013-06-05 16:01:04 -0700
+
+
+Started GET "/sidekiq/images/status-sd8051fd480.png" for 127.0.0.1 at 2013-06-05 16:01:04 -0700
+
+
+Started GET "/sidekiq/retries?poll=true" for 127.0.0.1 at 2013-06-05 16:01:06 -0700
+
+
+Started GET "/sidekiq/stylesheets/bootstrap.css" for 127.0.0.1 at 2013-06-05 16:01:06 -0700
+
+
+Started GET "/sidekiq/stylesheets/application.css" for 127.0.0.1 at 2013-06-05 16:01:06 -0700
+
+
+Started GET "/sidekiq/javascripts/application.js" for 127.0.0.1 at 2013-06-05 16:01:06 -0700
+
+
+Started GET "/sidekiq/images/status-sd8051fd480.png" for 127.0.0.1 at 2013-06-05 16:01:06 -0700
+
+
+Started GET "/sidekiq/retries?poll=true" for 127.0.0.1 at 2013-06-05 16:01:08 -0700
+
+
+Started GET "/sidekiq/stylesheets/bootstrap.css" for 127.0.0.1 at 2013-06-05 16:01:08 -0700
+
+
+Started GET "/sidekiq/stylesheets/application.css" for 127.0.0.1 at 2013-06-05 16:01:08 -0700
+
+
+Started GET "/sidekiq/javascripts/application.js" for 127.0.0.1 at 2013-06-05 16:01:08 -0700
+
+
+Started GET "/sidekiq/images/status-sd8051fd480.png" for 127.0.0.1 at 2013-06-05 16:01:09 -0700
+
+
+Started GET "/sidekiq/retries?poll=true" for 127.0.0.1 at 2013-06-05 16:01:11 -0700
+
+
+Started GET "/sidekiq/stylesheets/application.css" for 127.0.0.1 at 2013-06-05 16:01:11 -0700
+
+
+Started GET "/sidekiq/stylesheets/bootstrap.css" for 127.0.0.1 at 2013-06-05 16:01:11 -0700
+
+
+Started GET "/sidekiq/javascripts/application.js" for 127.0.0.1 at 2013-06-05 16:01:11 -0700
+
+
+Started GET "/sidekiq/images/status-sd8051fd480.png" for 127.0.0.1 at 2013-06-05 16:01:11 -0700
+
+
+Started GET "/sidekiq/retries?poll=true" for 127.0.0.1 at 2013-06-05 16:01:13 -0700
+
+
+Started GET "/sidekiq/javascripts/application.js" for 127.0.0.1 at 2013-06-05 16:01:13 -0700
+
+
+Started GET "/sidekiq/stylesheets/bootstrap.css" for 127.0.0.1 at 2013-06-05 16:01:13 -0700
+
+
+Started GET "/sidekiq/stylesheets/application.css" for 127.0.0.1 at 2013-06-05 16:01:13 -0700
+
+
+Started GET "/sidekiq/images/status-sd8051fd480.png" for 127.0.0.1 at 2013-06-05 16:01:13 -0700
+
+
+Started GET "/sidekiq/retries?poll=true" for 127.0.0.1 at 2013-06-05 16:01:15 -0700
+
+
+Started GET "/sidekiq/stylesheets/bootstrap.css" for 127.0.0.1 at 2013-06-05 16:01:15 -0700
+
+
+Started GET "/sidekiq/javascripts/application.js" for 127.0.0.1 at 2013-06-05 16:01:15 -0700
+
+
+Started GET "/sidekiq/stylesheets/application.css" for 127.0.0.1 at 2013-06-05 16:01:15 -0700
+
+
+Started GET "/sidekiq/images/status-sd8051fd480.png" for 127.0.0.1 at 2013-06-05 16:01:16 -0700
+
+
+Started GET "/sidekiq/retries?poll=true" for 127.0.0.1 at 2013-06-05 16:01:18 -0700
+
+
+Started GET "/sidekiq/stylesheets/bootstrap.css" for 127.0.0.1 at 2013-06-05 16:01:18 -0700
+
+
+Started GET "/sidekiq/javascripts/application.js" for 127.0.0.1 at 2013-06-05 16:01:18 -0700
+
+
+Started GET "/sidekiq/stylesheets/application.css" for 127.0.0.1 at 2013-06-05 16:01:18 -0700
+
+
+Started GET "/sidekiq/images/status-sd8051fd480.png" for 127.0.0.1 at 2013-06-05 16:01:18 -0700
+
+
+Started GET "/sidekiq/retries?poll=true" for 127.0.0.1 at 2013-06-05 16:01:20 -0700
+
+
+Started GET "/sidekiq/stylesheets/bootstrap.css" for 127.0.0.1 at 2013-06-05 16:01:20 -0700
+
+
+Started GET "/sidekiq/javascripts/application.js" for 127.0.0.1 at 2013-06-05 16:01:20 -0700
+
+
+Started GET "/sidekiq/stylesheets/application.css" for 127.0.0.1 at 2013-06-05 16:01:20 -0700
+
+
+Started GET "/sidekiq/images/status-sd8051fd480.png" for 127.0.0.1 at 2013-06-05 16:01:20 -0700
+
+
+Started GET "/sidekiq/retries?poll=true" for 127.0.0.1 at 2013-06-05 16:01:22 -0700
+
+
+Started GET "/sidekiq/stylesheets/bootstrap.css" for 127.0.0.1 at 2013-06-05 16:01:23 -0700
+
+
+Started GET "/sidekiq/javascripts/application.js" for 127.0.0.1 at 2013-06-05 16:01:23 -0700
+
+
+Started GET "/sidekiq/stylesheets/application.css" for 127.0.0.1 at 2013-06-05 16:01:23 -0700
+
+
+Started GET "/sidekiq/images/status-sd8051fd480.png" for 127.0.0.1 at 2013-06-05 16:01:23 -0700
+
+
+Started GET "/sidekiq/retries?poll=true" for 127.0.0.1 at 2013-06-05 16:01:25 -0700
+
+
+Started GET "/sidekiq/javascripts/application.js" for 127.0.0.1 at 2013-06-05 16:01:25 -0700
+
+
+Started GET "/sidekiq/stylesheets/application.css" for 127.0.0.1 at 2013-06-05 16:01:25 -0700
+
+
+Started GET "/sidekiq/stylesheets/bootstrap.css" for 127.0.0.1 at 2013-06-05 16:01:25 -0700
+
+
+Started GET "/sidekiq/images/status-sd8051fd480.png" for 127.0.0.1 at 2013-06-05 16:01:25 -0700
+
+
+Started GET "/sidekiq/retries?poll=true" for 127.0.0.1 at 2013-06-05 16:01:27 -0700
+
+
+Started GET "/sidekiq/stylesheets/bootstrap.css" for 127.0.0.1 at 2013-06-05 16:01:27 -0700
+
+
+Started GET "/sidekiq/stylesheets/application.css" for 127.0.0.1 at 2013-06-05 16:01:27 -0700
+
+
+Started GET "/sidekiq/javascripts/application.js" for 127.0.0.1 at 2013-06-05 16:01:27 -0700
+
+
+Started GET "/sidekiq/images/status-sd8051fd480.png" for 127.0.0.1 at 2013-06-05 16:01:27 -0700
+
+
+Started GET "/sidekiq/retries?poll=true" for 127.0.0.1 at 2013-06-05 16:01:29 -0700
+
+
+Started GET "/sidekiq/stylesheets/bootstrap.css" for 127.0.0.1 at 2013-06-05 16:01:29 -0700
+
+
+Started GET "/sidekiq/javascripts/application.js" for 127.0.0.1 at 2013-06-05 16:01:29 -0700
+
+
+Started GET "/sidekiq/stylesheets/application.css" for 127.0.0.1 at 2013-06-05 16:01:29 -0700
+
+
+Started GET "/sidekiq/images/status-sd8051fd480.png" for 127.0.0.1 at 2013-06-05 16:01:30 -0700
+
+
+Started GET "/sidekiq/retries?poll=true" for 127.0.0.1 at 2013-06-05 16:01:32 -0700
+
+
+Started GET "/sidekiq/stylesheets/bootstrap.css" for 127.0.0.1 at 2013-06-05 16:01:32 -0700
+
+
+Started GET "/sidekiq/stylesheets/application.css" for 127.0.0.1 at 2013-06-05 16:01:32 -0700
+
+
+Started GET "/sidekiq/javascripts/application.js" for 127.0.0.1 at 2013-06-05 16:01:32 -0700
+
+
+Started GET "/sidekiq/images/status-sd8051fd480.png" for 127.0.0.1 at 2013-06-05 16:01:32 -0700
+
+
+Started GET "/sidekiq/retries?poll=true" for 127.0.0.1 at 2013-06-05 16:01:34 -0700
+
+
+Started GET "/sidekiq/stylesheets/application.css" for 127.0.0.1 at 2013-06-05 16:01:34 -0700
+
+
+Started GET "/sidekiq/stylesheets/bootstrap.css" for 127.0.0.1 at 2013-06-05 16:01:34 -0700
+
+
+Started GET "/sidekiq/javascripts/application.js" for 127.0.0.1 at 2013-06-05 16:01:34 -0700
+
+
+Started GET "/sidekiq/images/status-sd8051fd480.png" for 127.0.0.1 at 2013-06-05 16:01:34 -0700
+
+
+Started GET "/sidekiq/retries?poll=true" for 127.0.0.1 at 2013-06-05 16:01:36 -0700
+
+
+Started GET "/sidekiq/stylesheets/bootstrap.css" for 127.0.0.1 at 2013-06-05 16:01:37 -0700
+
+
+Started GET "/sidekiq/javascripts/application.js" for 127.0.0.1 at 2013-06-05 16:01:37 -0700
+
+
+Started GET "/sidekiq/stylesheets/application.css" for 127.0.0.1 at 2013-06-05 16:01:37 -0700
+
+
+Started GET "/sidekiq/images/status-sd8051fd480.png" for 127.0.0.1 at 2013-06-05 16:01:37 -0700
+
+
+Started GET "/sidekiq/retries?poll=true" for 127.0.0.1 at 2013-06-05 16:01:39 -0700
+
+
+Started GET "/sidekiq/javascripts/application.js" for 127.0.0.1 at 2013-06-05 16:01:39 -0700
+
+
+Started GET "/sidekiq/stylesheets/bootstrap.css" for 127.0.0.1 at 2013-06-05 16:01:39 -0700
+
+
+Started GET "/sidekiq/stylesheets/application.css" for 127.0.0.1 at 2013-06-05 16:01:39 -0700
+
+
+Started GET "/sidekiq/images/status-sd8051fd480.png" for 127.0.0.1 at 2013-06-05 16:01:39 -0700
+
+
+Started GET "/sidekiq/retries?poll=true" for 127.0.0.1 at 2013-06-05 16:01:41 -0700
+
+
+Started GET "/sidekiq/stylesheets/bootstrap.css" for 127.0.0.1 at 2013-06-05 16:01:41 -0700
+
+
+Started GET "/sidekiq/stylesheets/application.css" for 127.0.0.1 at 2013-06-05 16:01:41 -0700
+
+
+Started GET "/sidekiq/javascripts/application.js" for 127.0.0.1 at 2013-06-05 16:01:41 -0700
+
+
+Started GET "/sidekiq/images/status-sd8051fd480.png" for 127.0.0.1 at 2013-06-05 16:01:41 -0700
+
+
+Started GET "/sidekiq/retries?poll=true" for 127.0.0.1 at 2013-06-05 16:01:43 -0700
+
+
+Started GET "/sidekiq/javascripts/application.js" for 127.0.0.1 at 2013-06-05 16:01:43 -0700
+
+
+Started GET "/sidekiq/stylesheets/application.css" for 127.0.0.1 at 2013-06-05 16:01:43 -0700
+
+
+Started GET "/sidekiq/stylesheets/bootstrap.css" for 127.0.0.1 at 2013-06-05 16:01:43 -0700
+
+
+Started GET "/sidekiq/images/status-sd8051fd480.png" for 127.0.0.1 at 2013-06-05 16:01:44 -0700
+
+
+Started GET "/sidekiq/retries?poll=true" for 127.0.0.1 at 2013-06-05 16:01:46 -0700
+
+
+Started GET "/sidekiq/stylesheets/bootstrap.css" for 127.0.0.1 at 2013-06-05 16:01:46 -0700
+
+
+Started GET "/sidekiq/javascripts/application.js" for 127.0.0.1 at 2013-06-05 16:01:46 -0700
+
+
+Started GET "/sidekiq/stylesheets/application.css" for 127.0.0.1 at 2013-06-05 16:01:46 -0700
+
+
+Started GET "/sidekiq/images/status-sd8051fd480.png" for 127.0.0.1 at 2013-06-05 16:01:46 -0700
+
+
+Started GET "/sidekiq/retries?poll=true" for 127.0.0.1 at 2013-06-05 16:01:48 -0700
+
+
+Started GET "/sidekiq/stylesheets/bootstrap.css" for 127.0.0.1 at 2013-06-05 16:01:48 -0700
+
+
+Started GET "/sidekiq/stylesheets/application.css" for 127.0.0.1 at 2013-06-05 16:01:48 -0700
+
+
+Started GET "/sidekiq/javascripts/application.js" for 127.0.0.1 at 2013-06-05 16:01:48 -0700
+
+
+Started GET "/sidekiq/images/status-sd8051fd480.png" for 127.0.0.1 at 2013-06-05 16:01:48 -0700
+
+
+Started GET "/sidekiq/retries?poll=true" for 127.0.0.1 at 2013-06-05 16:01:50 -0700
+
+
+Started GET "/sidekiq/javascripts/application.js" for 127.0.0.1 at 2013-06-05 16:01:50 -0700
+
+
+Started GET "/sidekiq/stylesheets/bootstrap.css" for 127.0.0.1 at 2013-06-05 16:01:50 -0700
+
+
+Started GET "/sidekiq/stylesheets/application.css" for 127.0.0.1 at 2013-06-05 16:01:50 -0700
+
+
+Started GET "/sidekiq/images/status-sd8051fd480.png" for 127.0.0.1 at 2013-06-05 16:01:51 -0700
+
+
+Started GET "/sidekiq/retries?poll=true" for 127.0.0.1 at 2013-06-05 16:01:53 -0700
+
+
+Started GET "/sidekiq/stylesheets/bootstrap.css" for 127.0.0.1 at 2013-06-05 16:01:53 -0700
+
+
+Started GET "/sidekiq/javascripts/application.js" for 127.0.0.1 at 2013-06-05 16:01:53 -0700
+
+
+Started GET "/sidekiq/stylesheets/application.css" for 127.0.0.1 at 2013-06-05 16:01:53 -0700
+
+
+Started GET "/sidekiq/images/status-sd8051fd480.png" for 127.0.0.1 at 2013-06-05 16:01:53 -0700
+
+
+Started GET "/sidekiq/retries?poll=true" for 127.0.0.1 at 2013-06-05 16:01:55 -0700
+
+
+Started GET "/sidekiq/stylesheets/bootstrap.css" for 127.0.0.1 at 2013-06-05 16:01:55 -0700
+
+
+Started GET "/sidekiq/javascripts/application.js" for 127.0.0.1 at 2013-06-05 16:01:55 -0700
+
+
+Started GET "/sidekiq/stylesheets/application.css" for 127.0.0.1 at 2013-06-05 16:01:55 -0700
+
+
+Started GET "/sidekiq/images/status-sd8051fd480.png" for 127.0.0.1 at 2013-06-05 16:01:55 -0700
+
+
+Started GET "/sidekiq/retries?poll=true" for 127.0.0.1 at 2013-06-05 16:01:57 -0700
+
+
+Started GET "/sidekiq/stylesheets/bootstrap.css" for 127.0.0.1 at 2013-06-05 16:01:57 -0700
+
+
+Started GET "/sidekiq/javascripts/application.js" for 127.0.0.1 at 2013-06-05 16:01:57 -0700
+
+
+Started GET "/sidekiq/stylesheets/application.css" for 127.0.0.1 at 2013-06-05 16:01:57 -0700
+
+
+Started GET "/sidekiq/images/status-sd8051fd480.png" for 127.0.0.1 at 2013-06-05 16:01:57 -0700
+
+
+Started GET "/sidekiq/retries?poll=true" for 127.0.0.1 at 2013-06-05 16:01:59 -0700
+
+
+Started GET "/sidekiq/stylesheets/bootstrap.css" for 127.0.0.1 at 2013-06-05 16:02:00 -0700
+
+
+Started GET "/sidekiq/stylesheets/application.css" for 127.0.0.1 at 2013-06-05 16:02:00 -0700
+
+
+Started GET "/sidekiq/javascripts/application.js" for 127.0.0.1 at 2013-06-05 16:02:00 -0700
+
+
+Started GET "/sidekiq/images/status-sd8051fd480.png" for 127.0.0.1 at 2013-06-05 16:02:00 -0700
+
+
+Started GET "/sidekiq/retries?poll=true" for 127.0.0.1 at 2013-06-05 16:02:02 -0700
+
+
+Started GET "/sidekiq/stylesheets/bootstrap.css" for 127.0.0.1 at 2013-06-05 16:02:02 -0700
+
+
+Started GET "/sidekiq/javascripts/application.js" for 127.0.0.1 at 2013-06-05 16:02:02 -0700
+
+
+Started GET "/sidekiq/stylesheets/application.css" for 127.0.0.1 at 2013-06-05 16:02:02 -0700
+
+
+Started GET "/sidekiq/images/status-sd8051fd480.png" for 127.0.0.1 at 2013-06-05 16:02:02 -0700
+
+
+Started GET "/sidekiq/retries?poll=true" for 127.0.0.1 at 2013-06-05 16:02:04 -0700
+
+
+Started GET "/sidekiq/stylesheets/bootstrap.css" for 127.0.0.1 at 2013-06-05 16:02:04 -0700
+
+
+Started GET "/sidekiq/javascripts/application.js" for 127.0.0.1 at 2013-06-05 16:02:04 -0700
+
+
+Started GET "/sidekiq/stylesheets/application.css" for 127.0.0.1 at 2013-06-05 16:02:04 -0700
+
+
+Started GET "/sidekiq/images/status-sd8051fd480.png" for 127.0.0.1 at 2013-06-05 16:02:04 -0700
+
+
+Started GET "/sidekiq/retries?poll=true" for 127.0.0.1 at 2013-06-05 16:02:06 -0700
+
+
+Started GET "/sidekiq/stylesheets/bootstrap.css" for 127.0.0.1 at 2013-06-05 16:02:07 -0700
+
+
+Started GET "/sidekiq/stylesheets/application.css" for 127.0.0.1 at 2013-06-05 16:02:07 -0700
+
+
+Started GET "/sidekiq/javascripts/application.js" for 127.0.0.1 at 2013-06-05 16:02:07 -0700
+
+
+Started GET "/sidekiq/images/status-sd8051fd480.png" for 127.0.0.1 at 2013-06-05 16:02:07 -0700
+
+
+Started GET "/sidekiq/retries?poll=true" for 127.0.0.1 at 2013-06-05 16:02:09 -0700
+
+
+Started GET "/sidekiq/stylesheets/bootstrap.css" for 127.0.0.1 at 2013-06-05 16:02:09 -0700
+
+
+Started GET "/sidekiq/stylesheets/application.css" for 127.0.0.1 at 2013-06-05 16:02:09 -0700
+
+
+Started GET "/sidekiq/javascripts/application.js" for 127.0.0.1 at 2013-06-05 16:02:09 -0700
+
+
+Started GET "/sidekiq/images/status-sd8051fd480.png" for 127.0.0.1 at 2013-06-05 16:02:09 -0700
+
+
+Started GET "/sidekiq/retries?poll=true" for 127.0.0.1 at 2013-06-05 16:02:11 -0700
+
+
+Started GET "/sidekiq/stylesheets/bootstrap.css" for 127.0.0.1 at 2013-06-05 16:02:11 -0700
+
+
+Started GET "/sidekiq/stylesheets/application.css" for 127.0.0.1 at 2013-06-05 16:02:11 -0700
+
+
+Started GET "/sidekiq/javascripts/application.js" for 127.0.0.1 at 2013-06-05 16:02:11 -0700
+
+
+Started GET "/sidekiq/images/status-sd8051fd480.png" for 127.0.0.1 at 2013-06-05 16:02:11 -0700
+
+
+Started GET "/sidekiq/retries?poll=true" for 127.0.0.1 at 2013-06-05 16:02:13 -0700
+
+
+Started GET "/sidekiq/stylesheets/bootstrap.css" for 127.0.0.1 at 2013-06-05 16:02:14 -0700
+
+
+Started GET "/sidekiq/stylesheets/application.css" for 127.0.0.1 at 2013-06-05 16:02:14 -0700
+
+
+Started GET "/sidekiq/javascripts/application.js" for 127.0.0.1 at 2013-06-05 16:02:14 -0700
+
+
+Started GET "/sidekiq/images/status-sd8051fd480.png" for 127.0.0.1 at 2013-06-05 16:02:14 -0700
+
+
+Started GET "/sidekiq/retries?poll=true" for 127.0.0.1 at 2013-06-05 16:02:16 -0700
+
+
+Started GET "/sidekiq/stylesheets/application.css" for 127.0.0.1 at 2013-06-05 16:02:16 -0700
+
+
+Started GET "/sidekiq/stylesheets/bootstrap.css" for 127.0.0.1 at 2013-06-05 16:02:16 -0700
+
+
+Started GET "/sidekiq/javascripts/application.js" for 127.0.0.1 at 2013-06-05 16:02:16 -0700
+
+
+Started GET "/sidekiq/images/status-sd8051fd480.png" for 127.0.0.1 at 2013-06-05 16:02:16 -0700
+
+
+Started GET "/sidekiq/retries?poll=true" for 127.0.0.1 at 2013-06-05 16:02:18 -0700
+
+
+Started GET "/sidekiq/stylesheets/application.css" for 127.0.0.1 at 2013-06-05 16:02:18 -0700
+
+
+Started GET "/sidekiq/stylesheets/bootstrap.css" for 127.0.0.1 at 2013-06-05 16:02:18 -0700
+
+
+Started GET "/sidekiq/javascripts/application.js" for 127.0.0.1 at 2013-06-05 16:02:18 -0700
+
+
+Started GET "/sidekiq/images/status-sd8051fd480.png" for 127.0.0.1 at 2013-06-05 16:02:18 -0700
+
+
+Started GET "/sidekiq/retries?poll=true" for 127.0.0.1 at 2013-06-05 16:02:20 -0700
+
+
+Started GET "/sidekiq/stylesheets/bootstrap.css" for 127.0.0.1 at 2013-06-05 16:02:21 -0700
+
+
+Started GET "/sidekiq/stylesheets/application.css" for 127.0.0.1 at 2013-06-05 16:02:21 -0700
+
+
+Started GET "/sidekiq/javascripts/application.js" for 127.0.0.1 at 2013-06-05 16:02:21 -0700
+
+
+Started GET "/sidekiq/images/status-sd8051fd480.png" for 127.0.0.1 at 2013-06-05 16:02:21 -0700
+
+
+Started GET "/sidekiq/retries?poll=true" for 127.0.0.1 at 2013-06-05 16:02:23 -0700
+
+
+Started GET "/sidekiq/stylesheets/bootstrap.css" for 127.0.0.1 at 2013-06-05 16:02:23 -0700
+
+
+Started GET "/sidekiq/stylesheets/application.css" for 127.0.0.1 at 2013-06-05 16:02:23 -0700
+
+
+Started GET "/sidekiq/javascripts/application.js" for 127.0.0.1 at 2013-06-05 16:02:23 -0700
+
+
+Started GET "/sidekiq/images/status-sd8051fd480.png" for 127.0.0.1 at 2013-06-05 16:02:23 -0700
+
+
+Started GET "/videos/1" for 127.0.0.1 at 2013-06-05 16:02:25 -0700
+Processing by VideosController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mVideo Load (0.5ms)[0m  SELECT "videos".* FROM "videos" WHERE "videos"."id" = $1 LIMIT 1  [["id", "1"]]
+  Rendered videos/show.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 11ms (Views: 8.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-05 16:02:25 -0700
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-06-05 16:02:25 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-05 16:02:25 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-06-05 16:02:25 -0700
+
+
+Started GET "/assets/videos.css?body=1" for 127.0.0.1 at 2013-06-05 16:02:25 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-05 16:02:25 -0700
+
+
+Started GET "/assets/videos.js?body=1" for 127.0.0.1 at 2013-06-05 16:02:25 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-05 16:02:25 -0700
+
+
+Started GET "/sidekiq/retries?poll=true" for 127.0.0.1 at 2013-06-05 16:02:25 -0700
+
+
+Started GET "/sidekiq/stylesheets/bootstrap.css" for 127.0.0.1 at 2013-06-05 16:02:25 -0700
+
+
+Started GET "/sidekiq/javascripts/application.js" for 127.0.0.1 at 2013-06-05 16:02:25 -0700
+
+
+Started GET "/sidekiq/stylesheets/application.css" for 127.0.0.1 at 2013-06-05 16:02:25 -0700
+
+
+Started GET "/sidekiq/images/status-sd8051fd480.png" for 127.0.0.1 at 2013-06-05 16:02:25 -0700
+
+
+Started GET "/sidekiq/retries?poll=true" for 127.0.0.1 at 2013-06-05 16:02:27 -0700
+
+
+Started GET "/sidekiq/javascripts/application.js" for 127.0.0.1 at 2013-06-05 16:02:28 -0700
+
+
+Started GET "/sidekiq/stylesheets/bootstrap.css" for 127.0.0.1 at 2013-06-05 16:02:28 -0700
+
+
+Started GET "/sidekiq/stylesheets/application.css" for 127.0.0.1 at 2013-06-05 16:02:28 -0700
+
+
+Started GET "/sidekiq/images/status-sd8051fd480.png" for 127.0.0.1 at 2013-06-05 16:02:28 -0700
+
+
+Started GET "/sidekiq/retries" for 127.0.0.1 at 2013-06-05 16:02:29 -0700
+
+
+Started GET "/sidekiq/stylesheets/bootstrap.css" for 127.0.0.1 at 2013-06-05 16:02:29 -0700
+
+
+Started GET "/sidekiq/javascripts/application.js" for 127.0.0.1 at 2013-06-05 16:02:29 -0700
+
+
+Started GET "/sidekiq/stylesheets/application.css" for 127.0.0.1 at 2013-06-05 16:02:29 -0700
+
+
+Started GET "/sidekiq/images/status-sd8051fd480.png" for 127.0.0.1 at 2013-06-05 16:02:29 -0700
+  [1m[35m (5137.7ms)[0m  commit transaction
+SQLite3::BusyException: database is locked: commit transaction
+  [1m[36m (29.8ms)[0m  [1mrollback transaction[0m
+
+
+Started GET "/sidekiq/retries" for 127.0.0.1 at 2013-06-05 16:05:01 -0700
+
+
+Started GET "/sidekiq/stylesheets/bootstrap.css" for 127.0.0.1 at 2013-06-05 16:05:01 -0700
+
+
+Started GET "/sidekiq/stylesheets/application.css" for 127.0.0.1 at 2013-06-05 16:05:01 -0700
+
+
+Started GET "/sidekiq/javascripts/application.js" for 127.0.0.1 at 2013-06-05 16:05:01 -0700
+
+
+Started GET "/sidekiq/images/status-sd8051fd480.png" for 127.0.0.1 at 2013-06-05 16:05:02 -0700
+
+
+Started GET "/sidekiq/retries/1370473516.2222452-6d781285b54d49bd722ba59d" for 127.0.0.1 at 2013-06-05 16:05:04 -0700
+
+
+Started GET "/sidekiq/stylesheets/bootstrap.css" for 127.0.0.1 at 2013-06-05 16:05:04 -0700
+
+
+Started GET "/sidekiq/stylesheets/application.css" for 127.0.0.1 at 2013-06-05 16:05:04 -0700
+
+
+Started GET "/sidekiq/javascripts/application.js" for 127.0.0.1 at 2013-06-05 16:05:04 -0700
+
+
+Started GET "/sidekiq/images/status-sd8051fd480.png" for 127.0.0.1 at 2013-06-05 16:05:04 -0700
+
+
+Started POST "/sidekiq/retries/1370473516.2222452-6d781285b54d49bd722ba59d" for 127.0.0.1 at 2013-06-05 16:05:07 -0700
+
+
+Started GET "/sidekiq/retries" for 127.0.0.1 at 2013-06-05 16:05:07 -0700
+
+
+Started GET "/sidekiq/javascripts/application.js" for 127.0.0.1 at 2013-06-05 16:05:07 -0700
+
+
+Started GET "/sidekiq/stylesheets/bootstrap.css" for 127.0.0.1 at 2013-06-05 16:05:07 -0700
+
+
+Started GET "/sidekiq/stylesheets/application.css" for 127.0.0.1 at 2013-06-05 16:05:07 -0700
+
+
+Started GET "/sidekiq/images/status-sd8051fd480.png" for 127.0.0.1 at 2013-06-05 16:05:07 -0700
+
+
+Started GET "/videos/1/edit" for 127.0.0.1 at 2013-06-05 16:05:23 -0700
+Processing by VideosController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mVideo Load (0.5ms)[0m  [1mSELECT "videos".* FROM "videos" WHERE "videos"."id" = $1 LIMIT 1[0m  [["id", "1"]]
+  Rendered videos/_form.html.erb (6.2ms)
+  Rendered videos/edit.html.erb within layouts/application (9.0ms)
+Completed 200 OK in 19ms (Views: 16.3ms | ActiveRecord: 0.5ms)
+
+
+Started PATCH "/videos/1" for 127.0.0.1 at 2013-06-05 16:05:34 -0700
+Processing by VideosController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"vXY8Omwf1qY8MJYPeomfeJpIEPr4GNwlMvddPDBqv2Q=", "video"=>{"file_url"=>#<ActionDispatch::Http::UploadedFile:0x007f8882f36c38 @tempfile=#<Tempfile:/var/folders/dp/dxp19pz54dzf_8f6zmvk7fyh0000gn/T/RackMultipart20130605-76344-9j3xbf>, @original_filename="mini.mp4", @content_type="video/mp4", @headers="Content-Disposition: form-data; name=\"video[file_url]\"; filename=\"mini.mp4\"\r\nContent-Type: video/mp4\r\n">, "file_url_tmp"=>"20130605-1557-76344-6362/mini_copy_2.mp4"}, "commit"=>"Update Video", "id"=>"1"}
+  [1m[35mVideo Load (0.5ms)[0m  SELECT "videos".* FROM "videos" WHERE "videos"."id" = $1 LIMIT 1  [["id", "1"]]
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mVideo Load (0.6ms)[0m  SELECT "videos".* FROM "videos" WHERE "videos"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mSQL (0.8ms)[0m  [1mUPDATE "videos" SET "file_url" = $1, "file_url_tmp" = $2, "updated_at" = $3 WHERE "videos"."id" = 1[0m  [["file_url", nil], ["file_url_tmp", "20130605-1605-76344-7285/mini.mp4"], ["updated_at", Wed, 05 Jun 2013 23:05:34 UTC +00:00]]
+  [1m[35m (0.7ms)[0m  COMMIT
+Redirected to http://localhost:3000/videos/1
+Completed 302 Found in 21ms (ActiveRecord: 2.8ms)
+  [1m[35mVideo Load (0.2ms)[0m  SELECT "videos".* FROM "videos" WHERE "videos"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+
+
+Started GET "/videos/1" for 127.0.0.1 at 2013-06-05 16:05:34 -0700
+  [1m[35mVideo Load (0.1ms)[0m  SELECT "videos".* FROM "videos" WHERE "videos"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mSQL (0.4ms)[0m  [1mUPDATE "videos" SET "file_url_tmp" = ?, "file_url" = ?, "updated_at" = ? WHERE "videos"."id" = 1[0m  [["file_url_tmp", nil], ["file_url", "mini_copy_2.mp4"], ["updated_at", Wed, 05 Jun 2013 23:05:34 UTC +00:00]]
+Processing by VideosController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mVideo Load (0.5ms)[0m  [1mSELECT "videos".* FROM "videos" WHERE "videos"."id" = $1 LIMIT 1[0m  [["id", "1"]]
+  Rendered videos/show.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 11ms (Views: 8.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-05 16:05:34 -0700
+
+
+Started GET "/assets/videos.css?body=1" for 127.0.0.1 at 2013-06-05 16:05:34 -0700
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-06-05 16:05:34 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-05 16:05:34 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-05 16:05:34 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-06-05 16:05:34 -0700
+
+
+Started GET "/assets/videos.js?body=1" for 127.0.0.1 at 2013-06-05 16:05:34 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-05 16:05:34 -0700
+
+
+Started GET "/sidekiq/retries?poll=true" for 127.0.0.1 at 2013-06-05 16:05:37 -0700
+
+
+Started GET "/sidekiq/stylesheets/application.css" for 127.0.0.1 at 2013-06-05 16:05:37 -0700
+
+
+Started GET "/sidekiq/javascripts/application.js" for 127.0.0.1 at 2013-06-05 16:05:37 -0700
+
+
+Started GET "/sidekiq/stylesheets/bootstrap.css" for 127.0.0.1 at 2013-06-05 16:05:37 -0700
+
+
+Started GET "/sidekiq/images/status-sd8051fd480.png" for 127.0.0.1 at 2013-06-05 16:05:37 -0700
+
+
+Started GET "/sidekiq/retries?poll=true" for 127.0.0.1 at 2013-06-05 16:05:39 -0700
+
+
+Started GET "/sidekiq/stylesheets/application.css" for 127.0.0.1 at 2013-06-05 16:05:39 -0700
+
+
+Started GET "/sidekiq/stylesheets/bootstrap.css" for 127.0.0.1 at 2013-06-05 16:05:39 -0700
+
+
+Started GET "/sidekiq/javascripts/application.js" for 127.0.0.1 at 2013-06-05 16:05:39 -0700
+
+
+Started GET "/sidekiq/images/status-sd8051fd480.png" for 127.0.0.1 at 2013-06-05 16:05:40 -0700
+
+
+Started GET "/sidekiq/retries?poll=true" for 127.0.0.1 at 2013-06-05 16:05:42 -0700
+
+
+Started GET "/sidekiq/stylesheets/bootstrap.css" for 127.0.0.1 at 2013-06-05 16:05:42 -0700
+
+
+Started GET "/sidekiq/javascripts/application.js" for 127.0.0.1 at 2013-06-05 16:05:42 -0700
+
+
+Started GET "/sidekiq/stylesheets/application.css" for 127.0.0.1 at 2013-06-05 16:05:42 -0700
+
+
+Started GET "/sidekiq/images/status-sd8051fd480.png" for 127.0.0.1 at 2013-06-05 16:05:42 -0700
+
+
+Started GET "/sidekiq/retries?poll=true" for 127.0.0.1 at 2013-06-05 16:05:44 -0700
+
+
+Started GET "/sidekiq/stylesheets/bootstrap.css" for 127.0.0.1 at 2013-06-05 16:05:44 -0700
+
+
+Started GET "/sidekiq/javascripts/application.js" for 127.0.0.1 at 2013-06-05 16:05:44 -0700
+
+
+Started GET "/sidekiq/stylesheets/application.css" for 127.0.0.1 at 2013-06-05 16:05:44 -0700
+
+
+Started GET "/sidekiq/images/status-sd8051fd480.png" for 127.0.0.1 at 2013-06-05 16:05:44 -0700
+
+
+Started GET "/sidekiq/retries?poll=true" for 127.0.0.1 at 2013-06-05 16:05:46 -0700
+
+
+Started GET "/sidekiq/stylesheets/application.css" for 127.0.0.1 at 2013-06-05 16:05:46 -0700
+
+
+Started GET "/sidekiq/javascripts/application.js" for 127.0.0.1 at 2013-06-05 16:05:46 -0700
+
+
+Started GET "/sidekiq/stylesheets/bootstrap.css" for 127.0.0.1 at 2013-06-05 16:05:46 -0700
+
+
+Started GET "/sidekiq/images/status-sd8051fd480.png" for 127.0.0.1 at 2013-06-05 16:05:46 -0700
+
+
+Started GET "/sidekiq/retries?poll=true" for 127.0.0.1 at 2013-06-05 16:05:48 -0700
+
+
+Started GET "/sidekiq/stylesheets/bootstrap.css" for 127.0.0.1 at 2013-06-05 16:05:49 -0700
+
+
+Started GET "/sidekiq/javascripts/application.js" for 127.0.0.1 at 2013-06-05 16:05:49 -0700
+
+
+Started GET "/sidekiq/stylesheets/application.css" for 127.0.0.1 at 2013-06-05 16:05:49 -0700
+
+
+Started GET "/sidekiq/images/status-sd8051fd480.png" for 127.0.0.1 at 2013-06-05 16:05:49 -0700
+
+
+Started GET "/sidekiq/retries?poll=true" for 127.0.0.1 at 2013-06-05 16:05:51 -0700
+
+
+Started GET "/sidekiq/stylesheets/bootstrap.css" for 127.0.0.1 at 2013-06-05 16:05:51 -0700
+
+
+Started GET "/sidekiq/javascripts/application.js" for 127.0.0.1 at 2013-06-05 16:05:51 -0700
+
+
+Started GET "/sidekiq/stylesheets/application.css" for 127.0.0.1 at 2013-06-05 16:05:51 -0700
+
+
+Started GET "/sidekiq/images/status-sd8051fd480.png" for 127.0.0.1 at 2013-06-05 16:05:51 -0700
+
+
+Started GET "/sidekiq/retries?poll=true" for 127.0.0.1 at 2013-06-05 16:05:53 -0700
+
+
+Started GET "/sidekiq/stylesheets/bootstrap.css" for 127.0.0.1 at 2013-06-05 16:05:53 -0700
+
+
+Started GET "/sidekiq/stylesheets/application.css" for 127.0.0.1 at 2013-06-05 16:05:53 -0700
+
+
+Started GET "/sidekiq/javascripts/application.js" for 127.0.0.1 at 2013-06-05 16:05:53 -0700
+
+
+Started GET "/sidekiq/images/status-sd8051fd480.png" for 127.0.0.1 at 2013-06-05 16:05:53 -0700
+
+
+Started GET "/sidekiq/retries?poll=true" for 127.0.0.1 at 2013-06-05 16:05:55 -0700
+
+
+Started GET "/sidekiq/stylesheets/bootstrap.css" for 127.0.0.1 at 2013-06-05 16:05:56 -0700
+
+
+Started GET "/sidekiq/stylesheets/application.css" for 127.0.0.1 at 2013-06-05 16:05:56 -0700
+
+
+Started GET "/sidekiq/javascripts/application.js" for 127.0.0.1 at 2013-06-05 16:05:56 -0700
+
+
+Started GET "/sidekiq/images/status-sd8051fd480.png" for 127.0.0.1 at 2013-06-05 16:05:56 -0700
+
+
+Started GET "/sidekiq/retries?poll=true" for 127.0.0.1 at 2013-06-05 16:05:58 -0700
+  [1m[35m (2.1ms)[0m  commit transaction
+
+
+Started GET "/sidekiq/stylesheets/bootstrap.css" for 127.0.0.1 at 2013-06-05 16:05:58 -0700
+
+
+Started GET "/sidekiq/javascripts/application.js" for 127.0.0.1 at 2013-06-05 16:05:58 -0700
+
+
+Started GET "/sidekiq/stylesheets/application.css" for 127.0.0.1 at 2013-06-05 16:05:58 -0700
+
+
+Started GET "/sidekiq/images/status-sd8051fd480.png" for 127.0.0.1 at 2013-06-05 16:05:58 -0700
+
+
+Started GET "/sidekiq/retries?poll=true" for 127.0.0.1 at 2013-06-05 16:06:00 -0700
+
+
+Started GET "/sidekiq/stylesheets/bootstrap.css" for 127.0.0.1 at 2013-06-05 16:06:00 -0700
+
+
+Started GET "/sidekiq/stylesheets/application.css" for 127.0.0.1 at 2013-06-05 16:06:00 -0700
+
+
+Started GET "/sidekiq/javascripts/application.js" for 127.0.0.1 at 2013-06-05 16:06:00 -0700
+
+
+Started GET "/sidekiq/images/status-sd8051fd480.png" for 127.0.0.1 at 2013-06-05 16:06:00 -0700
+
+
+Started GET "/sidekiq/retries?poll=true" for 127.0.0.1 at 2013-06-05 16:06:02 -0700
+
+
+Started GET "/sidekiq/javascripts/application.js" for 127.0.0.1 at 2013-06-05 16:06:03 -0700
+
+
+Started GET "/sidekiq/stylesheets/application.css" for 127.0.0.1 at 2013-06-05 16:06:03 -0700
+
+
+Started GET "/sidekiq/stylesheets/bootstrap.css" for 127.0.0.1 at 2013-06-05 16:06:03 -0700
+
+
+Started GET "/sidekiq/images/status-sd8051fd480.png" for 127.0.0.1 at 2013-06-05 16:06:03 -0700
+
+
+Started GET "/sidekiq/retries?poll=true" for 127.0.0.1 at 2013-06-05 16:06:05 -0700
+
+
+Started GET "/sidekiq/javascripts/application.js" for 127.0.0.1 at 2013-06-05 16:06:05 -0700
+
+
+Started GET "/sidekiq/stylesheets/application.css" for 127.0.0.1 at 2013-06-05 16:06:05 -0700
+
+
+Started GET "/sidekiq/stylesheets/bootstrap.css" for 127.0.0.1 at 2013-06-05 16:06:05 -0700
+
+
+Started GET "/sidekiq/images/status-sd8051fd480.png" for 127.0.0.1 at 2013-06-05 16:06:05 -0700
+
+
+Started GET "/sidekiq/retries?poll=true" for 127.0.0.1 at 2013-06-05 16:06:07 -0700
+
+
+Started GET "/sidekiq/stylesheets/bootstrap.css" for 127.0.0.1 at 2013-06-05 16:06:07 -0700
+
+
+Started GET "/sidekiq/stylesheets/application.css" for 127.0.0.1 at 2013-06-05 16:06:07 -0700
+
+
+Started GET "/sidekiq/javascripts/application.js" for 127.0.0.1 at 2013-06-05 16:06:07 -0700
+
+
+Started GET "/sidekiq/images/status-sd8051fd480.png" for 127.0.0.1 at 2013-06-05 16:06:07 -0700
+
+
+Started GET "/videos/1" for 127.0.0.1 at 2013-06-05 16:06:07 -0700
+Processing by VideosController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mVideo Load (0.5ms)[0m  SELECT "videos".* FROM "videos" WHERE "videos"."id" = $1 LIMIT 1  [["id", "1"]]
+  Rendered videos/show.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 11ms (Views: 8.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-05 16:06:07 -0700
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-06-05 16:06:07 -0700
+
+
+Started GET "/assets/videos.css?body=1" for 127.0.0.1 at 2013-06-05 16:06:07 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-06-05 16:06:08 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-05 16:06:08 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-05 16:06:08 -0700
+
+
+Started GET "/assets/videos.js?body=1" for 127.0.0.1 at 2013-06-05 16:06:08 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-05 16:06:08 -0700
+
+
+Started GET "/videos/1" for 127.0.0.1 at 2013-06-05 16:06:09 -0700
+Processing by VideosController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mVideo Load (0.4ms)[0m  [1mSELECT "videos".* FROM "videos" WHERE "videos"."id" = $1 LIMIT 1[0m  [["id", "1"]]
+  Rendered videos/show.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 10ms (Views: 8.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-05 16:06:09 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-06-05 16:06:09 -0700
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-06-05 16:06:09 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-05 16:06:09 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-05 16:06:09 -0700
+
+
+Started GET "/assets/videos.css?body=1" for 127.0.0.1 at 2013-06-05 16:06:09 -0700
+
+
+Started GET "/assets/videos.js?body=1" for 127.0.0.1 at 2013-06-05 16:06:09 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-05 16:06:09 -0700
+
+
+Started GET "/sidekiq/retries?poll=true" for 127.0.0.1 at 2013-06-05 16:06:09 -0700
+
+
+Started GET "/sidekiq/javascripts/application.js" for 127.0.0.1 at 2013-06-05 16:06:10 -0700
+
+
+Started GET "/sidekiq/stylesheets/application.css" for 127.0.0.1 at 2013-06-05 16:06:10 -0700
+
+
+Started GET "/sidekiq/stylesheets/bootstrap.css" for 127.0.0.1 at 2013-06-05 16:06:10 -0700
+
+
+Started GET "/sidekiq/images/status-sd8051fd480.png" for 127.0.0.1 at 2013-06-05 16:06:10 -0700
+
+
+Started GET "/videos/1" for 127.0.0.1 at 2013-06-05 16:06:10 -0700
+Processing by VideosController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mVideo Load (0.4ms)[0m  SELECT "videos".* FROM "videos" WHERE "videos"."id" = $1 LIMIT 1  [["id", "1"]]
+  Rendered videos/show.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 11ms (Views: 8.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-05 16:06:10 -0700
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-06-05 16:06:10 -0700
+
+
+Started GET "/assets/videos.css?body=1" for 127.0.0.1 at 2013-06-05 16:06:10 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-05 16:06:10 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-05 16:06:10 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-06-05 16:06:10 -0700
+
+
+Started GET "/assets/videos.js?body=1" for 127.0.0.1 at 2013-06-05 16:06:10 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-05 16:06:10 -0700
+
+
+Started GET "/sidekiq/retries?poll=true" for 127.0.0.1 at 2013-06-05 16:06:12 -0700
+
+
+Started GET "/sidekiq/stylesheets/application.css" for 127.0.0.1 at 2013-06-05 16:06:12 -0700
+
+
+Started GET "/sidekiq/javascripts/application.js" for 127.0.0.1 at 2013-06-05 16:06:12 -0700
+
+
+Started GET "/sidekiq/stylesheets/bootstrap.css" for 127.0.0.1 at 2013-06-05 16:06:12 -0700
+
+
+Started GET "/sidekiq/images/status-sd8051fd480.png" for 127.0.0.1 at 2013-06-05 16:06:12 -0700
+
+
+Started GET "/sidekiq/retries?poll=true" for 127.0.0.1 at 2013-06-05 16:06:14 -0700
+
+
+Started GET "/sidekiq/stylesheets/bootstrap.css" for 127.0.0.1 at 2013-06-05 16:06:14 -0700
+
+
+Started GET "/sidekiq/javascripts/application.js" for 127.0.0.1 at 2013-06-05 16:06:14 -0700
+
+
+Started GET "/sidekiq/stylesheets/application.css" for 127.0.0.1 at 2013-06-05 16:06:14 -0700
+
+
+Started GET "/sidekiq/images/status-sd8051fd480.png" for 127.0.0.1 at 2013-06-05 16:06:14 -0700
+
+
+Started GET "/sidekiq/retries?poll=true" for 127.0.0.1 at 2013-06-05 16:06:16 -0700
+
+
+Started GET "/sidekiq/javascripts/application.js" for 127.0.0.1 at 2013-06-05 16:06:17 -0700
+
+
+Started GET "/sidekiq/stylesheets/bootstrap.css" for 127.0.0.1 at 2013-06-05 16:06:17 -0700
+
+
+Started GET "/sidekiq/stylesheets/application.css" for 127.0.0.1 at 2013-06-05 16:06:17 -0700
+
+
+Started GET "/sidekiq/images/status-sd8051fd480.png" for 127.0.0.1 at 2013-06-05 16:06:17 -0700
+
+
+Started GET "/sidekiq/retries?poll=true" for 127.0.0.1 at 2013-06-05 16:06:19 -0700
+
+
+Started GET "/sidekiq/stylesheets/application.css" for 127.0.0.1 at 2013-06-05 16:06:19 -0700
+
+
+Started GET "/sidekiq/javascripts/application.js" for 127.0.0.1 at 2013-06-05 16:06:19 -0700
+
+
+Started GET "/sidekiq/stylesheets/bootstrap.css" for 127.0.0.1 at 2013-06-05 16:06:19 -0700
+
+
+Started GET "/sidekiq/images/status-sd8051fd480.png" for 127.0.0.1 at 2013-06-05 16:06:19 -0700
+
+
+Started GET "/sidekiq/retries?poll=true" for 127.0.0.1 at 2013-06-05 16:06:21 -0700
+
+
+Started GET "/sidekiq/stylesheets/bootstrap.css" for 127.0.0.1 at 2013-06-05 16:06:22 -0700
+
+
+Started GET "/sidekiq/javascripts/application.js" for 127.0.0.1 at 2013-06-05 16:06:22 -0700
+
+
+Started GET "/sidekiq/stylesheets/application.css" for 127.0.0.1 at 2013-06-05 16:06:22 -0700
+
+
+Started GET "/sidekiq/images/status-sd8051fd480.png" for 127.0.0.1 at 2013-06-05 16:06:22 -0700
+
+
+Started GET "/sidekiq/retries?poll=true" for 127.0.0.1 at 2013-06-05 16:06:24 -0700
+
+
+Started GET "/sidekiq/stylesheets/bootstrap.css" for 127.0.0.1 at 2013-06-05 16:06:24 -0700
+
+
+Started GET "/sidekiq/stylesheets/application.css" for 127.0.0.1 at 2013-06-05 16:06:24 -0700
+
+
+Started GET "/sidekiq/javascripts/application.js" for 127.0.0.1 at 2013-06-05 16:06:24 -0700
+
+
+Started GET "/sidekiq/images/status-sd8051fd480.png" for 127.0.0.1 at 2013-06-05 16:06:24 -0700
+
+
+Started GET "/sidekiq/retries?poll=true" for 127.0.0.1 at 2013-06-05 16:06:26 -0700
+
+
+Started GET "/sidekiq/stylesheets/application.css" for 127.0.0.1 at 2013-06-05 16:06:26 -0700
+
+
+Started GET "/sidekiq/stylesheets/bootstrap.css" for 127.0.0.1 at 2013-06-05 16:06:26 -0700
+
+
+Started GET "/sidekiq/javascripts/application.js" for 127.0.0.1 at 2013-06-05 16:06:26 -0700
+
+
+Started GET "/sidekiq/images/status-sd8051fd480.png" for 127.0.0.1 at 2013-06-05 16:06:26 -0700
+
+
+Started GET "/sidekiq/retries?poll=true" for 127.0.0.1 at 2013-06-05 16:06:28 -0700
+
+
+Started GET "/sidekiq/stylesheets/application.css" for 127.0.0.1 at 2013-06-05 16:06:29 -0700
+
+
+Started GET "/sidekiq/stylesheets/bootstrap.css" for 127.0.0.1 at 2013-06-05 16:06:29 -0700
+
+
+Started GET "/sidekiq/javascripts/application.js" for 127.0.0.1 at 2013-06-05 16:06:29 -0700
+
+
+Started GET "/sidekiq/images/status-sd8051fd480.png" for 127.0.0.1 at 2013-06-05 16:06:29 -0700
+
+
+Started GET "/sidekiq/retries?poll=true" for 127.0.0.1 at 2013-06-05 16:06:31 -0700
+
+
+Started GET "/sidekiq/stylesheets/application.css" for 127.0.0.1 at 2013-06-05 16:06:31 -0700
+
+
+Started GET "/sidekiq/javascripts/application.js" for 127.0.0.1 at 2013-06-05 16:06:31 -0700
+
+
+Started GET "/sidekiq/stylesheets/bootstrap.css" for 127.0.0.1 at 2013-06-05 16:06:31 -0700
+
+
+Started GET "/sidekiq/images/status-sd8051fd480.png" for 127.0.0.1 at 2013-06-05 16:06:31 -0700
+
+
+Started GET "/sidekiq/retries?poll=true" for 127.0.0.1 at 2013-06-05 16:06:33 -0700
+
+
+Started GET "/sidekiq/stylesheets/bootstrap.css" for 127.0.0.1 at 2013-06-05 16:06:33 -0700
+
+
+Started GET "/sidekiq/stylesheets/application.css" for 127.0.0.1 at 2013-06-05 16:06:33 -0700
+
+
+Started GET "/sidekiq/javascripts/application.js" for 127.0.0.1 at 2013-06-05 16:06:33 -0700
+
+
+Started GET "/sidekiq/images/status-sd8051fd480.png" for 127.0.0.1 at 2013-06-05 16:06:33 -0700
+
+
+Started GET "/sidekiq/retries?poll=true" for 127.0.0.1 at 2013-06-05 16:06:35 -0700
+
+
+Started GET "/sidekiq/stylesheets/bootstrap.css" for 127.0.0.1 at 2013-06-05 16:06:35 -0700
+
+
+Started GET "/sidekiq/stylesheets/application.css" for 127.0.0.1 at 2013-06-05 16:06:35 -0700
+
+
+Started GET "/sidekiq/javascripts/application.js" for 127.0.0.1 at 2013-06-05 16:06:35 -0700
+
+
+Started GET "/sidekiq/images/status-sd8051fd480.png" for 127.0.0.1 at 2013-06-05 16:06:36 -0700
+
+
+Started GET "/sidekiq/retries?poll=true" for 127.0.0.1 at 2013-06-05 16:06:38 -0700
+
+
+Started GET "/sidekiq/javascripts/application.js" for 127.0.0.1 at 2013-06-05 16:06:38 -0700
+
+
+Started GET "/sidekiq/stylesheets/application.css" for 127.0.0.1 at 2013-06-05 16:06:38 -0700
+
+
+Started GET "/sidekiq/stylesheets/bootstrap.css" for 127.0.0.1 at 2013-06-05 16:06:38 -0700
+
+
+Started GET "/sidekiq/images/status-sd8051fd480.png" for 127.0.0.1 at 2013-06-05 16:06:38 -0700
+
+
+Started GET "/sidekiq/retries?poll=true" for 127.0.0.1 at 2013-06-05 16:06:40 -0700
+
+
+Started GET "/sidekiq/stylesheets/application.css" for 127.0.0.1 at 2013-06-05 16:06:40 -0700
+
+
+Started GET "/sidekiq/stylesheets/bootstrap.css" for 127.0.0.1 at 2013-06-05 16:06:40 -0700
+
+
+Started GET "/sidekiq/javascripts/application.js" for 127.0.0.1 at 2013-06-05 16:06:40 -0700
+
+
+Started GET "/sidekiq/images/status-sd8051fd480.png" for 127.0.0.1 at 2013-06-05 16:06:40 -0700
+
+
+Started GET "/sidekiq/retries?poll=true" for 127.0.0.1 at 2013-06-05 16:06:42 -0700
+
+
+Started GET "/videos/1" for 127.0.0.1 at 2013-06-05 16:06:42 -0700
+Processing by VideosController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mVideo Load (0.4ms)[0m  [1mSELECT "videos".* FROM "videos" WHERE "videos"."id" = $1 LIMIT 1[0m  [["id", "1"]]
+  Rendered videos/show.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 13ms (Views: 9.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/sidekiq/stylesheets/bootstrap.css" for 127.0.0.1 at 2013-06-05 16:06:43 -0700
+
+
+Started GET "/sidekiq/javascripts/application.js" for 127.0.0.1 at 2013-06-05 16:06:43 -0700
+
+
+Started GET "/sidekiq/stylesheets/application.css" for 127.0.0.1 at 2013-06-05 16:06:43 -0700
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-06-05 16:06:43 -0700
+
+
+Started GET "/assets/videos.css?body=1" for 127.0.0.1 at 2013-06-05 16:06:43 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-05 16:06:43 -0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-05 16:06:43 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-06-05 16:06:43 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-05 16:06:43 -0700
+
+
+Started GET "/assets/videos.js?body=1" for 127.0.0.1 at 2013-06-05 16:06:43 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-05 16:06:43 -0700
+
+
+Started GET "/sidekiq/images/status-sd8051fd480.png" for 127.0.0.1 at 2013-06-05 16:06:43 -0700
+
+
+Started GET "/sidekiq/retries?poll=true" for 127.0.0.1 at 2013-06-05 16:06:45 -0700
+
+
+Started GET "/sidekiq/stylesheets/bootstrap.css" for 127.0.0.1 at 2013-06-05 16:06:45 -0700
+
+
+Started GET "/sidekiq/javascripts/application.js" for 127.0.0.1 at 2013-06-05 16:06:45 -0700
+
+
+Started GET "/sidekiq/stylesheets/application.css" for 127.0.0.1 at 2013-06-05 16:06:45 -0700
+
+
+Started GET "/sidekiq/images/status-sd8051fd480.png" for 127.0.0.1 at 2013-06-05 16:06:45 -0700
+
+
+Started GET "/sidekiq/retries?poll=true" for 127.0.0.1 at 2013-06-05 16:06:47 -0700
+
+
+Started GET "/sidekiq/stylesheets/bootstrap.css" for 127.0.0.1 at 2013-06-05 16:06:47 -0700
+
+
+Started GET "/sidekiq/javascripts/application.js" for 127.0.0.1 at 2013-06-05 16:06:47 -0700
+
+
+Started GET "/sidekiq/stylesheets/application.css" for 127.0.0.1 at 2013-06-05 16:06:47 -0700
+
+
+Started GET "/sidekiq/images/status-sd8051fd480.png" for 127.0.0.1 at 2013-06-05 16:06:48 -0700
+
+
+Started GET "/sidekiq/retries?poll=true" for 127.0.0.1 at 2013-06-05 16:06:50 -0700
+
+
+Started GET "/sidekiq/stylesheets/bootstrap.css" for 127.0.0.1 at 2013-06-05 16:06:50 -0700
+
+
+Started GET "/sidekiq/javascripts/application.js" for 127.0.0.1 at 2013-06-05 16:06:50 -0700
+
+
+Started GET "/sidekiq/stylesheets/application.css" for 127.0.0.1 at 2013-06-05 16:06:50 -0700
+
+
+Started GET "/sidekiq/images/status-sd8051fd480.png" for 127.0.0.1 at 2013-06-05 16:06:50 -0700
+
+
+Started GET "/sidekiq/retries?poll=true" for 127.0.0.1 at 2013-06-05 16:06:52 -0700
+
+
+Started GET "/sidekiq/stylesheets/bootstrap.css" for 127.0.0.1 at 2013-06-05 16:06:53 -0700
+
+
+Started GET "/sidekiq/stylesheets/application.css" for 127.0.0.1 at 2013-06-05 16:06:53 -0700
+
+
+Started GET "/sidekiq/javascripts/application.js" for 127.0.0.1 at 2013-06-05 16:06:53 -0700
+
+
+Started GET "/sidekiq/images/status-sd8051fd480.png" for 127.0.0.1 at 2013-06-05 16:06:53 -0700
+
+
+Started GET "/sidekiq/retries?poll=true" for 127.0.0.1 at 2013-06-05 16:06:55 -0700
+
+
+Started GET "/sidekiq/stylesheets/application.css" for 127.0.0.1 at 2013-06-05 16:06:56 -0700
+
+
+Started GET "/sidekiq/javascripts/application.js" for 127.0.0.1 at 2013-06-05 16:06:56 -0700
+
+
+Started GET "/sidekiq/stylesheets/bootstrap.css" for 127.0.0.1 at 2013-06-05 16:06:56 -0700
+
+
+Started GET "/sidekiq/images/status-sd8051fd480.png" for 127.0.0.1 at 2013-06-05 16:06:56 -0700
+
+
+Started GET "/videos/1/edit" for 127.0.0.1 at 2013-06-05 16:06:56 -0700
+Processing by VideosController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mVideo Load (0.4ms)[0m  SELECT "videos".* FROM "videos" WHERE "videos"."id" = $1 LIMIT 1  [["id", "1"]]
+  Rendered videos/_form.html.erb (7.0ms)
+  Rendered videos/edit.html.erb within layouts/application (9.0ms)
+Completed 200 OK in 20ms (Views: 16.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/sidekiq/retries?poll=true" for 127.0.0.1 at 2013-06-05 16:06:58 -0700
+
+
+Started GET "/sidekiq/stylesheets/application.css" for 127.0.0.1 at 2013-06-05 16:06:58 -0700
+
+
+Started GET "/sidekiq/stylesheets/bootstrap.css" for 127.0.0.1 at 2013-06-05 16:06:58 -0700
+
+
+Started GET "/sidekiq/javascripts/application.js" for 127.0.0.1 at 2013-06-05 16:06:58 -0700
+
+
+Started GET "/sidekiq/images/status-sd8051fd480.png" for 127.0.0.1 at 2013-06-05 16:06:58 -0700
+
+
+Started GET "/sidekiq/retries?poll=true" for 127.0.0.1 at 2013-06-05 16:07:00 -0700
+
+
+Started GET "/videos/1" for 127.0.0.1 at 2013-06-05 16:07:58 -0700
+Processing by VideosController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mVideo Load (1.2ms)[0m  [1mSELECT "videos".* FROM "videos" WHERE "videos"."id" = $1 LIMIT 1[0m  [["id", "1"]]
+  Rendered videos/show.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 214ms (Views: 147.7ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-06-05 16:07:59 -0700
+
+
+Started GET "/assets/videos.css?body=1" for 127.0.0.1 at 2013-06-05 16:07:59 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-05 16:07:59 -0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-05 16:07:59 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-06-05 16:07:59 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-05 16:07:59 -0700
+
+
+Started GET "/assets/videos.js?body=1" for 127.0.0.1 at 2013-06-05 16:07:59 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-05 16:07:59 -0700
+
+
+Started GET "/videos/1/edit" for 127.0.0.1 at 2013-06-05 16:08:00 -0700
+Processing by VideosController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mVideo Load (0.5ms)[0m  SELECT "videos".* FROM "videos" WHERE "videos"."id" = $1 LIMIT 1  [["id", "1"]]
+  Rendered videos/_form.html.erb (115.1ms)
+  Rendered videos/edit.html.erb within layouts/application (121.8ms)
+Completed 200 OK in 131ms (Views: 128.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/sidekiq/retries" for 127.0.0.1 at 2013-06-05 16:08:05 -0700
+
+
+Started GET "/sidekiq/stylesheets/bootstrap.css" for 127.0.0.1 at 2013-06-05 16:08:05 -0700
+
+
+Started GET "/sidekiq/javascripts/application.js" for 127.0.0.1 at 2013-06-05 16:08:05 -0700
+
+
+Started GET "/sidekiq/stylesheets/application.css" for 127.0.0.1 at 2013-06-05 16:08:05 -0700
+
+
+Started GET "/sidekiq/images/status-sd8051fd480.png" for 127.0.0.1 at 2013-06-05 16:08:05 -0700
+
+
+Started GET "/sidekiq/retries?poll=true" for 127.0.0.1 at 2013-06-05 16:08:08 -0700
+
+
+Started GET "/sidekiq/stylesheets/bootstrap.css" for 127.0.0.1 at 2013-06-05 16:08:08 -0700
+
+
+Started GET "/sidekiq/javascripts/application.js" for 127.0.0.1 at 2013-06-05 16:08:08 -0700
+
+
+Started GET "/sidekiq/stylesheets/application.css" for 127.0.0.1 at 2013-06-05 16:08:08 -0700
+
+
+Started GET "/sidekiq/images/status-sd8051fd480.png" for 127.0.0.1 at 2013-06-05 16:08:08 -0700
+
+
+Started GET "/sidekiq/retries?poll=true" for 127.0.0.1 at 2013-06-05 16:08:10 -0700
+
+
+Started GET "/sidekiq/stylesheets/bootstrap.css" for 127.0.0.1 at 2013-06-05 16:08:11 -0700
+
+
+Started GET "/sidekiq/stylesheets/application.css" for 127.0.0.1 at 2013-06-05 16:08:11 -0700
+
+
+Started GET "/sidekiq/javascripts/application.js" for 127.0.0.1 at 2013-06-05 16:08:11 -0700
+
+
+Started GET "/sidekiq/images/status-sd8051fd480.png" for 127.0.0.1 at 2013-06-05 16:08:11 -0700
+
+
+Started GET "/sidekiq/retries" for 127.0.0.1 at 2013-06-05 16:08:12 -0700
+
+
+Started GET "/sidekiq/stylesheets/application.css" for 127.0.0.1 at 2013-06-05 16:08:12 -0700
+
+
+Started GET "/sidekiq/javascripts/application.js" for 127.0.0.1 at 2013-06-05 16:08:12 -0700
+
+
+Started GET "/sidekiq/stylesheets/bootstrap.css" for 127.0.0.1 at 2013-06-05 16:08:12 -0700
+
+
+Started GET "/sidekiq/images/status-sd8051fd480.png" for 127.0.0.1 at 2013-06-05 16:08:13 -0700
+
+
+Started PATCH "/videos/1" for 127.0.0.1 at 2013-06-05 16:08:32 -0700
+Processing by VideosController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"vXY8Omwf1qY8MJYPeomfeJpIEPr4GNwlMvddPDBqv2Q=", "video"=>{"file_url"=>#<ActionDispatch::Http::UploadedFile:0x007fe35da4f248 @tempfile=#<Tempfile:/var/folders/dp/dxp19pz54dzf_8f6zmvk7fyh0000gn/T/RackMultipart20130605-76522-72qala>, @original_filename="mini copy.mp4", @content_type="video/mp4", @headers="Content-Disposition: form-data; name=\"video[file_url]\"; filename=\"mini copy.mp4\"\r\nContent-Type: video/mp4\r\n">, "file_url_tmp"=>"20130605-1605-76344-7285/mini.mp4"}, "commit"=>"Update Video", "id"=>"1"}
+  [1m[36mVideo Load (0.4ms)[0m  [1mSELECT "videos".* FROM "videos" WHERE "videos"."id" = $1 LIMIT 1[0m  [["id", "1"]]
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mVideo Load (0.5ms)[0m  [1mSELECT "videos".* FROM "videos" WHERE "videos"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mSQL (2.8ms)[0m  UPDATE "videos" SET "file_url" = $1, "file_url_tmp" = $2, "updated_at" = $3 WHERE "videos"."id" = 1  [["file_url", nil], ["file_url_tmp", "20130605-1608-76522-5339/mini_copy.mp4"], ["updated_at", Wed, 05 Jun 2013 23:08:32 UTC +00:00]]
+  [1m[36m (0.7ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/videos/1
+Completed 302 Found in 29ms (ActiveRecord: 4.5ms)
+
+
+Started GET "/videos/1" for 127.0.0.1 at 2013-06-05 16:08:32 -0700
+Processing by VideosController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mVideo Load (0.5ms)[0m  SELECT "videos".* FROM "videos" WHERE "videos"."id" = $1 LIMIT 1  [["id", "1"]]
+  Rendered videos/show.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 11ms (Views: 8.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-05 16:08:32 -0700
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-06-05 16:08:32 -0700
+
+
+Started GET "/assets/videos.css?body=1" for 127.0.0.1 at 2013-06-05 16:08:32 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-05 16:08:32 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-05 16:08:32 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-06-05 16:08:32 -0700
+
+
+Started GET "/assets/videos.js?body=1" for 127.0.0.1 at 2013-06-05 16:08:32 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-05 16:08:32 -0700
+
+
+Started GET "/videos/1" for 127.0.0.1 at 2013-06-05 16:08:35 -0700
+Processing by VideosController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mVideo Load (0.4ms)[0m  [1mSELECT "videos".* FROM "videos" WHERE "videos"."id" = $1 LIMIT 1[0m  [["id", "1"]]
+  Rendered videos/show.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 10ms (Views: 8.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/videos.css?body=1" for 127.0.0.1 at 2013-06-05 16:08:35 -0700
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-06-05 16:08:35 -0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-05 16:08:35 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-05 16:08:35 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-06-05 16:08:35 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-05 16:08:35 -0700
+
+
+Started GET "/assets/videos.js?body=1" for 127.0.0.1 at 2013-06-05 16:08:35 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-05 16:08:35 -0700
+
+
+Started GET "/sidekiq/retries" for 127.0.0.1 at 2013-06-05 16:08:36 -0700
+
+
+Started GET "/sidekiq/stylesheets/bootstrap.css" for 127.0.0.1 at 2013-06-05 16:08:37 -0700
+
+
+Started GET "/sidekiq/javascripts/application.js" for 127.0.0.1 at 2013-06-05 16:08:37 -0700
+
+
+Started GET "/sidekiq/stylesheets/application.css" for 127.0.0.1 at 2013-06-05 16:08:37 -0700
+
+
+Started GET "/sidekiq/images/status-sd8051fd480.png" for 127.0.0.1 at 2013-06-05 16:08:37 -0700
+
+
+Started GET "/sidekiq/retries/1370473748.453068-ebf9cac97e5fee5f09e75be8" for 127.0.0.1 at 2013-06-05 16:08:39 -0700
+
+
+Started GET "/sidekiq/stylesheets/bootstrap.css" for 127.0.0.1 at 2013-06-05 16:08:39 -0700
+
+
+Started GET "/sidekiq/javascripts/application.js" for 127.0.0.1 at 2013-06-05 16:08:39 -0700
+
+
+Started GET "/sidekiq/stylesheets/application.css" for 127.0.0.1 at 2013-06-05 16:08:39 -0700
+
+
+Started GET "/sidekiq/images/status-sd8051fd480.png" for 127.0.0.1 at 2013-06-05 16:08:39 -0700
+
+
+Started GET "/sidekiq/retries/1370473748.453068-ebf9cac97e5fee5f09e75be8" for 127.0.0.1 at 2013-06-05 16:08:56 -0700
+
+
+Started GET "/sidekiq/javascripts/application.js" for 127.0.0.1 at 2013-06-05 16:08:56 -0700
+
+
+Started GET "/sidekiq/stylesheets/bootstrap.css" for 127.0.0.1 at 2013-06-05 16:08:56 -0700
+
+
+Started GET "/sidekiq/stylesheets/application.css" for 127.0.0.1 at 2013-06-05 16:08:56 -0700
+
+
+Started GET "/sidekiq/images/status-sd8051fd480.png" for 127.0.0.1 at 2013-06-05 16:08:56 -0700
+
+
+Started GET "/sidekiq/retries" for 127.0.0.1 at 2013-06-05 16:09:00 -0700
+
+
+Started GET "/sidekiq/stylesheets/application.css" for 127.0.0.1 at 2013-06-05 16:09:00 -0700
+
+
+Started GET "/sidekiq/javascripts/application.js" for 127.0.0.1 at 2013-06-05 16:09:00 -0700
+
+
+Started GET "/sidekiq/stylesheets/bootstrap.css" for 127.0.0.1 at 2013-06-05 16:09:00 -0700
+
+
+Started GET "/sidekiq/images/status-sd8051fd480.png" for 127.0.0.1 at 2013-06-05 16:09:00 -0700
+
+
+Started GET "/sidekiq/retries" for 127.0.0.1 at 2013-06-05 16:09:03 -0700
+
+
+Started GET "/sidekiq/stylesheets/bootstrap.css" for 127.0.0.1 at 2013-06-05 16:09:03 -0700
+
+
+Started GET "/sidekiq/stylesheets/application.css" for 127.0.0.1 at 2013-06-05 16:09:03 -0700
+
+
+Started GET "/sidekiq/javascripts/application.js" for 127.0.0.1 at 2013-06-05 16:09:03 -0700
+
+
+Started GET "/sidekiq/images/status-sd8051fd480.png" for 127.0.0.1 at 2013-06-05 16:09:03 -0700
+
+
+Started POST "/sidekiq/retries" for 127.0.0.1 at 2013-06-05 16:09:05 -0700
+  [1m[36mVideo Load (0.2ms)[0m  [1mSELECT "videos".* FROM "videos" WHERE "videos"."id" = ? LIMIT 1[0m  [["id", "1"]]
+
+
+Started GET "/sidekiq/retries" for 127.0.0.1 at 2013-06-05 16:09:05 -0700
+
+
+Started GET "/sidekiq/stylesheets/bootstrap.css" for 127.0.0.1 at 2013-06-05 16:09:05 -0700
+
+
+Started GET "/sidekiq/stylesheets/application.css" for 127.0.0.1 at 2013-06-05 16:09:05 -0700
+
+
+Started GET "/sidekiq/javascripts/application.js" for 127.0.0.1 at 2013-06-05 16:09:05 -0700
+
+
+Started GET "/sidekiq/images/status-sd8051fd480.png" for 127.0.0.1 at 2013-06-05 16:09:05 -0700
+
+
+Started GET "/sidekiq/retries" for 127.0.0.1 at 2013-06-05 16:09:07 -0700
+
+
+Started GET "/sidekiq/stylesheets/application.css" for 127.0.0.1 at 2013-06-05 16:09:07 -0700
+
+
+Started GET "/sidekiq/stylesheets/bootstrap.css" for 127.0.0.1 at 2013-06-05 16:09:07 -0700
+
+
+Started GET "/sidekiq/javascripts/application.js" for 127.0.0.1 at 2013-06-05 16:09:07 -0700
+
+
+Started GET "/sidekiq/images/status-sd8051fd480.png" for 127.0.0.1 at 2013-06-05 16:09:07 -0700
+
+
+Started GET "/sidekiq/retries" for 127.0.0.1 at 2013-06-05 16:09:09 -0700
+
+
+Started GET "/sidekiq/stylesheets/bootstrap.css" for 127.0.0.1 at 2013-06-05 16:09:09 -0700
+
+
+Started GET "/sidekiq/javascripts/application.js" for 127.0.0.1 at 2013-06-05 16:09:09 -0700
+
+
+Started GET "/sidekiq/stylesheets/application.css" for 127.0.0.1 at 2013-06-05 16:09:09 -0700
+
+
+Started GET "/sidekiq/images/status-sd8051fd480.png" for 127.0.0.1 at 2013-06-05 16:09:09 -0700
+
+
+Started GET "/sidekiq/retries" for 127.0.0.1 at 2013-06-05 16:09:27 -0700
+
+
+Started GET "/sidekiq/stylesheets/bootstrap.css" for 127.0.0.1 at 2013-06-05 16:09:27 -0700
+
+
+Started GET "/sidekiq/javascripts/application.js" for 127.0.0.1 at 2013-06-05 16:09:27 -0700
+
+
+Started GET "/sidekiq/stylesheets/application.css" for 127.0.0.1 at 2013-06-05 16:09:27 -0700
+
+
+Started GET "/sidekiq/images/status-sd8051fd480.png" for 127.0.0.1 at 2013-06-05 16:09:27 -0700
+
+
+Started GET "/videos/1" for 127.0.0.1 at 2013-06-05 16:09:37 -0700
+Processing by VideosController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mVideo Load (0.4ms)[0m  SELECT "videos".* FROM "videos" WHERE "videos"."id" = $1 LIMIT 1  [["id", "1"]]
+  Rendered videos/show.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 12ms (Views: 8.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-06-05 16:09:37 -0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-05 16:09:37 -0700
+
+
+Started GET "/assets/videos.css?body=1" for 127.0.0.1 at 2013-06-05 16:09:37 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-05 16:09:37 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-06-05 16:09:37 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-05 16:09:37 -0700
+
+
+Started GET "/assets/videos.js?body=1" for 127.0.0.1 at 2013-06-05 16:09:37 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-05 16:09:37 -0700
+
+
+Started GET "/videos/1/edit" for 127.0.0.1 at 2013-06-05 16:09:53 -0700
+Processing by VideosController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mVideo Load (0.4ms)[0m  [1mSELECT "videos".* FROM "videos" WHERE "videos"."id" = $1 LIMIT 1[0m  [["id", "1"]]
+  Rendered videos/_form.html.erb (6.0ms)
+  Rendered videos/edit.html.erb within layouts/application (7.7ms)
+Completed 200 OK in 58ms (Views: 14.7ms | ActiveRecord: 2.2ms)
+
+
+Started PATCH "/videos/1" for 127.0.0.1 at 2013-06-05 16:10:17 -0700
+Processing by VideosController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"vXY8Omwf1qY8MJYPeomfeJpIEPr4GNwlMvddPDBqv2Q=", "video"=>{"file_url"=>#<ActionDispatch::Http::UploadedFile:0x007fe361504348 @tempfile=#<Tempfile:/var/folders/dp/dxp19pz54dzf_8f6zmvk7fyh0000gn/T/RackMultipart20130605-76522-1lp987c>, @original_filename="3699-91e79cb6.mp4", @content_type="video/mp4", @headers="Content-Disposition: form-data; name=\"video[file_url]\"; filename=\"3699-91e79cb6.mp4\"\r\nContent-Type: video/mp4\r\n">, "file_url_tmp"=>"20130605-1608-76522-5339/mini_copy.mp4"}, "commit"=>"Update Video", "id"=>"1"}
+  [1m[35mVideo Load (0.4ms)[0m  SELECT "videos".* FROM "videos" WHERE "videos"."id" = $1 LIMIT 1  [["id", "1"]]
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mVideo Load (0.4ms)[0m  SELECT "videos".* FROM "videos" WHERE "videos"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mSQL (0.6ms)[0m  [1mUPDATE "videos" SET "file_url" = $1, "file_url_tmp" = $2, "updated_at" = $3 WHERE "videos"."id" = 1[0m  [["file_url", nil], ["file_url_tmp", "20130605-1610-76522-3248/3699-91e79cb6.mp4"], ["updated_at", Wed, 05 Jun 2013 23:10:17 UTC +00:00]]
+  [1m[35m (69.9ms)[0m  COMMIT
+Redirected to http://localhost:3000/videos/1
+Completed 302 Found in 98ms (ActiveRecord: 71.5ms)
+
+
+Started GET "/videos/1" for 127.0.0.1 at 2013-06-05 16:10:17 -0700
+Processing by VideosController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mVideo Load (0.4ms)[0m  [1mSELECT "videos".* FROM "videos" WHERE "videos"."id" = $1 LIMIT 1[0m  [["id", "1"]]
+  Rendered videos/show.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 12ms (Views: 8.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-05 16:10:17 -0700
+
+
+Started GET "/assets/videos.css?body=1" for 127.0.0.1 at 2013-06-05 16:10:17 -0700
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-06-05 16:10:17 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-05 16:10:17 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-05 16:10:17 -0700
+
+
+Started GET "/assets/videos.js?body=1" for 127.0.0.1 at 2013-06-05 16:10:17 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-06-05 16:10:17 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-05 16:10:17 -0700
+
+
+Started GET "/sidekiq/retries?poll=true" for 127.0.0.1 at 2013-06-05 16:10:21 -0700
+
+
+Started GET "/sidekiq/javascripts/application.js" for 127.0.0.1 at 2013-06-05 16:10:22 -0700
+
+
+Started GET "/sidekiq/stylesheets/bootstrap.css" for 127.0.0.1 at 2013-06-05 16:10:22 -0700
+
+
+Started GET "/sidekiq/stylesheets/application.css" for 127.0.0.1 at 2013-06-05 16:10:22 -0700
+
+
+Started GET "/sidekiq/images/status-sd8051fd480.png" for 127.0.0.1 at 2013-06-05 16:10:22 -0700
+
+
+Started GET "/sidekiq/retries?poll=true" for 127.0.0.1 at 2013-06-05 16:10:24 -0700
+
+
+Started GET "/sidekiq/stylesheets/bootstrap.css" for 127.0.0.1 at 2013-06-05 16:10:24 -0700
+
+
+Started GET "/sidekiq/javascripts/application.js" for 127.0.0.1 at 2013-06-05 16:10:24 -0700
+
+
+Started GET "/sidekiq/stylesheets/application.css" for 127.0.0.1 at 2013-06-05 16:10:24 -0700
+
+
+Started GET "/sidekiq/images/status-sd8051fd480.png" for 127.0.0.1 at 2013-06-05 16:10:24 -0700
+
+
+Started GET "/sidekiq/retries/1370473838.543529-597e4ae4876edfd8e1b15424" for 127.0.0.1 at 2013-06-05 16:10:24 -0700
+
+
+Started GET "/sidekiq/javascripts/application.js" for 127.0.0.1 at 2013-06-05 16:10:24 -0700
+
+
+Started GET "/sidekiq/stylesheets/bootstrap.css" for 127.0.0.1 at 2013-06-05 16:10:24 -0700
+
+
+Started GET "/sidekiq/stylesheets/application.css" for 127.0.0.1 at 2013-06-05 16:10:24 -0700
+
+
+Started GET "/sidekiq/images/status-sd8051fd480.png" for 127.0.0.1 at 2013-06-05 16:10:24 -0700
+
+
+Started GET "/sidekiq/retries?poll=true" for 127.0.0.1 at 2013-06-05 16:10:28 -0700
+
+
+Started GET "/sidekiq/stylesheets/bootstrap.css" for 127.0.0.1 at 2013-06-05 16:10:29 -0700
+
+
+Started GET "/sidekiq/javascripts/application.js" for 127.0.0.1 at 2013-06-05 16:10:29 -0700
+
+
+Started GET "/sidekiq/stylesheets/application.css" for 127.0.0.1 at 2013-06-05 16:10:29 -0700
+
+
+Started GET "/sidekiq/images/status-sd8051fd480.png" for 127.0.0.1 at 2013-06-05 16:10:29 -0700
+
+
+Started GET "/sidekiq/retries?poll=true" for 127.0.0.1 at 2013-06-05 16:10:31 -0700
+
+
+Started GET "/sidekiq/stylesheets/bootstrap.css" for 127.0.0.1 at 2013-06-05 16:10:31 -0700
+
+
+Started GET "/sidekiq/javascripts/application.js" for 127.0.0.1 at 2013-06-05 16:10:31 -0700
+
+
+Started GET "/sidekiq/stylesheets/application.css" for 127.0.0.1 at 2013-06-05 16:10:31 -0700
+
+
+Started GET "/sidekiq/images/status-sd8051fd480.png" for 127.0.0.1 at 2013-06-05 16:10:31 -0700
+
+
+Started GET "/sidekiq/retries?poll=true" for 127.0.0.1 at 2013-06-05 16:10:33 -0700
+
+
+Started GET "/sidekiq/stylesheets/bootstrap.css" for 127.0.0.1 at 2013-06-05 16:10:33 -0700
+
+
+Started GET "/sidekiq/stylesheets/application.css" for 127.0.0.1 at 2013-06-05 16:10:33 -0700
+
+
+Started GET "/sidekiq/javascripts/application.js" for 127.0.0.1 at 2013-06-05 16:10:33 -0700
+
+
+Started GET "/sidekiq/images/status-sd8051fd480.png" for 127.0.0.1 at 2013-06-05 16:10:33 -0700
+
+
+Started GET "/sidekiq/retries?poll=true" for 127.0.0.1 at 2013-06-05 16:10:35 -0700
+
+
+Started GET "/sidekiq/stylesheets/bootstrap.css" for 127.0.0.1 at 2013-06-05 16:10:36 -0700
+
+
+Started GET "/sidekiq/stylesheets/application.css" for 127.0.0.1 at 2013-06-05 16:10:36 -0700
+
+
+Started GET "/sidekiq/javascripts/application.js" for 127.0.0.1 at 2013-06-05 16:10:36 -0700
+
+
+Started GET "/sidekiq/images/status-sd8051fd480.png" for 127.0.0.1 at 2013-06-05 16:10:36 -0700
+
+
+Started GET "/sidekiq/retries?poll=true" for 127.0.0.1 at 2013-06-05 16:10:38 -0700
+
+
+Started GET "/sidekiq/stylesheets/bootstrap.css" for 127.0.0.1 at 2013-06-05 16:10:38 -0700
+
+
+Started GET "/sidekiq/javascripts/application.js" for 127.0.0.1 at 2013-06-05 16:10:38 -0700
+
+
+Started GET "/sidekiq/stylesheets/application.css" for 127.0.0.1 at 2013-06-05 16:10:38 -0700
+
+
+Started GET "/sidekiq/images/status-sd8051fd480.png" for 127.0.0.1 at 2013-06-05 16:10:38 -0700
+
+
+Started GET "/sidekiq/retries?poll=true" for 127.0.0.1 at 2013-06-05 16:10:40 -0700
+
+
+Started GET "/sidekiq/stylesheets/bootstrap.css" for 127.0.0.1 at 2013-06-05 16:10:40 -0700
+
+
+Started GET "/sidekiq/javascripts/application.js" for 127.0.0.1 at 2013-06-05 16:10:40 -0700
+
+
+Started GET "/sidekiq/stylesheets/application.css" for 127.0.0.1 at 2013-06-05 16:10:40 -0700
+
+
+Started GET "/sidekiq/images/status-sd8051fd480.png" for 127.0.0.1 at 2013-06-05 16:10:40 -0700
+
+
+Started GET "/sidekiq/retries?poll=true" for 127.0.0.1 at 2013-06-05 16:10:42 -0700
+
+
+Started GET "/sidekiq/stylesheets/application.css" for 127.0.0.1 at 2013-06-05 16:10:42 -0700
+
+
+Started GET "/sidekiq/javascripts/application.js" for 127.0.0.1 at 2013-06-05 16:10:42 -0700
+
+
+Started GET "/sidekiq/stylesheets/bootstrap.css" for 127.0.0.1 at 2013-06-05 16:10:42 -0700
+
+
+Started GET "/sidekiq/images/status-sd8051fd480.png" for 127.0.0.1 at 2013-06-05 16:10:43 -0700
+
+
+Started GET "/sidekiq/retries?poll=true" for 127.0.0.1 at 2013-06-05 16:10:45 -0700
+
+
+Started GET "/sidekiq/stylesheets/bootstrap.css" for 127.0.0.1 at 2013-06-05 16:10:45 -0700
+
+
+Started GET "/sidekiq/stylesheets/application.css" for 127.0.0.1 at 2013-06-05 16:10:45 -0700
+
+
+Started GET "/sidekiq/javascripts/application.js" for 127.0.0.1 at 2013-06-05 16:10:45 -0700
+
+
+Started GET "/sidekiq/images/status-sd8051fd480.png" for 127.0.0.1 at 2013-06-05 16:10:45 -0700
+
+
+Started GET "/sidekiq/retries?poll=true" for 127.0.0.1 at 2013-06-05 16:10:47 -0700
+
+
+Started GET "/sidekiq/stylesheets/bootstrap.css" for 127.0.0.1 at 2013-06-05 16:10:47 -0700
+
+
+Started GET "/sidekiq/stylesheets/application.css" for 127.0.0.1 at 2013-06-05 16:10:47 -0700
+
+
+Started GET "/sidekiq/javascripts/application.js" for 127.0.0.1 at 2013-06-05 16:10:47 -0700
+
+
+Started GET "/sidekiq/images/status-sd8051fd480.png" for 127.0.0.1 at 2013-06-05 16:10:47 -0700
+
+
+Started GET "/sidekiq/retries/1370473890.274938-597e4ae4876edfd8e1b15424" for 127.0.0.1 at 2013-06-05 16:10:49 -0700
+
+
+Started GET "/sidekiq/retries?poll=true" for 127.0.0.1 at 2013-06-05 16:10:49 -0700
+
+
+Started GET "/sidekiq/stylesheets/bootstrap.css" for 127.0.0.1 at 2013-06-05 16:10:50 -0700
+
+
+Started GET "/sidekiq/stylesheets/application.css" for 127.0.0.1 at 2013-06-05 16:10:50 -0700
+
+
+Started GET "/sidekiq/javascripts/application.js" for 127.0.0.1 at 2013-06-05 16:10:50 -0700
+
+
+Started GET "/sidekiq/images/status-sd8051fd480.png" for 127.0.0.1 at 2013-06-05 16:10:50 -0700
+
+
+Started GET "/sidekiq/retries?poll=true" for 127.0.0.1 at 2013-06-05 16:10:52 -0700
+
+
+Started GET "/sidekiq/stylesheets/bootstrap.css" for 127.0.0.1 at 2013-06-05 16:10:52 -0700
+
+
+Started GET "/sidekiq/stylesheets/application.css" for 127.0.0.1 at 2013-06-05 16:10:52 -0700
+
+
+Started GET "/sidekiq/javascripts/application.js" for 127.0.0.1 at 2013-06-05 16:10:52 -0700
+
+
+Started GET "/sidekiq/images/status-sd8051fd480.png" for 127.0.0.1 at 2013-06-05 16:10:52 -0700
+
+
+Started GET "/sidekiq/retries/1370473890.274938-597e4ae4876edfd8e1b15424" for 127.0.0.1 at 2013-06-05 16:10:54 -0700
+
+
+Started GET "/sidekiq/retries?poll=true" for 127.0.0.1 at 2013-06-05 16:10:54 -0700
+
+
+Started GET "/sidekiq/stylesheets/application.css" for 127.0.0.1 at 2013-06-05 16:10:54 -0700
+
+
+Started GET "/sidekiq/stylesheets/bootstrap.css" for 127.0.0.1 at 2013-06-05 16:10:54 -0700
+
+
+Started GET "/sidekiq/javascripts/application.js" for 127.0.0.1 at 2013-06-05 16:10:54 -0700
+
+
+Started GET "/sidekiq/images/status-sd8051fd480.png" for 127.0.0.1 at 2013-06-05 16:10:54 -0700
+
+
+Started GET "/sidekiq/retries" for 127.0.0.1 at 2013-06-05 16:10:56 -0700
+
+
+Started GET "/sidekiq/retries?poll=true" for 127.0.0.1 at 2013-06-05 16:10:57 -0700
+
+
+Started GET "/sidekiq/stylesheets/bootstrap.css" for 127.0.0.1 at 2013-06-05 16:10:57 -0700
+
+
+Started GET "/sidekiq/stylesheets/application.css" for 127.0.0.1 at 2013-06-05 16:10:57 -0700
+
+
+Started GET "/sidekiq/javascripts/application.js" for 127.0.0.1 at 2013-06-05 16:10:57 -0700
+
+
+Started GET "/sidekiq/images/status-sd8051fd480.png" for 127.0.0.1 at 2013-06-05 16:10:57 -0700
+
+
+Started GET "/sidekiq/retries" for 127.0.0.1 at 2013-06-05 16:10:59 -0700
+
+
+Started GET "/sidekiq/retries?poll=true" for 127.0.0.1 at 2013-06-05 16:10:59 -0700
+
+
+Started GET "/sidekiq/stylesheets/bootstrap.css" for 127.0.0.1 at 2013-06-05 16:10:59 -0700
+
+
+Started GET "/sidekiq/stylesheets/application.css" for 127.0.0.1 at 2013-06-05 16:10:59 -0700
+
+
+Started GET "/sidekiq/javascripts/application.js" for 127.0.0.1 at 2013-06-05 16:10:59 -0700
+
+
+Started GET "/sidekiq/images/status-sd8051fd480.png" for 127.0.0.1 at 2013-06-05 16:10:59 -0700
+
+
+Started GET "/sidekiq/retries" for 127.0.0.1 at 2013-06-05 16:11:00 -0700
+
+
+Started GET "/sidekiq/stylesheets/bootstrap.css" for 127.0.0.1 at 2013-06-05 16:11:00 -0700
+
+
+Started GET "/sidekiq/javascripts/application.js" for 127.0.0.1 at 2013-06-05 16:11:00 -0700
+
+
+Started GET "/sidekiq/stylesheets/application.css" for 127.0.0.1 at 2013-06-05 16:11:00 -0700
+
+
+Started GET "/sidekiq/images/status-sd8051fd480.png" for 127.0.0.1 at 2013-06-05 16:11:00 -0700
+
+
+Started GET "/sidekiq/retries/1370473890.274938-597e4ae4876edfd8e1b15424" for 127.0.0.1 at 2013-06-05 16:11:01 -0700
+
+
+Started GET "/sidekiq/stylesheets/bootstrap.css" for 127.0.0.1 at 2013-06-05 16:11:02 -0700
+
+
+Started GET "/sidekiq/javascripts/application.js" for 127.0.0.1 at 2013-06-05 16:11:02 -0700
+
+
+Started GET "/sidekiq/stylesheets/application.css" for 127.0.0.1 at 2013-06-05 16:11:02 -0700
+
+
+Started GET "/sidekiq/images/status-sd8051fd480.png" for 127.0.0.1 at 2013-06-05 16:11:02 -0700
+
+
+Started GET "/videos/1" for 127.0.0.1 at 2013-06-05 16:11:12 -0700
+Processing by VideosController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mVideo Load (0.5ms)[0m  SELECT "videos".* FROM "videos" WHERE "videos"."id" = $1 LIMIT 1  [["id", "1"]]
+  Rendered videos/show.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 14ms (Views: 10.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-05 16:11:12 -0700
+
+
+Started GET "/assets/videos.css?body=1" for 127.0.0.1 at 2013-06-05 16:11:12 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-05 16:11:12 -0700
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-06-05 16:11:12 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-05 16:11:12 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-06-05 16:11:12 -0700
+
+
+Started GET "/assets/videos.js?body=1" for 127.0.0.1 at 2013-06-05 16:11:12 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-05 16:11:12 -0700
+  [1m[35mVideo Load (0.2ms)[0m  SELECT "videos".* FROM "videos" WHERE "videos"."id" = ? LIMIT 1  [["id", "1"]]
+
+
+Started GET "/videos/1/edit" for 127.0.0.1 at 2013-06-05 16:11:54 -0700
+Processing by VideosController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mVideo Load (0.3ms)[0m  [1mSELECT "videos".* FROM "videos" WHERE "videos"."id" = $1 LIMIT 1[0m  [["id", "1"]]
+  Rendered videos/_form.html.erb (6.4ms)
+  Rendered videos/edit.html.erb within layouts/application (8.3ms)
+Completed 200 OK in 62ms (Views: 15.6ms | ActiveRecord: 2.1ms)
+
+
+Started PATCH "/videos/1" for 127.0.0.1 at 2013-06-05 16:12:19 -0700
+Processing by VideosController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"vXY8Omwf1qY8MJYPeomfeJpIEPr4GNwlMvddPDBqv2Q=", "video"=>{"file_url"=>#<ActionDispatch::Http::UploadedFile:0x007fe363a05430 @tempfile=#<Tempfile:/var/folders/dp/dxp19pz54dzf_8f6zmvk7fyh0000gn/T/RackMultipart20130605-76522-1jya95l>, @original_filename="mini.mp4", @content_type="video/mp4", @headers="Content-Disposition: form-data; name=\"video[file_url]\"; filename=\"mini.mp4\"\r\nContent-Type: video/mp4\r\n">, "file_url_tmp"=>"20130605-1610-76522-3248/3699-91e79cb6.mp4"}, "commit"=>"Update Video", "id"=>"1"}
+  [1m[35mVideo Load (0.4ms)[0m  SELECT "videos".* FROM "videos" WHERE "videos"."id" = $1 LIMIT 1  [["id", "1"]]
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mVideo Load (0.4ms)[0m  SELECT "videos".* FROM "videos" WHERE "videos"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mSQL (0.7ms)[0m  [1mUPDATE "videos" SET "file_url" = $1, "file_url_tmp" = $2, "updated_at" = $3 WHERE "videos"."id" = 1[0m  [["file_url", nil], ["file_url_tmp", "20130605-1612-76522-3729/mini.mp4"], ["updated_at", Wed, 05 Jun 2013 23:12:33 UTC +00:00]]
+  [1m[35m (0.5ms)[0m  COMMIT
+Redirected to http://localhost:3000/videos/1
+Completed 302 Found in 13825ms (ActiveRecord: 2.3ms)
+  [1m[36mVideo Load (0.2ms)[0m  [1mSELECT "videos".* FROM "videos" WHERE "videos"."id" = ? LIMIT 1[0m  [["id", "1"]]
+
+
+Started GET "/videos/1" for 127.0.0.1 at 2013-06-05 16:12:33 -0700
+Processing by VideosController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mVideo Load (0.4ms)[0m  [1mSELECT "videos".* FROM "videos" WHERE "videos"."id" = $1 LIMIT 1[0m  [["id", "1"]]
+  Rendered videos/show.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 11ms (Views: 8.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-05 16:12:33 -0700
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-06-05 16:12:33 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-05 16:12:33 -0700
+
+
+Started GET "/assets/videos.css?body=1" for 127.0.0.1 at 2013-06-05 16:12:33 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-05 16:12:33 -0700
+
+
+Started GET "/assets/videos.js?body=1" for 127.0.0.1 at 2013-06-05 16:12:33 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-06-05 16:12:33 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-05 16:12:33 -0700
+
+
+Started GET "/sidekiq/retries" for 127.0.0.1 at 2013-06-05 16:13:07 -0700
+
+
+Started GET "/sidekiq/stylesheets/bootstrap.css" for 127.0.0.1 at 2013-06-05 16:13:07 -0700
+
+
+Started GET "/sidekiq/stylesheets/application.css" for 127.0.0.1 at 2013-06-05 16:13:07 -0700
+
+
+Started GET "/sidekiq/javascripts/application.js" for 127.0.0.1 at 2013-06-05 16:13:07 -0700
+
+
+Started GET "/sidekiq/images/status-sd8051fd480.png" for 127.0.0.1 at 2013-06-05 16:13:07 -0700
+
+
+Started GET "/videos/1" for 127.0.0.1 at 2013-06-05 16:13:20 -0700
+Processing by VideosController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mVideo Load (0.4ms)[0m  SELECT "videos".* FROM "videos" WHERE "videos"."id" = $1 LIMIT 1  [["id", "1"]]
+  Rendered videos/show.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 12ms (Views: 8.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-05 16:13:20 -0700
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-06-05 16:13:20 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-05 16:13:20 -0700
+
+
+Started GET "/assets/videos.css?body=1" for 127.0.0.1 at 2013-06-05 16:13:20 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-05 16:13:20 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-06-05 16:13:20 -0700
+
+
+Started GET "/assets/videos.js?body=1" for 127.0.0.1 at 2013-06-05 16:13:20 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-05 16:13:20 -0700
+
+
+Started GET "/videos/1/edit" for 127.0.0.1 at 2013-06-05 16:13:22 -0700
+Processing by VideosController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mVideo Load (0.4ms)[0m  [1mSELECT "videos".* FROM "videos" WHERE "videos"."id" = $1 LIMIT 1[0m  [["id", "1"]]
+  Rendered videos/_form.html.erb (6.4ms)
+  Rendered videos/edit.html.erb within layouts/application (8.3ms)
+Completed 200 OK in 17ms (Views: 14.8ms | ActiveRecord: 0.4ms)
+
+
+Started PATCH "/videos/1" for 127.0.0.1 at 2013-06-05 16:13:29 -0700
+Processing by VideosController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"vXY8Omwf1qY8MJYPeomfeJpIEPr4GNwlMvddPDBqv2Q=", "video"=>{"file_url"=>#<ActionDispatch::Http::UploadedFile:0x007fe363e5d528 @tempfile=#<Tempfile:/var/folders/dp/dxp19pz54dzf_8f6zmvk7fyh0000gn/T/RackMultipart20130605-76522-wayaxm>, @original_filename="mini copy.mp4", @content_type="video/mp4", @headers="Content-Disposition: form-data; name=\"video[file_url]\"; filename=\"mini copy.mp4\"\r\nContent-Type: video/mp4\r\n">, "file_url_tmp"=>"20130605-1612-76522-3729/mini.mp4"}, "commit"=>"Update Video", "id"=>"1"}
+  [1m[35mVideo Load (0.4ms)[0m  SELECT "videos".* FROM "videos" WHERE "videos"."id" = $1 LIMIT 1  [["id", "1"]]
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mVideo Load (0.5ms)[0m  SELECT "videos".* FROM "videos" WHERE "videos"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mSQL (0.5ms)[0m  [1mUPDATE "videos" SET "file_url" = $1, "file_url_tmp" = $2, "updated_at" = $3 WHERE "videos"."id" = 1[0m  [["file_url", nil], ["file_url_tmp", "20130605-1613-76522-7231/mini_copy.mp4"], ["updated_at", Wed, 05 Jun 2013 23:13:33 UTC +00:00]]
+  [1m[35m (2.6ms)[0m  COMMIT
+Redirected to http://localhost:3000/videos/1
+Completed 302 Found in 3854ms (ActiveRecord: 4.1ms)
+
+
+Started GET "/videos/1" for 127.0.0.1 at 2013-06-05 16:13:33 -0700
+Processing by VideosController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mVideo Load (0.3ms)[0m  [1mSELECT "videos".* FROM "videos" WHERE "videos"."id" = $1 LIMIT 1[0m  [["id", "1"]]
+  Rendered videos/show.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 11ms (Views: 8.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-06-05 16:13:33 -0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-05 16:13:33 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-05 16:13:33 -0700
+
+
+Started GET "/assets/videos.css?body=1" for 127.0.0.1 at 2013-06-05 16:13:33 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-06-05 16:13:33 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-05 16:13:33 -0700
+
+
+Started GET "/assets/videos.js?body=1" for 127.0.0.1 at 2013-06-05 16:13:33 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-05 16:13:33 -0700
+
+
+Started GET "/sidekiq/retries" for 127.0.0.1 at 2013-06-05 16:13:39 -0700
+
+
+Started GET "/sidekiq/javascripts/application.js" for 127.0.0.1 at 2013-06-05 16:13:39 -0700
+
+
+Started GET "/sidekiq/stylesheets/bootstrap.css" for 127.0.0.1 at 2013-06-05 16:13:39 -0700
+
+
+Started GET "/sidekiq/stylesheets/application.css" for 127.0.0.1 at 2013-06-05 16:13:39 -0700
+
+
+Started GET "/sidekiq/images/status-sd8051fd480.png" for 127.0.0.1 at 2013-06-05 16:13:39 -0700
+
+
+Started GET "/sidekiq/retries/1370474033.345267-76f27cdf7c86abaa49ff84fe" for 127.0.0.1 at 2013-06-05 16:13:41 -0700
+
+
+Started GET "/sidekiq/stylesheets/bootstrap.css" for 127.0.0.1 at 2013-06-05 16:13:41 -0700
+
+
+Started GET "/sidekiq/javascripts/application.js" for 127.0.0.1 at 2013-06-05 16:13:41 -0700
+
+
+Started GET "/sidekiq/stylesheets/application.css" for 127.0.0.1 at 2013-06-05 16:13:41 -0700
+
+
+Started GET "/sidekiq/images/status-sd8051fd480.png" for 127.0.0.1 at 2013-06-05 16:13:41 -0700
+  [1m[36mVideo Load (1.2ms)[0m  [1mSELECT "videos".* FROM "videos" WHERE "videos"."id" = $1 LIMIT 1[0m  [["id", "1"]]
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mVideo Load (0.5ms)[0m  [1mSELECT "videos".* FROM "videos" WHERE "videos"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mSQL (2.8ms)[0m  UPDATE "videos" SET "file_url_tmp" = $1, "file_url" = $2, "updated_at" = $3 WHERE "videos"."id" = 1  [["file_url_tmp", nil], ["file_url", "mini_copy.mp4"], ["updated_at", Wed, 05 Jun 2013 23:14:04 UTC +00:00]]
+  [1m[36m (0.9ms)[0m  [1mCOMMIT[0m
+
+
+Started GET "/sidekiq/retries/1370474033.345267-76f27cdf7c86abaa49ff84fe?poll=true" for 127.0.0.1 at 2013-06-05 16:14:09 -0700
+
+
+Started GET "/sidekiq/retries" for 127.0.0.1 at 2013-06-05 16:14:09 -0700
+
+
+Started GET "/sidekiq/stylesheets/bootstrap.css" for 127.0.0.1 at 2013-06-05 16:14:09 -0700
+
+
+Started GET "/sidekiq/javascripts/application.js" for 127.0.0.1 at 2013-06-05 16:14:10 -0700
+
+
+Started GET "/sidekiq/stylesheets/application.css" for 127.0.0.1 at 2013-06-05 16:14:10 -0700
+
+
+Started GET "/sidekiq/images/status-sd8051fd480.png" for 127.0.0.1 at 2013-06-05 16:14:10 -0700
+
+
+Started GET "/videos/1" for 127.0.0.1 at 2013-06-05 16:14:14 -0700
+Processing by VideosController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mVideo Load (0.4ms)[0m  SELECT "videos".* FROM "videos" WHERE "videos"."id" = $1 LIMIT 1  [["id", "1"]]
+  Rendered videos/show.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 13ms (Views: 10.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-06-05 16:14:14 -0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-05 16:14:14 -0700
+
+
+Started GET "/assets/videos.css?body=1" for 127.0.0.1 at 2013-06-05 16:14:14 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-05 16:14:14 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-05 16:14:14 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-06-05 16:14:14 -0700
+
+
+Started GET "/assets/videos.js?body=1" for 127.0.0.1 at 2013-06-05 16:14:14 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-05 16:14:14 -0700
+
+
+Started GET "/videos/1/edit" for 127.0.0.1 at 2013-06-05 16:14:31 -0700
+Processing by VideosController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mVideo Load (0.3ms)[0m  [1mSELECT "videos".* FROM "videos" WHERE "videos"."id" = $1 LIMIT 1[0m  [["id", "1"]]
+  Rendered videos/_form.html.erb (5.3ms)
+  Rendered videos/edit.html.erb within layouts/application (7.1ms)
+Completed 200 OK in 16ms (Views: 13.6ms | ActiveRecord: 0.3ms)
+
+
+Started PATCH "/videos/1" for 127.0.0.1 at 2013-06-05 16:14:36 -0700
+Processing by VideosController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"vXY8Omwf1qY8MJYPeomfeJpIEPr4GNwlMvddPDBqv2Q=", "video"=>{"file_url"=>#<ActionDispatch::Http::UploadedFile:0x007fe363d4ee98 @tempfile=#<Tempfile:/var/folders/dp/dxp19pz54dzf_8f6zmvk7fyh0000gn/T/RackMultipart20130605-76522-45t152>, @original_filename="mini.mp4", @content_type="video/mp4", @headers="Content-Disposition: form-data; name=\"video[file_url]\"; filename=\"mini.mp4\"\r\nContent-Type: video/mp4\r\n">, "file_url_tmp"=>""}, "commit"=>"Update Video", "id"=>"1"}
+  [1m[35mVideo Load (0.3ms)[0m  SELECT "videos".* FROM "videos" WHERE "videos"."id" = $1 LIMIT 1  [["id", "1"]]
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mVideo Load (0.4ms)[0m  SELECT "videos".* FROM "videos" WHERE "videos"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mSQL (0.6ms)[0m  [1mUPDATE "videos" SET "file_url" = $1, "file_url_tmp" = $2, "updated_at" = $3 WHERE "videos"."id" = 1[0m  [["file_url", "mini_copy.mp4"], ["file_url_tmp", "20130605-1614-76522-9820/mini.mp4"], ["updated_at", Wed, 05 Jun 2013 23:14:41 UTC +00:00]]
+  [1m[35m (0.7ms)[0m  COMMIT
+Redirected to http://localhost:3000/videos/1
+Completed 302 Found in 5864ms (ActiveRecord: 2.3ms)
+
+
+Started GET "/videos/1" for 127.0.0.1 at 2013-06-05 16:14:42 -0700
+Processing by VideosController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mVideo Load (0.4ms)[0m  [1mSELECT "videos".* FROM "videos" WHERE "videos"."id" = $1 LIMIT 1[0m  [["id", "1"]]
+  Rendered videos/show.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 13ms (Views: 9.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-05 16:14:42 -0700
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-06-05 16:14:42 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-06-05 16:14:42 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-05 16:14:42 -0700
+
+
+Started GET "/assets/videos.css?body=1" for 127.0.0.1 at 2013-06-05 16:14:42 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-05 16:14:42 -0700
+
+
+Started GET "/assets/videos.js?body=1" for 127.0.0.1 at 2013-06-05 16:14:42 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-05 16:14:42 -0700
+
+
+Started GET "/sidekiq/retries?poll=true" for 127.0.0.1 at 2013-06-05 16:14:44 -0700
+
+
+Started GET "/sidekiq/stylesheets/bootstrap.css" for 127.0.0.1 at 2013-06-05 16:14:44 -0700
+
+
+Started GET "/sidekiq/stylesheets/application.css" for 127.0.0.1 at 2013-06-05 16:14:44 -0700
+
+
+Started GET "/sidekiq/javascripts/application.js" for 127.0.0.1 at 2013-06-05 16:14:44 -0700
+
+
+Started GET "/sidekiq/images/status-sd8051fd480.png" for 127.0.0.1 at 2013-06-05 16:14:44 -0700
+
+
+Started GET "/sidekiq/retries?poll=true" for 127.0.0.1 at 2013-06-05 16:14:46 -0700
+
+
+Started GET "/sidekiq/stylesheets/application.css" for 127.0.0.1 at 2013-06-05 16:14:46 -0700
+
+
+Started GET "/sidekiq/javascripts/application.js" for 127.0.0.1 at 2013-06-05 16:14:46 -0700
+
+
+Started GET "/sidekiq/stylesheets/bootstrap.css" for 127.0.0.1 at 2013-06-05 16:14:46 -0700
+
+
+Started GET "/sidekiq/images/status-sd8051fd480.png" for 127.0.0.1 at 2013-06-05 16:14:46 -0700
+
+
+Started GET "/sidekiq/retries/1370474117.445351-d64aa6cb90dd50ccd548e23c" for 127.0.0.1 at 2013-06-05 16:14:47 -0700
+
+
+Started GET "/sidekiq/stylesheets/bootstrap.css" for 127.0.0.1 at 2013-06-05 16:14:47 -0700
+
+
+Started GET "/sidekiq/javascripts/application.js" for 127.0.0.1 at 2013-06-05 16:14:47 -0700
+
+
+Started GET "/sidekiq/stylesheets/application.css" for 127.0.0.1 at 2013-06-05 16:14:47 -0700
+
+
+Started GET "/sidekiq/images/status-sd8051fd480.png" for 127.0.0.1 at 2013-06-05 16:14:47 -0700
+
+
+Started GET "/sidekiq/retries?poll=true" for 127.0.0.1 at 2013-06-05 16:14:51 -0700
+
+
+Started GET "/sidekiq/stylesheets/application.css" for 127.0.0.1 at 2013-06-05 16:14:52 -0700
+
+
+Started GET "/sidekiq/stylesheets/bootstrap.css" for 127.0.0.1 at 2013-06-05 16:14:52 -0700
+
+
+Started GET "/sidekiq/javascripts/application.js" for 127.0.0.1 at 2013-06-05 16:14:52 -0700
+
+
+Started GET "/sidekiq/images/status-sd8051fd480.png" for 127.0.0.1 at 2013-06-05 16:14:52 -0700
+
+
+Started GET "/sidekiq/retries?poll=true" for 127.0.0.1 at 2013-06-05 16:14:54 -0700
+
+
+Started GET "/sidekiq/stylesheets/bootstrap.css" for 127.0.0.1 at 2013-06-05 16:14:54 -0700
+
+
+Started GET "/sidekiq/stylesheets/application.css" for 127.0.0.1 at 2013-06-05 16:14:54 -0700
+
+
+Started GET "/sidekiq/javascripts/application.js" for 127.0.0.1 at 2013-06-05 16:14:54 -0700
+
+
+Started GET "/sidekiq/images/status-sd8051fd480.png" for 127.0.0.1 at 2013-06-05 16:14:54 -0700
+
+
+Started GET "/sidekiq/retries?poll=true" for 127.0.0.1 at 2013-06-05 16:14:56 -0700
+
+
+Started GET "/sidekiq/stylesheets/application.css" for 127.0.0.1 at 2013-06-05 16:14:56 -0700
+
+
+Started GET "/sidekiq/stylesheets/bootstrap.css" for 127.0.0.1 at 2013-06-05 16:14:56 -0700
+
+
+Started GET "/sidekiq/javascripts/application.js" for 127.0.0.1 at 2013-06-05 16:14:56 -0700
+
+
+Started GET "/sidekiq/images/status-sd8051fd480.png" for 127.0.0.1 at 2013-06-05 16:14:56 -0700
+
+
+Started GET "/sidekiq/retries?poll=true" for 127.0.0.1 at 2013-06-05 16:14:58 -0700
+
+
+Started GET "/sidekiq/stylesheets/bootstrap.css" for 127.0.0.1 at 2013-06-05 16:14:59 -0700
+
+
+Started GET "/sidekiq/stylesheets/application.css" for 127.0.0.1 at 2013-06-05 16:14:59 -0700
+
+
+Started GET "/sidekiq/javascripts/application.js" for 127.0.0.1 at 2013-06-05 16:14:59 -0700
+
+
+Started GET "/sidekiq/images/status-sd8051fd480.png" for 127.0.0.1 at 2013-06-05 16:14:59 -0700
+
+
+Started GET "/sidekiq/retries?poll=true" for 127.0.0.1 at 2013-06-05 16:15:01 -0700
+
+
+Started GET "/sidekiq/stylesheets/bootstrap.css" for 127.0.0.1 at 2013-06-05 16:15:01 -0700
+
+
+Started GET "/sidekiq/stylesheets/application.css" for 127.0.0.1 at 2013-06-05 16:15:01 -0700
+
+
+Started GET "/sidekiq/javascripts/application.js" for 127.0.0.1 at 2013-06-05 16:15:01 -0700
+
+
+Started GET "/sidekiq/images/status-sd8051fd480.png" for 127.0.0.1 at 2013-06-05 16:15:01 -0700
+
+
+Started GET "/sidekiq/retries?poll=true" for 127.0.0.1 at 2013-06-05 16:15:03 -0700
+
+
+Started GET "/sidekiq/stylesheets/bootstrap.css" for 127.0.0.1 at 2013-06-05 16:15:03 -0700
+
+
+Started GET "/sidekiq/javascripts/application.js" for 127.0.0.1 at 2013-06-05 16:15:03 -0700
+
+
+Started GET "/sidekiq/stylesheets/application.css" for 127.0.0.1 at 2013-06-05 16:15:03 -0700
+
+
+Started GET "/sidekiq/images/status-sd8051fd480.png" for 127.0.0.1 at 2013-06-05 16:15:03 -0700
+
+
+Started GET "/sidekiq/retries?poll=true" for 127.0.0.1 at 2013-06-05 16:15:05 -0700
+
+
+Started GET "/sidekiq/stylesheets/application.css" for 127.0.0.1 at 2013-06-05 16:15:06 -0700
+
+
+Started GET "/sidekiq/javascripts/application.js" for 127.0.0.1 at 2013-06-05 16:15:06 -0700
+
+
+Started GET "/sidekiq/stylesheets/bootstrap.css" for 127.0.0.1 at 2013-06-05 16:15:06 -0700
+
+
+Started GET "/sidekiq/images/status-sd8051fd480.png" for 127.0.0.1 at 2013-06-05 16:15:06 -0700
+
+
+Started GET "/sidekiq/retries?poll=true" for 127.0.0.1 at 2013-06-05 16:15:08 -0700
+
+
+Started GET "/sidekiq/stylesheets/bootstrap.css" for 127.0.0.1 at 2013-06-05 16:15:08 -0700
+
+
+Started GET "/sidekiq/javascripts/application.js" for 127.0.0.1 at 2013-06-05 16:15:08 -0700
+
+
+Started GET "/sidekiq/stylesheets/application.css" for 127.0.0.1 at 2013-06-05 16:15:08 -0700
+
+
+Started GET "/sidekiq/images/status-sd8051fd480.png" for 127.0.0.1 at 2013-06-05 16:15:08 -0700
+
+
+Started GET "/sidekiq/retries?poll=true" for 127.0.0.1 at 2013-06-05 16:15:10 -0700
+
+
+Started GET "/sidekiq/stylesheets/application.css" for 127.0.0.1 at 2013-06-05 16:15:10 -0700
+
+
+Started GET "/sidekiq/javascripts/application.js" for 127.0.0.1 at 2013-06-05 16:15:10 -0700
+
+
+Started GET "/sidekiq/stylesheets/bootstrap.css" for 127.0.0.1 at 2013-06-05 16:15:10 -0700
+
+
+Started GET "/sidekiq/images/status-sd8051fd480.png" for 127.0.0.1 at 2013-06-05 16:15:10 -0700
+
+
+Started GET "/sidekiq/retries?poll=true" for 127.0.0.1 at 2013-06-05 16:15:12 -0700
+
+
+Started GET "/sidekiq/javascripts/application.js" for 127.0.0.1 at 2013-06-05 16:15:13 -0700
+
+
+Started GET "/sidekiq/stylesheets/bootstrap.css" for 127.0.0.1 at 2013-06-05 16:15:13 -0700
+
+
+Started GET "/sidekiq/stylesheets/application.css" for 127.0.0.1 at 2013-06-05 16:15:13 -0700
+
+
+Started GET "/sidekiq/images/status-sd8051fd480.png" for 127.0.0.1 at 2013-06-05 16:15:13 -0700
+
+
+Started GET "/sidekiq/retries?poll=true" for 127.0.0.1 at 2013-06-05 16:15:15 -0700
+
+
+Started GET "/sidekiq/stylesheets/bootstrap.css" for 127.0.0.1 at 2013-06-05 16:15:16 -0700
+
+
+Started GET "/sidekiq/stylesheets/application.css" for 127.0.0.1 at 2013-06-05 16:15:16 -0700
+
+
+Started GET "/sidekiq/javascripts/application.js" for 127.0.0.1 at 2013-06-05 16:15:16 -0700
+
+
+Started GET "/sidekiq/images/status-sd8051fd480.png" for 127.0.0.1 at 2013-06-05 16:15:16 -0700
+
+
+Started GET "/sidekiq/retries?poll=true" for 127.0.0.1 at 2013-06-05 16:15:18 -0700
+
+
+Started GET "/sidekiq/stylesheets/bootstrap.css" for 127.0.0.1 at 2013-06-05 16:15:18 -0700
+
+
+Started GET "/sidekiq/javascripts/application.js" for 127.0.0.1 at 2013-06-05 16:15:18 -0700
+
+
+Started GET "/sidekiq/stylesheets/application.css" for 127.0.0.1 at 2013-06-05 16:15:18 -0700
+
+
+Started GET "/sidekiq/images/status-sd8051fd480.png" for 127.0.0.1 at 2013-06-05 16:15:18 -0700
+
+
+Started GET "/sidekiq/retries?poll=true" for 127.0.0.1 at 2013-06-05 16:15:20 -0700
+
+
+Started GET "/sidekiq/stylesheets/bootstrap.css" for 127.0.0.1 at 2013-06-05 16:15:21 -0700
+
+
+Started GET "/sidekiq/stylesheets/application.css" for 127.0.0.1 at 2013-06-05 16:15:21 -0700
+
+
+Started GET "/sidekiq/javascripts/application.js" for 127.0.0.1 at 2013-06-05 16:15:21 -0700
+
+
+Started GET "/sidekiq/images/status-sd8051fd480.png" for 127.0.0.1 at 2013-06-05 16:15:21 -0700
+  [1m[35mVideo Load (0.5ms)[0m  SELECT "videos".* FROM "videos" WHERE "videos"."id" = $1 LIMIT 1  [["id", "1"]]
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mVideo Load (0.5ms)[0m  SELECT "videos".* FROM "videos" WHERE "videos"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mSQL (0.5ms)[0m  [1mUPDATE "videos" SET "file_url_tmp" = $1, "file_url" = $2, "updated_at" = $3 WHERE "videos"."id" = 1[0m  [["file_url_tmp", nil], ["file_url", "mini.mp4"], ["updated_at", Wed, 05 Jun 2013 23:15:22 UTC +00:00]]
+
+
+Started GET "/sidekiq/retries?poll=true" for 127.0.0.1 at 2013-06-05 16:15:23 -0700
+  [1m[35m (0.3ms)[0m  ROLLBACK
+
+
+Started GET "/sidekiq/stylesheets/bootstrap.css" for 127.0.0.1 at 2013-06-05 16:15:23 -0700
+
+
+Started GET "/sidekiq/javascripts/application.js" for 127.0.0.1 at 2013-06-05 16:15:23 -0700
+
+
+Started GET "/sidekiq/stylesheets/application.css" for 127.0.0.1 at 2013-06-05 16:15:23 -0700
+
+
+Started GET "/sidekiq/images/status-sd8051fd480.png" for 127.0.0.1 at 2013-06-05 16:15:23 -0700
+
+
+Started GET "/sidekiq/retries?poll=true" for 127.0.0.1 at 2013-06-05 16:15:25 -0700
+
+
+Started GET "/sidekiq/stylesheets/bootstrap.css" for 127.0.0.1 at 2013-06-05 16:15:25 -0700
+
+
+Started GET "/sidekiq/stylesheets/application.css" for 127.0.0.1 at 2013-06-05 16:15:25 -0700
+
+
+Started GET "/sidekiq/javascripts/application.js" for 127.0.0.1 at 2013-06-05 16:15:25 -0700
+
+
+Started GET "/sidekiq/images/status-sd8051fd480.png" for 127.0.0.1 at 2013-06-05 16:15:25 -0700
+
+
+Started GET "/sidekiq/retries?poll=true" for 127.0.0.1 at 2013-06-05 16:15:27 -0700
+
+
+Started GET "/sidekiq/stylesheets/bootstrap.css" for 127.0.0.1 at 2013-06-05 16:15:28 -0700
+
+
+Started GET "/sidekiq/javascripts/application.js" for 127.0.0.1 at 2013-06-05 16:15:28 -0700
+
+
+Started GET "/sidekiq/stylesheets/application.css" for 127.0.0.1 at 2013-06-05 16:15:28 -0700
+
+
+Started GET "/sidekiq/images/status-sd8051fd480.png" for 127.0.0.1 at 2013-06-05 16:15:28 -0700
+
+
+Started GET "/sidekiq/retries?poll=true" for 127.0.0.1 at 2013-06-05 16:15:30 -0700
+
+
+Started GET "/sidekiq/javascripts/application.js" for 127.0.0.1 at 2013-06-05 16:15:30 -0700
+
+
+Started GET "/sidekiq/stylesheets/application.css" for 127.0.0.1 at 2013-06-05 16:15:30 -0700
+
+
+Started GET "/sidekiq/stylesheets/bootstrap.css" for 127.0.0.1 at 2013-06-05 16:15:30 -0700
+
+
+Started GET "/sidekiq/images/status-sd8051fd480.png" for 127.0.0.1 at 2013-06-05 16:15:30 -0700
+
+
+Started GET "/sidekiq/retries?poll=true" for 127.0.0.1 at 2013-06-05 16:15:32 -0700
+
+
+Started GET "/sidekiq/stylesheets/bootstrap.css" for 127.0.0.1 at 2013-06-05 16:15:32 -0700
+
+
+Started GET "/sidekiq/javascripts/application.js" for 127.0.0.1 at 2013-06-05 16:15:32 -0700
+
+
+Started GET "/sidekiq/stylesheets/application.css" for 127.0.0.1 at 2013-06-05 16:15:32 -0700
+
+
+Started GET "/sidekiq/images/status-sd8051fd480.png" for 127.0.0.1 at 2013-06-05 16:15:32 -0700
+
+
+Started GET "/sidekiq/retries?poll=true" for 127.0.0.1 at 2013-06-05 16:15:34 -0700
+
+
+Started GET "/sidekiq/stylesheets/bootstrap.css" for 127.0.0.1 at 2013-06-05 16:15:35 -0700
+
+
+Started GET "/sidekiq/javascripts/application.js" for 127.0.0.1 at 2013-06-05 16:15:35 -0700
+
+
+Started GET "/sidekiq/stylesheets/application.css" for 127.0.0.1 at 2013-06-05 16:15:35 -0700
+
+
+Started GET "/sidekiq/images/status-sd8051fd480.png" for 127.0.0.1 at 2013-06-05 16:15:35 -0700
+
+
+Started GET "/sidekiq/retries?poll=true" for 127.0.0.1 at 2013-06-05 16:15:37 -0700
+
+
+Started GET "/sidekiq/stylesheets/bootstrap.css" for 127.0.0.1 at 2013-06-05 16:15:37 -0700
+
+
+Started GET "/sidekiq/javascripts/application.js" for 127.0.0.1 at 2013-06-05 16:15:37 -0700
+
+
+Started GET "/sidekiq/stylesheets/application.css" for 127.0.0.1 at 2013-06-05 16:15:37 -0700
+
+
+Started GET "/sidekiq/images/status-sd8051fd480.png" for 127.0.0.1 at 2013-06-05 16:15:37 -0700
+
+
+Started GET "/sidekiq/retries/1370474165.432617-d64aa6cb90dd50ccd548e23c" for 127.0.0.1 at 2013-06-05 16:15:39 -0700
+
+
+Started GET "/sidekiq/retries?poll=true" for 127.0.0.1 at 2013-06-05 16:15:40 -0700
+
+
+Started GET "/sidekiq/stylesheets/bootstrap.css" for 127.0.0.1 at 2013-06-05 16:15:40 -0700
+
+
+Started GET "/sidekiq/stylesheets/application.css" for 127.0.0.1 at 2013-06-05 16:15:40 -0700
+
+
+Started GET "/sidekiq/javascripts/application.js" for 127.0.0.1 at 2013-06-05 16:15:40 -0700
+
+
+Started GET "/sidekiq/images/status-sd8051fd480.png" for 127.0.0.1 at 2013-06-05 16:15:40 -0700
+
+
+Started GET "/sidekiq/retries/1370474165.432617-d64aa6cb90dd50ccd548e23c" for 127.0.0.1 at 2013-06-05 16:15:40 -0700
+
+
+Started GET "/sidekiq/stylesheets/bootstrap.css" for 127.0.0.1 at 2013-06-05 16:15:40 -0700
+
+
+Started GET "/sidekiq/stylesheets/application.css" for 127.0.0.1 at 2013-06-05 16:15:40 -0700
+
+
+Started GET "/sidekiq/javascripts/application.js" for 127.0.0.1 at 2013-06-05 16:15:40 -0700
+
+
+Started GET "/sidekiq/images/status-sd8051fd480.png" for 127.0.0.1 at 2013-06-05 16:15:40 -0700
+
+
+Started GET "/sidekiq/retries?poll=true" for 127.0.0.1 at 2013-06-05 16:15:47 -0700
+
+
+Started GET "/sidekiq/javascripts/application.js" for 127.0.0.1 at 2013-06-05 16:15:48 -0700
+
+
+Started GET "/sidekiq/stylesheets/bootstrap.css" for 127.0.0.1 at 2013-06-05 16:15:48 -0700
+
+
+Started GET "/sidekiq/stylesheets/application.css" for 127.0.0.1 at 2013-06-05 16:15:48 -0700
+
+
+Started GET "/sidekiq/images/status-sd8051fd480.png" for 127.0.0.1 at 2013-06-05 16:15:48 -0700
+
+
+Started GET "/sidekiq/retries?poll=true" for 127.0.0.1 at 2013-06-05 16:15:50 -0700
+
+
+Started GET "/sidekiq/stylesheets/bootstrap.css" for 127.0.0.1 at 2013-06-05 16:15:50 -0700
+
+
+Started GET "/sidekiq/javascripts/application.js" for 127.0.0.1 at 2013-06-05 16:15:50 -0700
+
+
+Started GET "/sidekiq/stylesheets/application.css" for 127.0.0.1 at 2013-06-05 16:15:50 -0700
+
+
+Started GET "/sidekiq/images/status-sd8051fd480.png" for 127.0.0.1 at 2013-06-05 16:15:50 -0700
+
+
+Started GET "/sidekiq/retries?poll=true" for 127.0.0.1 at 2013-06-05 16:15:52 -0700
+
+
+Started GET "/sidekiq/stylesheets/application.css" for 127.0.0.1 at 2013-06-05 16:15:53 -0700
+
+
+Started GET "/sidekiq/javascripts/application.js" for 127.0.0.1 at 2013-06-05 16:15:53 -0700
+
+
+Started GET "/sidekiq/stylesheets/bootstrap.css" for 127.0.0.1 at 2013-06-05 16:15:53 -0700
+
+
+Started GET "/sidekiq/images/status-sd8051fd480.png" for 127.0.0.1 at 2013-06-05 16:15:53 -0700
+
+
+Started GET "/sidekiq/retries?poll=true" for 127.0.0.1 at 2013-06-05 16:15:55 -0700
+
+
+Started GET "/sidekiq/javascripts/application.js" for 127.0.0.1 at 2013-06-05 16:15:55 -0700
+
+
+Started GET "/sidekiq/stylesheets/bootstrap.css" for 127.0.0.1 at 2013-06-05 16:15:55 -0700
+
+
+Started GET "/sidekiq/stylesheets/application.css" for 127.0.0.1 at 2013-06-05 16:15:55 -0700
+
+
+Started GET "/sidekiq/images/status-sd8051fd480.png" for 127.0.0.1 at 2013-06-05 16:15:55 -0700
+
+
+Started GET "/sidekiq/retries?poll=true" for 127.0.0.1 at 2013-06-05 16:15:58 -0700
+
+
+Started GET "/sidekiq/javascripts/application.js" for 127.0.0.1 at 2013-06-05 16:15:58 -0700
+
+
+Started GET "/sidekiq/stylesheets/bootstrap.css" for 127.0.0.1 at 2013-06-05 16:15:58 -0700
+
+
+Started GET "/sidekiq/stylesheets/application.css" for 127.0.0.1 at 2013-06-05 16:15:58 -0700
+
+
+Started GET "/sidekiq/images/status-sd8051fd480.png" for 127.0.0.1 at 2013-06-05 16:15:58 -0700
+
+
+Started GET "/sidekiq/retries?poll=true" for 127.0.0.1 at 2013-06-05 16:16:00 -0700
+
+
+Started GET "/sidekiq/javascripts/application.js" for 127.0.0.1 at 2013-06-05 16:16:00 -0700
+
+
+Started GET "/sidekiq/stylesheets/bootstrap.css" for 127.0.0.1 at 2013-06-05 16:16:00 -0700
+
+
+Started GET "/sidekiq/stylesheets/application.css" for 127.0.0.1 at 2013-06-05 16:16:00 -0700
+
+
+Started GET "/sidekiq/images/status-sd8051fd480.png" for 127.0.0.1 at 2013-06-05 16:16:01 -0700
+
+
+Started GET "/sidekiq/retries?poll=true" for 127.0.0.1 at 2013-06-05 16:16:03 -0700
+
+
+Started GET "/sidekiq/stylesheets/bootstrap.css" for 127.0.0.1 at 2013-06-05 16:16:03 -0700
+
+
+Started GET "/sidekiq/javascripts/application.js" for 127.0.0.1 at 2013-06-05 16:16:03 -0700
+
+
+Started GET "/sidekiq/stylesheets/application.css" for 127.0.0.1 at 2013-06-05 16:16:03 -0700
+
+
+Started GET "/sidekiq/images/status-sd8051fd480.png" for 127.0.0.1 at 2013-06-05 16:16:03 -0700
+
+
+Started GET "/videos/1" for 127.0.0.1 at 2013-06-05 16:16:04 -0700
+Processing by VideosController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mVideo Load (0.4ms)[0m  SELECT "videos".* FROM "videos" WHERE "videos"."id" = $1 LIMIT 1  [["id", "1"]]
+  Rendered videos/show.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 12ms (Views: 9.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-06-05 16:16:04 -0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-05 16:16:04 -0700
+
+
+Started GET "/assets/videos.css?body=1" for 127.0.0.1 at 2013-06-05 16:16:04 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-05 16:16:04 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-05 16:16:04 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-06-05 16:16:04 -0700
+
+
+Started GET "/assets/videos.js?body=1" for 127.0.0.1 at 2013-06-05 16:16:04 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-05 16:16:04 -0700
+
+
+Started GET "/sidekiq/retries?poll=true" for 127.0.0.1 at 2013-06-05 16:16:05 -0700
+
+
+Started GET "/sidekiq/stylesheets/bootstrap.css" for 127.0.0.1 at 2013-06-05 16:16:05 -0700
+
+
+Started GET "/sidekiq/javascripts/application.js" for 127.0.0.1 at 2013-06-05 16:16:05 -0700
+
+
+Started GET "/sidekiq/stylesheets/application.css" for 127.0.0.1 at 2013-06-05 16:16:05 -0700
+
+
+Started GET "/sidekiq/images/status-sd8051fd480.png" for 127.0.0.1 at 2013-06-05 16:16:06 -0700
+  [1m[36mVideo Load (0.8ms)[0m  [1mSELECT "videos".* FROM "videos" WHERE "videos"."id" = $1 LIMIT 1[0m  [["id", "1"]]
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mVideo Load (0.5ms)[0m  [1mSELECT "videos".* FROM "videos" WHERE "videos"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mSQL (0.6ms)[0m  UPDATE "videos" SET "file_url_tmp" = $1, "file_url" = $2, "updated_at" = $3 WHERE "videos"."id" = 1  [["file_url_tmp", nil], ["file_url", "mini.mp4"], ["updated_at", Wed, 05 Jun 2013 23:16:07 UTC +00:00]]
+
+
+Started GET "/sidekiq/retries?poll=true" for 127.0.0.1 at 2013-06-05 16:16:08 -0700
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+
+
+Started GET "/sidekiq/javascripts/application.js" for 127.0.0.1 at 2013-06-05 16:16:08 -0700
+
+
+Started GET "/sidekiq/stylesheets/bootstrap.css" for 127.0.0.1 at 2013-06-05 16:16:08 -0700
+
+
+Started GET "/sidekiq/stylesheets/application.css" for 127.0.0.1 at 2013-06-05 16:16:08 -0700
+
+
+Started GET "/sidekiq/images/status-sd8051fd480.png" for 127.0.0.1 at 2013-06-05 16:16:08 -0700
+
+
+Started GET "/sidekiq/retries?poll=true" for 127.0.0.1 at 2013-06-05 16:16:10 -0700
+
+
+Started GET "/sidekiq/javascripts/application.js" for 127.0.0.1 at 2013-06-05 16:16:10 -0700
+
+
+Started GET "/sidekiq/stylesheets/bootstrap.css" for 127.0.0.1 at 2013-06-05 16:16:10 -0700
+
+
+Started GET "/sidekiq/stylesheets/application.css" for 127.0.0.1 at 2013-06-05 16:16:10 -0700
+
+
+Started GET "/sidekiq/images/status-sd8051fd480.png" for 127.0.0.1 at 2013-06-05 16:16:10 -0700
+
+
+Started GET "/sidekiq/retries?poll=true" for 127.0.0.1 at 2013-06-05 16:16:12 -0700
+
+
+Started GET "/sidekiq/stylesheets/application.css" for 127.0.0.1 at 2013-06-05 16:16:14 -0700
+
+
+Started GET "/sidekiq/javascripts/application.js" for 127.0.0.1 at 2013-06-05 16:16:14 -0700
+
+
+Started GET "/sidekiq/stylesheets/bootstrap.css" for 127.0.0.1 at 2013-06-05 16:16:14 -0700
+
+
+Started GET "/sidekiq/images/status-sd8051fd480.png" for 127.0.0.1 at 2013-06-05 16:16:14 -0700
+
+
+Started GET "/sidekiq/retries?poll=true" for 127.0.0.1 at 2013-06-05 16:16:16 -0700
+
+
+Started GET "/sidekiq/javascripts/application.js" for 127.0.0.1 at 2013-06-05 16:16:17 -0700
+
+
+Started GET "/sidekiq/stylesheets/bootstrap.css" for 127.0.0.1 at 2013-06-05 16:16:17 -0700
+
+
+Started GET "/sidekiq/stylesheets/application.css" for 127.0.0.1 at 2013-06-05 16:16:17 -0700
+
+
+Started GET "/sidekiq/images/status-sd8051fd480.png" for 127.0.0.1 at 2013-06-05 16:16:17 -0700
+
+
+Started GET "/sidekiq/retries?poll=true" for 127.0.0.1 at 2013-06-05 16:16:19 -0700
+
+
+Started GET "/sidekiq/stylesheets/bootstrap.css" for 127.0.0.1 at 2013-06-05 16:16:19 -0700
+
+
+Started GET "/sidekiq/stylesheets/application.css" for 127.0.0.1 at 2013-06-05 16:16:19 -0700
+
+
+Started GET "/sidekiq/javascripts/application.js" for 127.0.0.1 at 2013-06-05 16:16:19 -0700
+
+
+Started GET "/sidekiq/images/status-sd8051fd480.png" for 127.0.0.1 at 2013-06-05 16:16:19 -0700
+
+
+Started GET "/sidekiq/retries" for 127.0.0.1 at 2013-06-05 16:16:21 -0700
+
+
+Started GET "/sidekiq/stylesheets/bootstrap.css" for 127.0.0.1 at 2013-06-05 16:16:21 -0700
+
+
+Started GET "/sidekiq/stylesheets/application.css" for 127.0.0.1 at 2013-06-05 16:16:21 -0700
+
+
+Started GET "/sidekiq/javascripts/application.js" for 127.0.0.1 at 2013-06-05 16:16:21 -0700
+
+
+Started GET "/sidekiq/images/status-sd8051fd480.png" for 127.0.0.1 at 2013-06-05 16:16:21 -0700
+  [1m[35mVideo Load (0.4ms)[0m  SELECT "videos".* FROM "videos" WHERE "videos"."id" = $1 LIMIT 1  [["id", "1"]]
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mVideo Load (0.4ms)[0m  SELECT "videos".* FROM "videos" WHERE "videos"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mSQL (0.5ms)[0m  [1mUPDATE "videos" SET "file_url_tmp" = $1, "file_url" = $2, "updated_at" = $3 WHERE "videos"."id" = 1[0m  [["file_url_tmp", nil], ["file_url", "mini.mp4"], ["updated_at", Wed, 05 Jun 2013 23:16:52 UTC +00:00]]
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36mVideo Load (0.5ms)[0m  [1mSELECT "videos".* FROM "videos" WHERE "videos"."id" = $1 LIMIT 1[0m  [["id", "1"]]
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mVideo Load (0.4ms)[0m  [1mSELECT "videos".* FROM "videos" WHERE "videos"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mSQL (0.5ms)[0m  UPDATE "videos" SET "file_url_tmp" = $1, "file_url" = $2, "updated_at" = $3 WHERE "videos"."id" = 1  [["file_url_tmp", nil], ["file_url", "mini.mp4"], ["updated_at", Wed, 05 Jun 2013 23:19:07 UTC +00:00]]
+  [1m[36m (0.5ms)[0m  [1mROLLBACK[0m
+  [1m[35mVideo Load (0.6ms)[0m  SELECT "videos".* FROM "videos" WHERE "videos"."id" = $1 LIMIT 1  [["id", "1"]]
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mVideo Load (0.3ms)[0m  SELECT "videos".* FROM "videos" WHERE "videos"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mSQL (0.5ms)[0m  [1mUPDATE "videos" SET "file_url_tmp" = $1, "file_url" = $2, "updated_at" = $3 WHERE "videos"."id" = 1[0m  [["file_url_tmp", nil], ["file_url", "mini.mp4"], ["updated_at", Wed, 05 Jun 2013 23:24:07 UTC +00:00]]
+  [1m[35m (0.6ms)[0m  ROLLBACK
+
+
+Started GET "/videos/1/edit" for 127.0.0.1 at 2013-06-05 16:25:04 -0700
+Processing by VideosController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mVideo Load (0.3ms)[0m  [1mSELECT "videos".* FROM "videos" WHERE "videos"."id" = $1 LIMIT 1[0m  [["id", "1"]]
+  Rendered videos/_form.html.erb (5.8ms)
+  Rendered videos/edit.html.erb within layouts/application (7.6ms)
+Completed 200 OK in 163ms (Views: 14.6ms | ActiveRecord: 2.1ms)
+
+
+Started PATCH "/videos/1" for 127.0.0.1 at 2013-06-05 16:25:24 -0700
+Processing by VideosController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"vXY8Omwf1qY8MJYPeomfeJpIEPr4GNwlMvddPDBqv2Q=", "video"=>{"file_url"=>#<ActionDispatch::Http::UploadedFile:0x007fe35bf1f0e0 @tempfile=#<Tempfile:/var/folders/dp/dxp19pz54dzf_8f6zmvk7fyh0000gn/T/RackMultipart20130605-76522-1jrrdd5>, @original_filename="3699-91e79cb6.mp4", @content_type="video/mp4", @headers="Content-Disposition: form-data; name=\"video[file_url]\"; filename=\"3699-91e79cb6.mp4\"\r\nContent-Type: video/mp4\r\n">, "file_url_tmp"=>"20130605-1614-76522-9820/mini.mp4"}, "commit"=>"Update Video", "id"=>"1"}
+  [1m[35mVideo Load (0.4ms)[0m  SELECT "videos".* FROM "videos" WHERE "videos"."id" = $1 LIMIT 1  [["id", "1"]]
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mVideo Load (0.4ms)[0m  SELECT "videos".* FROM "videos" WHERE "videos"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mSQL (0.5ms)[0m  [1mUPDATE "videos" SET "file_url" = $1, "file_url_tmp" = $2, "updated_at" = $3 WHERE "videos"."id" = 1[0m  [["file_url", "mini_copy.mp4"], ["file_url_tmp", "20130605-1625-76522-2668/3699-91e79cb6.mp4"], ["updated_at", Wed, 05 Jun 2013 23:25:24 UTC +00:00]]
+  [1m[35m (0.4ms)[0m  ROLLBACK
+Completed 500 Internal Server Error in 997ms
+
+Fog::Storage::Rackspace::NotFound ([HTTP 404] resource not found in ord region):
+  app/controllers/videos_controller.rb:44:in `block in update'
+  app/controllers/videos_controller.rb:43:in `update'
+
+
+  Rendered /usr/local/opt/rbenv/versions/2.0.0-p0/lib/ruby/gems/2.0.0/gems/actionpack-4.0.0.rc1/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.6ms)
+  Rendered /usr/local/opt/rbenv/versions/2.0.0-p0/lib/ruby/gems/2.0.0/gems/actionpack-4.0.0.rc1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.7ms)
+  Rendered /usr/local/opt/rbenv/versions/2.0.0-p0/lib/ruby/gems/2.0.0/gems/actionpack-4.0.0.rc1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.2ms)
+  Rendered /usr/local/opt/rbenv/versions/2.0.0-p0/lib/ruby/gems/2.0.0/gems/actionpack-4.0.0.rc1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (42.2ms)

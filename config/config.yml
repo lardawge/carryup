@@ -1,0 +1,6 @@
+development:
+  cloudfiles:
+    host_url: enter_yours_here
+    username:  enter_yours_here
+    api_key:   enter_yours_here
+    container: enter_yours_here
