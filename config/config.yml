@@ -1,6 +1,6 @@
 development:
   cloudfiles:
-    host_url: enter_yours_here
-    username:  enter_yours_here
-    api_key:   enter_yours_here
-    container: enter_yours_here
+    host_url: http://58da0930c4715881f7fd-9a5b506f95300605fff53010f5cdc92a.r46.cf2.rackcdn.com
+    username:  patpoels
+    api_key:   1dc5491b0b64d77d79744bb197109cde
+    container: development

@@ -3,8 +3,8 @@
 <table>
   <thead>
     <tr>
-      <th>File url</th>
-      <th>File url tmp</th>
+      <th>File attachment</th>
+      <th>File attachment tmp</th>
       <th></th>
       <th></th>
       <th></th>
@@ -14,8 +14,8 @@
   <tbody>
     <% @videos.each do |video| %>
       <tr>
-        <td><%= video.file_url %></td>
-        <td><%= video.file_url_tmp %></td>
+        <td><%= video.file_attachment %></td>
+        <td><%= video.file_attachment_tmp %></td>
         <td><%= link_to 'Show', video %></td>
         <td><%= link_to 'Edit', edit_video_path(video) %></td>
         <td><%= link_to 'Destroy', video, method: :delete, data: { confirm: 'Are you sure?' } %></td>

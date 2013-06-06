@@ -12,12 +12,11 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :file_url %><br>
-    <%= f.file_field :file_url %>
+    <%= f.label :file_attachment %><br>
+    <%= f.file_field :file_attachment %>
   </div>
   <div class="field">
-    <%= f.label :file_url_tmp %><br>
-    <%= f.text_field :file_url_tmp %>
+    <%= @video.file_attachment_tmp %>
   </div>
   <div class="actions">
     <%= f.submit %>

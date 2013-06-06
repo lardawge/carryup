@@ -11,14 +11,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130605223904) do
+ActiveRecord::Schema.define(version: 20130606160721) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "videos", force: true do |t|
-    t.string   "file_url"
-    t.string   "file_url_tmp"
+    t.string   "file_attachment"
+    t.string   "file_attachment_tmp"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

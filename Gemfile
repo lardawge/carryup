@@ -19,7 +19,7 @@ gem 'coffee-rails', '~> 4.0.0'
 # gem 'therubyracer', platforms: :ruby
 gem 'unicorn', "4.6.2"
 gem "fog", "1.11.1"
-gem 'carrierwave_backgrounder', git: "git@github.com:lardawge/carrierwave_backgrounder.git", branch: "master"
+gem 'carrierwave_backgrounder'
 gem 'carrierwave', "0.8.0"
 gem 'pg'
 gem 'pry'
@@ -56,7 +56,8 @@ end
 
 # Queue
 gem 'redis', "3.0.4"
-gem 'sidekiq', "2.12.0"
-gem "sidekiq-status", "0.3.0"
-gem 'sinatra', "1.4.2", require: false
-gem 'slim', "2.0.0"
+gem 'resque', :require => "resque/server"
+# gem 'sidekiq', "2.12.0"
+# gem "sidekiq-status", "0.3.0"
+# gem 'sinatra', "1.4.2", require: false
+# gem 'slim', "2.0.0"
